@@ -1,6 +1,0 @@
-from run_UC1_request_to_img import get_system_response
-
-# User inputs a request for a travel plan
-user_request = "Give me a plan for a trip for 2 weeks to Amsterdam"
-
-system_response = get_system_response(user_request, index)

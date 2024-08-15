@@ -1,10 +1,10 @@
-from data import load_user_requests, load_img_text_dataset
-from index import init_img_index
-from prompts import get_location_recognizer_prompt
-from LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_using_RAG
-from retrieve import retrive_landmarks_names
-from evaluation import evaluate_landmark_answer, compare_results_Use_Case_2
-from utils import get_start_time, get_end_time
+from src.data import load_user_requests, load_img_text_dataset
+from src.index import init_img_index
+from src.prompts import get_location_recognizer_prompt
+from src.LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_using_RAG
+from src.retrieve import retrive_landmarks_names
+from src.evaluation import evaluate_landmark_answer, compare_results_Use_Case_2
+from src.utils import get_start_time, get_end_time
 
 
 # system response pipeline

@@ -1,11 +1,11 @@
-from data import load_user_requests, load_img_text_dataset
-from index import init_text_index
-from prompts import get_travel_plan_prompt
-from LLM_answers import get_plan_using_LLM, create_final_travel_plan
-from retrieve import retrive_landmarks_images
-from img_generation import generate_images
-from evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
-from utils import get_start_time, get_end_time
+from src.data import load_user_requests, load_img_text_dataset
+from src.index import init_text_index
+from src.prompts import get_travel_plan_prompt
+from src.LLM_answers import get_plan_using_LLM, create_final_travel_plan
+from src.retrieve import retrive_landmarks_images
+from src.img_generation import generate_images
+from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
+from src.utils import get_start_time, get_end_time
 
 
 # system response pipeline

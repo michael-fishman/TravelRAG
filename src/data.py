@@ -38,7 +38,6 @@ def get_true_images(landmarks_list):
     # TODO: complete
     raise NotImplementedError
 
-
 if __name__ == "__main__":
     # Load the images
     img_text_dataset = load_img_text_dataset()
