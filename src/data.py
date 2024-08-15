@@ -11,7 +11,6 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 
-
 def load_names(sample_size=5):
     images_names = []
     image_paths = [os.path.join(DATASET_PATH, img) for img in os.listdir(DATASET_PATH)]
@@ -22,15 +21,10 @@ def load_names(sample_size=5):
         images_names.append(img_name)
     return images_names
 
-
-
-
 def load_user_requests(requests_path):
     # TODO: complete
     raise NotImplementedError
 
-
 def get_true_images(landmarks_list):
     # TODO: complete
     raise NotImplementedError
-
