@@ -11,7 +11,7 @@ from src.utils import get_start_time, get_end_time
 def get_RAG_response(img_query, img_index, true_answer=None, id=None):
     start_time = get_start_time()
     retrieved_answer = retrive_landmarks_names(img_index, img_query)
-    prompt = get_location_recognizer_prompt(request)
+    prompt = get_location_recognizer_prompt(img_query)
     full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(prompt, retrieved_answer)
     end_time = get_end_time()
     if true_answer:
@@ -35,7 +35,7 @@ def get_RAG_response(img_query, img_index, true_answer=None, id=None):
 # baseline response pipeline
 def get_baseline_response(img_query, true_answer=None):
     start_time = get_start_time()
-    prompt = get_location_recognizer_prompt(request)
+    prompt = get_location_recognizer_prompt(img_query)
     full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(prompt)
     end_time = get_end_time()
     if true_answer:
@@ -55,7 +55,7 @@ def get_baseline_response(img_query, true_answer=None):
     }
     return results
 
-if __name__ == "__main__":
+def run_full_pipeline_Use_Case_2():
     # User pipeline
     ids, requests, true_answers = load_user_requests()
     # new_requests = load_new_requests() # requests without true answers
@@ -74,3 +74,7 @@ if __name__ == "__main__":
         all_baseline_results.append(baseline_results)
 
     compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
+    
+
+if __name__ == "__main__":
+    run_full_pipeline_Use_Case_2()

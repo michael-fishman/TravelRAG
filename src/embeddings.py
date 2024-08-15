@@ -19,7 +19,6 @@ def load_and_embedd_dataset(
         tuple: A tuple containing the chunked documents and the embeddings
     """
 
-
     print("Loading and embedding the dataset")
 
     # Load the dataset
@@ -36,8 +35,6 @@ def load_and_embedd_dataset(
     return used_places_names, embeddings
 
 
-
-
 def get_img_query_embeddings(img_queries):
     # TODO: complete
     # (model, img_query.unsqueeze(0))
@@ -50,4 +47,3 @@ def get_text_query_embeddings(text_queries):
     # (model)
     # return query_embedding
     raise NotImplementedError
-
