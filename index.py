@@ -6,7 +6,7 @@ import numpy as np
 from torchvision.models import resnet50
 from embeddings import load_and_embedd_dataset
 
-TEXT_INDEX_NAME = "TravelRAG"
+TEXT_INDEX_NAME = "travel-rag"
 
 with open("./API_keys/pinecone_api_key.txt") as f:
     PINECONE_API_KEY = f.read().strip()
@@ -69,7 +69,7 @@ def init_text_index(index_name: str, dimension: int, metric: str = 'cosine'):
 def upsert_vectors(
         index: Pinecone,
         embeddings: np.ndarray,
-        chunked_docs: list,
+        text_items: list,
         text_field: str = 'Content',
         batch_size: int = 128
 ):
@@ -87,19 +87,21 @@ def upsert_vectors(
     shape = embeddings.shape
 
     ids = [str(i) for i in range(shape[0])]
-    meta = [{text_field: text} for text in chunked_docs]
+    meta = [{text_field: text} for text in text_items]
 
     # create list of (id, vector, metadata) tuples to be upserted
     to_upsert = list(zip(ids, embeddings, meta))
 
     for i in tqdm(range(0, shape[0], batch_size)):
+        print(to_upsert)
         i_end = min(i + batch_size, shape[0])
         index.upsert(vectors=to_upsert[i:i_end])
+    print("Done!")
     return index
 
 
-def create_index_and_upsert():
-    places_names, embeddings = load_and_embedd_dataset()
+def create_index_and_upsert(rec_num=10):
+    places_names, embeddings = load_and_embedd_dataset(rec_num=rec_num)
     embedding_shape = embeddings.shape[1]
     text_index = init_text_index(TEXT_INDEX_NAME, embedding_shape)
     index = text_index.Index(TEXT_INDEX_NAME)
