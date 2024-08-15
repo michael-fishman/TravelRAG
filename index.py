@@ -37,4 +37,4 @@ if __name__ == "__main__":
     # Prepare Data
     img_text_dataset = load_img_text_dataset()
     img_index = init_img_index(img_text_dataset)
-    text_index = init_text_index(imaimg_text_datasetges)
+    text_index = init_text_index(img_text_dataset)

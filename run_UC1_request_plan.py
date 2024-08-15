@@ -34,15 +34,16 @@ def get_baseline_response(request):
     evaluate_generated_images(generated_imgs, landmarks_list)
     return final_travel_plan
 
+if __name__ == "__main__":
+    # User pipeline
+    requests = load_user_requests()
+    # Prepare Data
+    img_text_dataset = load_img_text_dataset()
+    # prepare DB
+    text_index = init_text_index(img_text_dataset)
 
-# User pipeline
-requests = load_user_requests()
-# Prepare Data
-img_text_dataset = load_img_text_dataset()
-# prepare DB
-text_index = init_text_index(img_text_dataset)
-
-for request in requests:
-    system_response = get_system_response(request, text_index)
-    baseline_response = get_baseline_response(request)
+    for request in requests:
+        system_response = get_system_response(request, text_index)
+        baseline_response = get_baseline_response(request)
+        
     compare_responses(system_response, baseline_response)

@@ -29,16 +29,26 @@ def get_plan_using_LLM(prompt):
 
     return travel_plan, landmarks_list
 
-def get_landmark_answer_using_LLM(prompt, retrieved_answer=None):
-    # TODO: complete, somhow change that the LLM will use the retrieved_answer if not None (this is the RAG part)
+def get_landmark_answer_using_LLM(prompt):
     # Load the LLM (e.g., using OpenAI GPT or similar model)
     llm = pipeline("text-generation", model="gpt-3.5-turbo")
 
     # Generate the travel plan with landmarks
     llm_response = llm(prompt, max_length=700, num_return_sequences=1)
     landmark_answer = llm_response[0]['generated_text']
-    raise landmark_answer
+    return landmark_answer
 
+def get_landmark_answer_using_RAG(prompt, retrieved_answer):
+    # TODO: complete, somehow change that the LLM will use the retrieved_answer if not None (this is the RAG part)
+    
+    # Load the LLM (e.g., using OpenAI GPT or similar model)
+    llm = pipeline("text-generation", model="gpt-3.5-turbo")
+
+    # Generate the travel plan with landmarks
+    llm_response = llm(prompt, max_length=700, num_return_sequences=1)
+    landmark_answer = llm_response[0]['generated_text']
+    raise NotImplementedError
+    return landmark_answer
 
 def create_final_travel_plan(travel_plan, retrieved_images):
     # TODO: complete
