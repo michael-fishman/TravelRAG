@@ -1,5 +1,8 @@
-from data import load_user_requests, load_img_text_dataset
-from index import init_text_index
+import numpy as np
+from random import random
+from data import load_user_requests
+from index import create_index_and_upsert
+from pinecone import Pinecone, QueryResponse
 from prompts import get_travel_plan_prompt
 from LLM_answers import get_plan_using_LLM, create_final_travel_plan
 from retrieve import retrive_landmarks_images
@@ -55,20 +58,66 @@ def get_baseline_response(request):
     }
     return results
 
+
+def load_user_requests():
+    # Simulate loading user requests
+    return ["(Venice) Doge's Palace and campanile of St. Mark's Basilica facing the sea.jpg",
+            "Petřín Lookout Tower in Prague, 2012.jpg",
+            "Rzym Fontanna piazza navona.jpg",
+            # Add more file names as needed
+            ], np.random.rand(50, 512)  # Random embeddings for testing
+
+
+def load_and_embedd_dataset(rec_num=10):
+    # Simulate loading and embedding a dataset
+    file_names = [
+        "(Venice) Doge's Palace and campanile of St. Mark's Basilica facing the sea.jpg",
+        "Petřín Lookout Tower in Prague, 2012.jpg",
+        "Rzym Fontanna piazza navona.jpg",
+        "St. Vitus Prague September 2016-21.jpg",
+        "The Dancing House in Prague.jpg",
+        # Add more file names as needed
+    ]
+    # Select a subset based on rec_num
+    selected_names = file_names[:rec_num]
+    # Generate random embeddings for the selected files
+    embeddings = np.random.rand(rec_num, 512)  # Assuming embedding dimension is 512
+    return selected_names, embeddings
+
+
+def test_pipeline():
+    # Initialize and upsert data to the index
+    index_upserted = create_index_and_upsert(rec_num=50)
+
+    # Simulate a query to the Pinecone index
+    query_embedding = [random() for i in range(384)]  # Random query embedding for testing
+    query_result: QueryResponse = index_upserted.query(
+        vector=query_embedding,
+        top_k=5,
+        include_metadata=True
+    )
+
+    # Print the query results
+    print("Query results:")
+    for match in query_result.matches:
+        print(f"ID: {match.id}, Score: {match.score}, Metadata: {match.metadata}")
+
+
 if __name__ == "__main__":
-    # User pipeline
-    ids, requests = load_user_requests()
-    # Prepare Data
-    img_text_dataset = load_img_text_dataset()
-    # prepare DB
-    text_index = init_text_index(img_text_dataset)
+    test_pipeline()
 
-    all_RAG_results = []
-    all_baseline_results = []
-    for id, request, true_answer in zip(ids, requests):
-        RAG_results = get_RAG_response(request, text_index, id)
-        baseline_results = get_baseline_response(request, id)
-        all_RAG_results.append(RAG_results)
-        all_baseline_results.append(baseline_results)
-
-    compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
+# if __name__ == "__main__":
+#     # User pipeline
+#     ids, requests = load_user_requests()
+#     # Prepare Data
+#     text_index = create_index_and_upsert(rec_num=50)
+#
+#     all_RAG_results = []
+#     all_baseline_results = []
+#     for id, request, true_answer in zip(ids, requests):
+#         RAG_results = get_RAG_response(request, text_index, id)
+#         baseline_results = get_baseline_response(request, id)
+#         all_RAG_results.append(RAG_results)
+#         all_baseline_results.append(baseline_results)
+#
+#     compare_results_Use_Case_1(all_RAG_results, all_baseline_results)

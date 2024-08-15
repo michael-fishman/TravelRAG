@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from embeddings import get_img_query_embeddings, get_text_query_embeddings, convert_vecs_to_text, convert_vecs_to_img
+from embeddings import get_img_query_embeddings, get_text_query_embeddings
 
 def retrieve_images(img_index, query_embedding, k):
     query_embedding_np = query_embedding.cpu().numpy().reshape(1, -1)
