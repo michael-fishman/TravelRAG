@@ -1,4 +1,4 @@
-from data import load_user_requests, load_img_text_dataset
+from data import load_user_requests
 from index import init_text_index
 from prompts import get_travel_plan_prompt
 from LLM_answers import get_plan_using_LLM, create_final_travel_plan
