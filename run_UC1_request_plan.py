@@ -8,6 +8,7 @@ from evaluation import evaluate_retrieved_images, evaluate_generated_images, com
 from utils import get_start_time, get_end_time
 from time_comparison import save_time_results
 
+
 # system response pipeline
 def get_system_response(request, text_index):
     start_time = get_start_time()
@@ -19,6 +20,7 @@ def get_system_response(request, text_index):
     save_time_results(start_time, end_time)
     evaluate_retrieved_images(retrieved_images, landmarks_list)
     return final_travel_plan
+
 
 # baseline response pipeline
 def get_baseline_response(request):
@@ -32,6 +34,7 @@ def get_baseline_response(request):
     evaluate_generated_images(generated_imgs, landmarks_list)
     return final_travel_plan
 
+
 # User pipeline
 requests = load_user_requests()
 # Prepare Data
@@ -43,5 +46,3 @@ for request in requests:
     system_response = get_system_response(request, text_index)
     baseline_response = get_baseline_response(request)
     compare_responses(system_response, baseline_response)
-    
-    

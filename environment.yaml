@@ -1,5 +1,0 @@
-name: lab_prject
-channels:
-  - pytorch
-  - defaults
-prefix: C:\Anaconda\envs\lab_prject
