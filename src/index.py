@@ -3,42 +3,17 @@ import faiss
 from pinecone import Pinecone, ServerlessSpec
 from tqdm import tqdm
 import numpy as np
-from torchvision.models import resnet50
 from src.embeddings import load_and_embedd_dataset
+from transformers import CLIPProcessor, CLIPModel
 
-TEXT_INDEX_NAME = "travel-rag"
+TEXT_INDEX_NAME = "travel-rag-text-index"
+IMAGE_INDEX_NAME = "travel-rag-image-index"
 
 with open("./API_keys/pinecone_api_key.txt") as f:
     PINECONE_API_KEY = f.read().strip()
 
 
-# Create embeddings
-def create_embeddings(model, images):
-    # TODO: this code is generated - need to rewrite
-    with torch.no_grad():
-        embeddings = model(images).squeeze()
-    return embeddings
-
-
-def init_img_index(images):
-    # TODO: this code is generated - need to rewrite
-    # Load a pre-trained ResNet model
-    model = resnet50(pretrained=True)
-    model = torch.nn.Sequential(*list(model.children())[:-1])  # Remove the classification layer
-
-    # Generate embeddings for the images
-    embeddings = create_embeddings(model, images)
-
-    # Convert embeddings to numpy for Faiss
-    embeddings_np = embeddings.cpu().numpy()
-
-    # Initialize a Faiss index
-    index = faiss.IndexFlatL2(embeddings_np.shape[1])
-    index.add(embeddings_np)
-    return index
-
-
-def init_text_index(index_name: str, dimension: int, metric: str = 'cosine'):
+def init_index(index_name: str, dimension: int, metric: str = 'cosine'):
     """
     Create a pinecone index if it does not exist
     Args:
@@ -103,12 +78,10 @@ def upsert_vectors(
     return index
 
 
-def create_index_and_upsert(rec_num=10):
-    places_names, images_formats, embeddings = load_and_embedd_dataset(rec_num=rec_num)
+def create_index_and_upsert(is_text_index=True, rec_num=10, embedding_model=None):
+    places_names, images_formats, embeddings = load_and_embedd_dataset(is_text_index=is_text_index, rec_num=rec_num, embedding_model=embedding_model)
     embedding_shape = embeddings.shape[1]
-    text_index = init_text_index(TEXT_INDEX_NAME, embedding_shape)
-    index = text_index.Index(TEXT_INDEX_NAME)
-    index_upserted = upsert_vectors(index, embeddings, places_names, images_formats)
+    vector_db_index = init_index(TEXT_INDEX_NAME if is_text_index else IMAGE_INDEX_NAME, embedding_shape)
+    vector_db_index = vector_db_index.Index(TEXT_INDEX_NAME)
+    index_upserted = upsert_vectors(vector_db_index, embeddings, places_names, images_formats)
     return index_upserted
-
-

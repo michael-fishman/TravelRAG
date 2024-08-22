@@ -3,9 +3,9 @@ from PIL import Image
 import requests
 from io import BytesIO
 import os
-from embeddings import get_text_query_embeddings
-from index import create_index_and_upsert
-from data import DATASET_PATH
+from src.embeddings import get_text_query_embeddings
+from src.index import create_index_and_upsert
+from src.data import DATASET_PATH
 
 
 # Placeholder function to simulate LLM response and image retrieval
@@ -27,8 +27,6 @@ def identify_location(image):
 def get_image(site_name, index_upserted):
     query_embedding = get_text_query_embeddings(text_query=site_name)
     query_result = index_upserted.query(vector=query_embedding, top_k=1,include_metadata=True)
-    # print(query_result)
-    # print(query_result.matches)
     img_name = query_result.matches[0].metadata['Content']
     img_format = query_result.matches[0].metadata['image_format']
     retrieved_image_url = os.path.join(DATASET_PATH, f'{img_name}{img_format}')
@@ -37,7 +35,7 @@ def get_image(site_name, index_upserted):
 
     # # This is a mock function to return a sample image URL
     # images = {
-    #     "Eiffel Tower": os.path.join('TravelRAG/datasets/images', 'Paris,_Eiffelturm_--_2014_--_1245.jpg'),
+    #     "Eiffel Tower": os.path.join('TravelRAG/datasets/images', 'Eiffel_Tower.jpg'),
     #     "Louvre Museum": os.path.join('TravelRAG/datasets/images', '320px-Paris_06_2012_Cour_Napoléon_(Palais_du_Louvre)_Panorama_3004.jpg'),
     #     "Notre-Dame Cathedral": os.path.join('TravelRAG/datasets/images', "Paris_75004_Place_de_l'Hôtel-de-Ville_S01_Notre-Dame_remote.jpg")
     # }
@@ -54,6 +52,12 @@ def resize_image_to_max(img, max_size=200):
         ratio = max_size / float(height)
         new_size = (int(width * ratio), max_size)
     return img.resize(new_size)
+
+# Change image names
+# for img_pth, new_pth in zip(image_paths, new_paths):
+#     new_pth = f"{new_pth[:new_pth.rfind('.')]}{img_pth[img_pth.rfind('.'):]}"
+#     print(f'img_pth = {img_pth}, new_pth = {new_pth}')
+#     os.rename(img_path, new_pth)
 
 
 # UI Layout

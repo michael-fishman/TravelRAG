@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from src.embeddings import get_img_query_embeddings, get_text_query_embeddings
+from src.embeddings import get_img_embeddings, get_text_embeddings
 
 
 def retrieve_images(img_index, query_embedding, k):
@@ -26,16 +26,15 @@ def get_texts_by_img_indices(img_index, retrieved_indices):
     return [img_index[idx]['name'] for idx in retrieved_indices[0]]
 
 
-def retrive_landmarks_images(text_index, landmark_name_queries):
-    query_embeddings = get_img_query_embeddings(landmark_name_queries)
-    retrieved_indices = retrieve_texts(query_embeddings, k=1)
+def retrieve_landmarks_images(text_index, landmark_name_queries):
+    query_embeddings = get_text_embeddings(landmark_name_queries)
+    retrieved_indices = retrieve_texts(text_index, query_embeddings, k=1)
     retrieved_images = get_imgs_by_text_indices(text_index, retrieved_indices)
     return retrieved_images
 
 
-def retrive_landmarks_names(img_index, img_query):
-    query_embedding = get_text_query_embeddings(img_query)
-    retrieved_indices = retrieve_images(query_embedding, k=1)
+def retrieve_landmarks_names(img_index, embedded_img_query):
+    retrieved_indices = retrieve_images(img_index, embedded_img_query, k=1)
     retrieved_text_vectors = get_texts_by_img_indices(img_index, retrieved_indices)
     return retrieved_text_vectors
 
@@ -44,7 +43,7 @@ if __name__ == "__main__":
     # TODO: change example here
     landmarks_list_example = ["Amsterdam"]
 
-    retrieved_images = retrive_landmarks_images(landmarks_list_example)
+    retrieved_images = retrieve_landmarks_images(landmarks_list_example)
     # Display the retrieved images
     for retrieved_img in retrieved_images:
         plt.imshow(retrieved_img)
