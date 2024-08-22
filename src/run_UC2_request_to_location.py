@@ -1,13 +1,11 @@
 from src.data import load_user_requests, load_img_text_dataset
 from src.index import init_img_index
-from src.prompts import get_location_recognizer_prompt
 from src.LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_using_RAG
 from src.retrieve import retrive_landmarks_names
 from src.evaluation import evaluate_landmark_answer, compare_results_Use_Case_2
 from src.utils import get_start_time, get_end_time
 from transformers import CLIPProcessor, CLIPModel
 import torch
-from PIL import Image
 
 model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
 processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
@@ -17,8 +15,7 @@ processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 def get_RAG_response(img_query, img_index, true_answer=None, id=None):
     start_time = get_start_time()
     retrieved_answer = retrive_landmarks_names(img_index, img_query)
-    prompt = get_location_recognizer_prompt(img_query)
-    full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(prompt, retrieved_answer)
+    full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(img_query, retrieved_answer)
     end_time = get_end_time()
     if true_answer:
         correct = evaluate_landmark_answer(landmark_RAG_answer, true_answer)
@@ -41,8 +38,7 @@ def get_RAG_response(img_query, img_index, true_answer=None, id=None):
 # baseline response pipeline
 def get_baseline_response(img_query, true_answer=None):
     start_time = get_start_time()
-    prompt = get_location_recognizer_prompt(img_query)
-    full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(prompt)
+    full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(img_query)
     end_time = get_end_time()
     if true_answer:
         correct = evaluate_landmark_answer(landmark_LLM_answer, true_answer)
