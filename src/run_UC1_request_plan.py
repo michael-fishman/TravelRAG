@@ -2,7 +2,7 @@ from src.data import load_user_requests
 from src.index import create_index_and_upsert
 from src.prompts import get_travel_plan_prompt
 from src.LLM_answers import get_plan_using_LLM, create_final_travel_plan
-from src.retrieve import retrive_landmarks_images
+from src.retrieve import retrieve_landmarks_images
 from src.img_generation import generate_images
 from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
 from src.utils import get_start_time, get_end_time
@@ -16,7 +16,7 @@ def get_RAG_response(request, text_index):
     start_time = get_start_time()
     prompt = get_travel_plan_prompt(request)
     travel_plan, landmarks_list = get_plan_using_LLM(prompt)
-    retrieved_images = retrive_landmarks_images(text_index, landmarks_list)
+    retrieved_images = retrieve_landmarks_images(text_index, landmarks_list)
     final_travel_plan = create_final_travel_plan(travel_plan, retrieved_images)
     end_time = get_end_time()
     accuracy = evaluate_retrieved_images(retrieved_images, landmarks_list)
