@@ -76,8 +76,12 @@ def get_landmark_answer_using_RAG(retrieved_answer, user_name):
     
 
 if __name__ == "__main__":
-    user_request_1 = "Give me a plan for a trip for 2 weeks to Amsterdam"
-    prompt_example = get_travel_plan_prompt(user_request_1)
-    travel_plan, landmarks_list = get_plan_using_LLM(prompt_example)
-    print("Travel Plan:\n", travel_plan)
+    user_request_1 = "Give me a plan for a trip for 6 days to New York"
+    travel_plan, landmarks_list = get_plan_using_LLM(user_request_1)
+    print("\nTravel Plan:")
+    for day, landmark, description in zip(travel_plan['days'], travel_plan['landmarks'], travel_plan['descriptions']):
+        print(f"Day {day}:")
+        print(f"  Landmark: {landmark}")
+        print(f"  Description: {description}")
+        print()
     print("\nLandmarks List:\n", landmarks_list)
