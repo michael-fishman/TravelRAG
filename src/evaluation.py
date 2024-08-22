@@ -1,5 +1,10 @@
 from src.data import get_true_images
-from transformers import pipeline
+import google.generativeai as genai
+
+with open("./API_keys/gemini_api_key.txt") as f:
+    GEMINI_API_KEY = f.read().strip()
+genai.configure(api_key=GEMINI_API_KEY)
+
 
 def evaluate_retrieved_images(retrieved_images, landmarks_list):
     # TODO: complete
@@ -11,12 +16,8 @@ def evaluate_generated_images(generated_imgs, landmarks_list):
     true_images = get_true_images(landmarks_list)
     raise NotImplementedError
 
-def evaluate_retrieved_images(landmark_RAG_answer, true_answer):
-    # TODO: complete
-    raise NotImplementedError
-
-def evaluate_landmark_answer(landmark_RAG_answer, true_answer):
-    llm = pipeline("text-generation", model="gpt-3.5-turbo")
+def evaluate_landmark_answer(landmark_RAG_answer, true_answer):    
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
     
     # Construct the prompt to ask the LLM to evaluate the match between the two landmarks
     prompt = (
@@ -26,9 +27,9 @@ def evaluate_landmark_answer(landmark_RAG_answer, true_answer):
         "Respond with either 'Correct' or 'Incorrect'."
     )
     
-    # Generate the evaluation using the LLM
-    llm_response = llm(prompt, max_length=50, num_return_sequences=1)
-    evaluation = llm_response[0]['generated_text'].strip()
+    # Generate the evaluation using the LLM)
+    llm_response = model.generate_content(prompt)
+    evaluation = llm_response.text.replace("\n", "").strip()
     
     # Ensure the response is either "Correct" or "Incorrect"
     if "Correct" in evaluation:
