@@ -3,22 +3,26 @@ from src.embeddings import get_img_query_embeddings, get_text_query_embeddings
 
 
 def retrieve_images(img_index, query_embedding, k):
+    # TODO: this code is generated - need to rewrite
     query_embedding_np = query_embedding.cpu().numpy().reshape(1, -1)
     _, indices = img_index.search(query_embedding_np, k)
     return indices
 
 
 def retrieve_texts(text_index, query_embedding, k):
+    # TODO: this code is generated - need to rewrite
     query_embedding_np = query_embedding.cpu().numpy().reshape(1, -1)
     _, indices = text_index.search(query_embedding_np, k)
     return indices
 
 
 def get_imgs_by_text_indices(text_index, retrieved_indices):
+    # TODO: this code is generated - need to rewrite
     return [text_index[idx]['image'].permute(1, 2, 0).numpy() for idx in retrieved_indices[0]]
 
 
 def get_texts_by_img_indices(img_index, retrieved_indices):
+    # TODO: this code is generated - need to rewrite
     return [img_index[idx]['name'] for idx in retrieved_indices[0]]
 
 

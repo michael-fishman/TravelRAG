@@ -6,10 +6,12 @@ def generated_img_prompt(landmark):
     return prompt
 
 def generate_image(generator, prompt):
+    # TODO: this code is generated - need to rewrite
     image = generator(prompt)
     return image
 
 def generate_images(landmarks_list):
+    # TODO: this code is generated - need to rewrite
     # Assuming the use of a DALL-E model for image generation
     generator = DALL-E.from_pretrained('dalle-mini')
 
@@ -21,6 +23,7 @@ def generate_images(landmarks_list):
     return generated_imgs
 
 def display_img(img):
+    # TODO: this code is generated - need to rewrite
     # Display the generated image
     plt.imshow(generated_image)
     plt.show()

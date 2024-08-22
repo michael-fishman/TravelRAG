@@ -1,7 +1,13 @@
 from transformers import pipeline
-from prompts import get_travel_plan_prompt
+from src.prompts import get_travel_plan_prompt
+import google.generativeai as genai
+
+with open("./API_keys/gemini_api_key.txt") as f:
+    GEMINI_API_KEY = f.read().strip()
+genai.configure(api_key=GEMINI_API_KEY)
 
 def get_plan_using_LLM(prompt):
+    # TODO: this code is generated - need to rewrite
     # Load the LLM (e.g., using OpenAI GPT or similar model)
     llm = pipeline("text-generation", model="gpt-3.5-turbo")
 
@@ -30,15 +36,16 @@ def get_plan_using_LLM(prompt):
     return travel_plan, landmarks_list
 
 def get_landmark_answer_using_LLM(prompt):
-    # Load the LLM (e.g., using OpenAI GPT or similar model)
-    llm = pipeline("text-generation", model="gpt-3.5-turbo")
+    # TODO: this code is generated - need to rewrite
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
     # Generate the travel plan with landmarks
-    llm_response = llm(prompt, max_length=700, num_return_sequences=1)
-    landmark_answer = llm_response[0]['generated_text']
+    llm_response = model.generate_content(prompt)
+    landmark_answer = llm_response.text
     return landmark_answer
 
 def get_landmark_answer_using_RAG(prompt, retrieved_answer):
+    # TODO: this code is generated - need to rewrite
     # TODO: complete, somehow change that the LLM will use the retrieved_answer if not None (this is the RAG part)
     
     # Load the LLM (e.g., using OpenAI GPT or similar model)

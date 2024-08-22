@@ -8,7 +8,7 @@ from src.evaluation import evaluate_retrieved_images, evaluate_generated_images,
 from src.utils import get_start_time, get_end_time
 import numpy as np
 from random import random
-from pinecone import Pinecone, QueryResponse
+from pinecone import QueryResponse
 
 
 # system response pipeline
