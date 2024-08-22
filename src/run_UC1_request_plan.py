@@ -84,6 +84,7 @@ def load_and_embedd_dataset(rec_num=10):
     embeddings = np.random.rand(rec_num, 512)  # Assuming embedding dimension is 512
     return selected_names, embeddings
 
+
 def run_full_pipeline_Use_Case_1():
     # User pipeline
     ids, requests = load_user_requests()
@@ -99,7 +100,7 @@ def run_full_pipeline_Use_Case_1():
         all_baseline_results.append(baseline_results)
 
     compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
-    
+
 
 def test_pipeline():
     # Initialize and upsert data to the index

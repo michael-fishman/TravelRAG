@@ -55,11 +55,12 @@ def get_baseline_response(img_query, true_answer=None):
     }
     return results
 
+
 def run_full_pipeline_Use_Case_2():
     # User pipeline
     ids, requests, true_answers = load_user_requests()
     # new_requests = load_new_requests() # requests without true answers
-    
+
     # Prepare Data
     img_text_dataset = load_img_text_dataset()
     # prepare DB
@@ -74,7 +75,7 @@ def run_full_pipeline_Use_Case_2():
         all_baseline_results.append(baseline_results)
 
     compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
-    
+
 
 if __name__ == "__main__":
     run_full_pipeline_Use_Case_2()
