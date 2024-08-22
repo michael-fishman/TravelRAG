@@ -1,14 +1,14 @@
+from src.data import load_user_requests
+from src.index import create_index_and_upsert
+from src.prompts import get_travel_plan_prompt
+from src.LLM_answers import get_plan_using_LLM, create_final_travel_plan
+from src.retrieve import retrive_landmarks_images
+from src.img_generation import generate_images
+from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
+from src.utils import get_start_time, get_end_time
 import numpy as np
 from random import random
-from data import load_user_requests
-from index import create_index_and_upsert
 from pinecone import Pinecone, QueryResponse
-from prompts import get_travel_plan_prompt
-from LLM_answers import get_plan_using_LLM, create_final_travel_plan
-from retrieve import retrive_landmarks_images
-from img_generation import generate_images
-from evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
-from utils import get_start_time, get_end_time
 
 
 # system response pipeline
@@ -84,6 +84,22 @@ def load_and_embedd_dataset(rec_num=10):
     embeddings = np.random.rand(rec_num, 512)  # Assuming embedding dimension is 512
     return selected_names, embeddings
 
+def run_full_pipeline_Use_Case_1():
+    # User pipeline
+    ids, requests = load_user_requests()
+    # Prepare Data
+    text_index = create_index_and_upsert(rec_num=50)
+
+    all_RAG_results = []
+    all_baseline_results = []
+    for id, request, true_answer in zip(ids, requests):
+        RAG_results = get_RAG_response(request, text_index, id)
+        baseline_results = get_baseline_response(request, id)
+        all_RAG_results.append(RAG_results)
+        all_baseline_results.append(baseline_results)
+
+    compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
+    
 
 def test_pipeline():
     # Initialize and upsert data to the index
@@ -105,19 +121,3 @@ def test_pipeline():
 
 if __name__ == "__main__":
     test_pipeline()
-
-# if __name__ == "__main__":
-#     # User pipeline
-#     ids, requests = load_user_requests()
-#     # Prepare Data
-#     text_index = create_index_and_upsert(rec_num=50)
-#
-#     all_RAG_results = []
-#     all_baseline_results = []
-#     for id, request, true_answer in zip(ids, requests):
-#         RAG_results = get_RAG_response(request, text_index, id)
-#         baseline_results = get_baseline_response(request, id)
-#         all_RAG_results.append(RAG_results)
-#         all_baseline_results.append(baseline_results)
-#
-#     compare_results_Use_Case_1(all_RAG_results, all_baseline_results)

@@ -1,6 +1,6 @@
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from data import load_names
+from src.data import load_names
 
 
 def load_and_embedd_dataset(

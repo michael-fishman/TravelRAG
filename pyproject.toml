@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "TravelRAG"
+version = "0.1.0"
+authors = [
+  {name="Keren Gruteke Klein", email="gkeren@campus.technion.ac.il"},
+  {name="Michael Fishman", email="fishman@campus.technion.ac.il" },
+  {name="Amit Frechter", email="frechter@campus.technion.ac.il" }
+]
+
+readme = "README.md"
+requires-python = ">=3.7"
+
+dependencies = [
+  # TODO add dependencies
+]
+
+[project.urls]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

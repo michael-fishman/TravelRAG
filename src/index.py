@@ -4,7 +4,7 @@ from pinecone import Pinecone, ServerlessSpec
 from tqdm import tqdm
 import numpy as np
 from torchvision.models import resnet50
-from embeddings import load_and_embedd_dataset
+from src.embeddings import load_and_embedd_dataset
 
 TEXT_INDEX_NAME = "travel-rag"
 
