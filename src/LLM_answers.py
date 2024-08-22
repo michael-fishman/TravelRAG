@@ -1,6 +1,7 @@
 from transformers import pipeline
 from src.prompts import get_travel_plan_prompt
 import google.generativeai as genai
+from src.prompts import get_location_recognizer_prompt
 
 with open("./API_keys/gemini_api_key.txt") as f:
     GEMINI_API_KEY = f.read().strip()
@@ -9,11 +10,11 @@ genai.configure(api_key=GEMINI_API_KEY)
 def get_plan_using_LLM(prompt):
     # TODO: this code is generated - need to rewrite
     # Load the LLM (e.g., using OpenAI GPT or similar model)
-    llm = pipeline("text-generation", model="gpt-3.5-turbo")
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
     # Generate the travel plan with landmarks
-    llm_response = llm(prompt, max_length=700, num_return_sequences=1)
-    travel_plan = llm_response[0]['generated_text']
+    llm_response = model.generate_content(prompt)
+    travel_plan = llm_response.text
 
     # Extract the travel plan and landmarks list
     try:
@@ -35,26 +36,21 @@ def get_plan_using_LLM(prompt):
 
     return travel_plan, landmarks_list
 
-def get_landmark_answer_using_LLM(prompt):
-    # TODO: this code is generated - need to rewrite
+def get_landmark_answer_using_LLM(img_query):
     model = genai.GenerativeModel(model_name="gemini-1.5-flash")
-
-    # Generate the travel plan with landmarks
+    prompt = get_location_recognizer_prompt(img_query)
     llm_response = model.generate_content(prompt)
-    landmark_answer = llm_response.text
+    landmark_answer = llm_response.text.replace('\n', '').strip()
     return landmark_answer
 
-def get_landmark_answer_using_RAG(prompt, retrieved_answer):
+def get_landmark_answer_using_RAG(img_query, retrieved_answer):
     # TODO: this code is generated - need to rewrite
     # TODO: complete, somehow change that the LLM will use the retrieved_answer if not None (this is the RAG part)
     
-    # Load the LLM (e.g., using OpenAI GPT or similar model)
-    llm = pipeline("text-generation", model="gpt-3.5-turbo")
-
-    # Generate the travel plan with landmarks
-    llm_response = llm(prompt, max_length=700, num_return_sequences=1)
-    landmark_answer = llm_response[0]['generated_text']
-    raise NotImplementedError
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+    prompt = get_location_recognizer_prompt(img_query)
+    llm_response = model.generate_content(prompt)
+    landmark_answer = llm_response.text
     return landmark_answer
 
 def create_final_travel_plan(travel_plan, retrieved_images):
