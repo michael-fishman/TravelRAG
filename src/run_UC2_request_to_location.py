@@ -5,6 +5,12 @@ from src.LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_u
 from src.retrieve import retrive_landmarks_names
 from src.evaluation import evaluate_landmark_answer, compare_results_Use_Case_2
 from src.utils import get_start_time, get_end_time
+from transformers import CLIPProcessor, CLIPModel
+import torch
+from PIL import Image
+
+model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 
 # system response pipeline
@@ -56,7 +62,7 @@ def get_baseline_response(img_query, true_answer=None):
     return results
 
 
-def run_full_pipeline_Use_Case_2():
+def eval_pipeline_Use_Case_2():
     # User pipeline
     ids, requests, true_answers = load_user_requests()
     # new_requests = load_new_requests() # requests without true answers
@@ -77,5 +83,18 @@ def run_full_pipeline_Use_Case_2():
     compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
 
 
+def inference_pipenine_Use_Case_2(img):
+    inputs = processor(images=img, return_tensors="pt")
+    with torch.no_grad():
+        image_embeddings = model.get_image_features(**inputs)
+
+    # Normalize the embeddings (optional but often useful)
+    image_embeddings = image_embeddings / image_embeddings.norm(dim=-1, keepdim=True)
+    # Prepare Data
+    img_text_dataset = load_img_text_dataset()
+    # prepare DB
+    img_index = init_img_index(img_text_dataset)
+    RAG_results = get_RAG_response(image_embeddings, img_index)
+
 if __name__ == "__main__":
-    run_full_pipeline_Use_Case_2()
+    eval_pipeline_Use_Case_2()

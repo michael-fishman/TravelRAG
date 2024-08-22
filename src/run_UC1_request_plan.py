@@ -85,7 +85,7 @@ def load_and_embedd_dataset(rec_num=10):
     return selected_names, embeddings
 
 
-def run_full_pipeline_Use_Case_1():
+def eval_pipeline_Use_Case_1():
     # User pipeline
     ids, requests = load_user_requests()
     # Prepare Data
