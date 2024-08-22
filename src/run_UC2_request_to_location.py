@@ -1,6 +1,6 @@
 from src.data import load_user_requests, load_img_text_dataset
 from src.index import init_img_index
-from src.LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_using_RAG
+from src.LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_using_RAG, get_final_landmark_answer_for_user
 from src.retrieve import retrive_landmarks_names
 from src.evaluation import evaluate_landmark_answer, compare_results_Use_Case_2
 from src.utils import get_start_time, get_end_time
@@ -12,10 +12,10 @@ processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 
 # system response pipeline
-def get_RAG_response(img_query, img_index, true_answer=None, id=None):
+def get_RAG_response(img_query, img_index, true_answer=None, id=None, user_name=None):
     start_time = get_start_time()
     retrieved_answer = retrive_landmarks_names(img_index, img_query)
-    full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(img_query, retrieved_answer)
+    full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(retrieved_answer, user_name)
     end_time = get_end_time()
     if true_answer:
         correct = evaluate_landmark_answer(landmark_RAG_answer, true_answer)
@@ -36,9 +36,9 @@ def get_RAG_response(img_query, img_index, true_answer=None, id=None):
 
 
 # baseline response pipeline
-def get_baseline_response(img_query, true_answer=None):
+def get_baseline_response(img_query, true_answer=None, user_name=None, id=None):
     start_time = get_start_time()
-    full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(img_query)
+    full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(img_query, user_name)
     end_time = get_end_time()
     if true_answer:
         correct = evaluate_landmark_answer(landmark_LLM_answer, true_answer)
@@ -79,7 +79,7 @@ def eval_pipeline_Use_Case_2():
     compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
 
 
-def inference_pipenine_Use_Case_2(img):
+def inference_pipeline_Use_Case_2(img):
     inputs = processor(images=img, return_tensors="pt")
     with torch.no_grad():
         image_embeddings = model.get_image_features(**inputs)
