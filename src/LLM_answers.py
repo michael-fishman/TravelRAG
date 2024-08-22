@@ -54,10 +54,6 @@ def get_plan_using_LLM(request):
 
     return travel_plan, landmarks_list
 
-def create_final_travel_plan(travel_plan, retrieved_images):
-    # TODO: complete
-    raise NotImplementedError
-
 def get_landmark_answer_using_LLM(img_query, user_name):
     model = genai.GenerativeModel(model_name="gemini-1.5-flash")
     # Landmark Answer
