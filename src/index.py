@@ -14,12 +14,14 @@ with open("./API_keys/pinecone_api_key.txt") as f:
 
 # Create embeddings
 def create_embeddings(model, images):
+    # TODO: this code is generated - need to rewrite
     with torch.no_grad():
         embeddings = model(images).squeeze()
     return embeddings
 
 
 def init_img_index(images):
+    # TODO: this code is generated - need to rewrite
     # Load a pre-trained ResNet model
     model = resnet50(pretrained=True)
     model = torch.nn.Sequential(*list(model.children())[:-1])  # Remove the classification layer
