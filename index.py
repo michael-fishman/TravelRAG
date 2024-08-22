@@ -70,6 +70,7 @@ def upsert_vectors(
         index: Pinecone,
         embeddings: np.ndarray,
         text_items: list,
+        images_formats: list,
         text_field: str = 'Content',
         batch_size: int = 128
 ):
@@ -87,13 +88,13 @@ def upsert_vectors(
     shape = embeddings.shape
 
     ids = [str(i) for i in range(shape[0])]
-    meta = [{text_field: text} for text in text_items]
+    meta = [{text_field: text, 'image_format': img_format} for text, img_format in zip(text_items, images_formats)]
 
     # create list of (id, vector, metadata) tuples to be upserted
     to_upsert = list(zip(ids, embeddings, meta))
 
     for i in tqdm(range(0, shape[0], batch_size)):
-        print(to_upsert)
+        # print(to_upsert)
         i_end = min(i + batch_size, shape[0])
         index.upsert(vectors=to_upsert[i:i_end])
     print("Done!")
@@ -101,11 +102,11 @@ def upsert_vectors(
 
 
 def create_index_and_upsert(rec_num=10):
-    places_names, embeddings = load_and_embedd_dataset(rec_num=rec_num)
+    places_names, images_formats, embeddings = load_and_embedd_dataset(rec_num=rec_num)
     embedding_shape = embeddings.shape[1]
     text_index = init_text_index(TEXT_INDEX_NAME, embedding_shape)
     index = text_index.Index(TEXT_INDEX_NAME)
-    index_upserted = upsert_vectors(index, embeddings, places_names)
+    index_upserted = upsert_vectors(index, embeddings, places_names, images_formats)
     return index_upserted
 
 

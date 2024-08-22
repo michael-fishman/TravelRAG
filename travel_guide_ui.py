@@ -3,6 +3,9 @@ from PIL import Image
 import requests
 from io import BytesIO
 import os
+from embeddings import get_text_query_embeddings
+from index import create_index_and_upsert
+from data import DATASET_PATH
 
 
 # Placeholder function to simulate LLM response and image retrieval
@@ -21,14 +24,36 @@ def identify_location(image):
     return "Paris", generate_itinerary("Paris")
 
 
-def get_image(site_name):
-    # This is a mock function to return a sample image URL
-    images = {
-        "Eiffel Tower": os.path.join('selected_images', 'Paris,_Eiffelturm_--_2014_--_1245.jpg'),
-        "Louvre Museum": os.path.join('selected_images', '320px-Paris_06_2012_Cour_Napoléon_(Palais_du_Louvre)_Panorama_3004.jpg'),
-        "Notre-Dame Cathedral": os.path.join('selected_images', "Paris_75004_Place_de_l'Hôtel-de-Ville_S01_Notre-Dame_remote.jpg")
-    }
-    return images.get(site_name, None)
+def get_image(site_name, index_upserted):
+    query_embedding = get_text_query_embeddings(text_query=site_name)
+    query_result = index_upserted.query(vector=query_embedding, top_k=1,include_metadata=True)
+    # print(query_result)
+    # print(query_result.matches)
+    img_name = query_result.matches[0].metadata['Content']
+    img_format = query_result.matches[0].metadata['image_format']
+    retrieved_image_url = os.path.join(DATASET_PATH, f'{img_name}{img_format}')
+    print(f'site_name = {site_name}, retrieved_image_url = {retrieved_image_url}')
+    return retrieved_image_url
+
+    # # This is a mock function to return a sample image URL
+    # images = {
+    #     "Eiffel Tower": os.path.join('TravelRAG/datasets/images', 'Paris,_Eiffelturm_--_2014_--_1245.jpg'),
+    #     "Louvre Museum": os.path.join('TravelRAG/datasets/images', '320px-Paris_06_2012_Cour_Napoléon_(Palais_du_Louvre)_Panorama_3004.jpg'),
+    #     "Notre-Dame Cathedral": os.path.join('TravelRAG/datasets/images', "Paris_75004_Place_de_l'Hôtel-de-Ville_S01_Notre-Dame_remote.jpg")
+    # }
+    # return images.get(site_name, None)
+
+
+def resize_image_to_max(img, max_size=200):
+    """Resize image to maintain aspect ratio, with max width/height of max_size."""
+    width, height = img.size
+    if width > height:
+        ratio = max_size / float(width)
+        new_size = (max_size, int(height * ratio))
+    else:
+        ratio = max_size / float(height)
+        new_size = (int(width * ratio), max_size)
+    return img.resize(new_size)
 
 
 # UI Layout
@@ -39,6 +64,8 @@ user_input = st.text_input("Enter a city name or upload an image",
                            placeholder="Tell me where you would like to travel or provide me an image of it")
 
 uploaded_image = st.file_uploader("Or upload an image of a tourist site", type=["jpg", "jpeg", "png"])
+# Initialize and upsert data to the index
+index_upserted = create_index_and_upsert(rec_num=370)
 
 if st.button("Generate Itinerary"):
     if user_input:
@@ -49,11 +76,12 @@ if st.button("Generate Itinerary"):
             with col1:
                 st.write(description)
             with col2:
-                image_url = get_image(site)
+                image_url = get_image(site_name=site, index_upserted=index_upserted)
                 if image_url:
                     # response = requests.get(image_url)
                     img = Image.open(image_url)
-                    img = img.resize((150, 150))
+                    # img = img.resize((150, 150))
+                    img = resize_image_to_max(img, 200)
                     st.image(img, caption=site)
 
     elif uploaded_image:

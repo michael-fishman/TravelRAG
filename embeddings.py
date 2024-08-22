@@ -1,3 +1,4 @@
+import numpy as np
 from sentence_transformers import SentenceTransformer
 from data import load_names
 
@@ -22,17 +23,18 @@ def load_and_embedd_dataset(
     print("Loading and embedding the dataset")
 
     # Load the dataset
-    names = load_names()
+    names, formats = load_names()
 
     # Chunk the documents
     used_places_names = names[:rec_num]
+    used_places_formats = formats[:rec_num]
     print(used_places_names)
 
     # Embed the first `rec_num` rows of the dataset
     embeddings = model.encode(used_places_names)
 
     print("Done!")
-    return used_places_names, embeddings
+    return used_places_names, used_places_formats, embeddings
 
 
 def get_img_query_embeddings(img_queries):
@@ -42,8 +44,10 @@ def get_img_query_embeddings(img_queries):
     raise NotImplementedError
 
 
-def get_text_query_embeddings(text_queries):
-    # TODO: complete
-    # (model)
-    # return query_embedding
-    raise NotImplementedError
+def get_text_query_embeddings(
+        text_query: str,
+        model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2'),
+) -> np.array:
+    # query_embedding = model.encode(text_queries)
+    query_embedding = [float(val) for val in list(model.encode(text_query))]
+    return query_embedding

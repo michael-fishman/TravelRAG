@@ -13,14 +13,17 @@ transform = transforms.Compose([
 
 
 def load_names(sample_size=5):
-    images_names = []
+    images_names, images_formats = [], []
     image_paths = [os.path.join(DATASET_PATH, img) for img in os.listdir(DATASET_PATH)]
 
-    for img_path in image_paths[:sample_size]:
+    # for img_path in image_paths[:sample_size]:
+    for img_path in image_paths:
         # extract the image name without the extension
-        img_name = os.path.splitext(os.path.basename(img_path))[0]
+        img_name, img_format = os.path.splitext(os.path.basename(img_path))
         images_names.append(img_name)
-    return images_names
+        images_formats.append(img_format)
+
+    return images_names, images_formats
 
 
 
