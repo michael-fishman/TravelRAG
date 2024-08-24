@@ -9,7 +9,7 @@ from transformers import CLIPProcessor, CLIPModel
 TEXT_INDEX_NAME = "travel-rag-text-index"
 IMAGE_INDEX_NAME = "travel-rag-image-index"
 
-with open("./API_keys/pinecone_api_key.txt") as f:
+with open("../API_keys/pinecone_api_key.txt") as f:
     PINECONE_API_KEY = f.read().strip()
 
 
@@ -62,7 +62,7 @@ def upsert_vectors(
         An updated pinecone index
     """
     print("Upserting the embeddings to the Pinecone index...")
-    shape = embeddings.shape
+    shape = (len(embeddings), len(embeddings[0]))
 
     ids = [str(i) for i in range(shape[0])]
     meta = [{text_field: text, 'image_format': img_format} for text, img_format in zip(text_items, images_formats)]
@@ -79,9 +79,10 @@ def upsert_vectors(
 
 
 def create_index_and_upsert(is_text_index=True, rec_num=10, embedding_model=None):
+    index_name = TEXT_INDEX_NAME if is_text_index else IMAGE_INDEX_NAME
     places_names, images_formats, embeddings = load_and_embedd_dataset(is_text_index=is_text_index, rec_num=rec_num, embedding_model=embedding_model)
-    embedding_shape = embeddings.shape[1]
-    vector_db_index = init_index(TEXT_INDEX_NAME if is_text_index else IMAGE_INDEX_NAME, embedding_shape)
-    vector_db_index = vector_db_index.Index(TEXT_INDEX_NAME)
+    embedding_shape = len(embeddings[0])
+    vector_db_index = init_index(index_name, embedding_shape)
+    vector_db_index = vector_db_index.Index(index_name)
     index_upserted = upsert_vectors(vector_db_index, embeddings, places_names, images_formats)
     return index_upserted

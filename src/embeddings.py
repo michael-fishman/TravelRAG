@@ -9,10 +9,10 @@ processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 
 def load_and_embedd_dataset(
-    split: str = 'train',
-    is_text_index: bool = True,
-    embedding_model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2'),
-    rec_num: int = 2
+        split: str = 'train',
+        is_text_index: bool = True,
+        embedding_model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2'),
+        rec_num: int = 2
 ) -> tuple:
     """
     Load a dataset and embedd the text field using a sentence-transformer model
@@ -48,24 +48,30 @@ def load_and_embedd_dataset(
 
 
 def get_img_embeddings(imgs: list,
-    model=CLIPModel.from_pretrained("openai/clip-vit-base-patch32")) -> np.array:
+                       model=CLIPModel.from_pretrained("openai/clip-vit-base-patch32")) -> list:
     images_embeddings = []
     for img in imgs:
         inputs = processor(images=img, return_tensors="pt")
         with torch.no_grad():
             embeddings = model.get_image_features(**inputs)
-        embeddings = embeddings / embeddings.norm(dim=-1, keepdim=True)
         images_embeddings.append(embeddings)
-    return images_embeddings
+
+    # Concatenate all embeddings into a single tensor
+    embeddings_tensor = torch.cat(images_embeddings, dim=0)
+
+    # Convert the tensor to a NumPy array and then to a list of lists
+    embeddings_list = embeddings_tensor.cpu().numpy().tolist()
+
+    return embeddings_list
 
 
 def get_text_embeddings(
-        texts: str,
+        texts: list,
         model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2'),
-) -> np.array:
-    # query_embedding = model.encode(text_queries)
-    texts_embeddings = []
-    for text in texts:
-        query_embedding = model.encode(text)
-        texts_embeddings.append(float(val) for val in list(query_embedding))
-    return texts_embeddings
+) -> list:
+    texts_embeddings = model.encode(texts)
+
+    # Convert the numpy array to a list of lists of floats
+    embeddings_as_list = [embedding.tolist() for embedding in texts_embeddings]
+
+    return embeddings_as_list

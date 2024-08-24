@@ -1,41 +1,57 @@
 import matplotlib.pyplot as plt
-from src.embeddings import get_img_embeddings, get_text_embeddings
+from PIL import Image
+
+from src.embeddings import get_text_embeddings
+from pinecone import QueryResponse
+
+DATASET_PATH = '../datasets/images/'
 
 
-def retrieve_images(img_index, query_embedding, k):
-    # TODO: this code is generated - need to rewrite
-    query_embedding_np = query_embedding.cpu().numpy().reshape(1, -1)
-    _, indices = img_index.search(query_embedding_np, k)
-    return indices
+def retrieve_neighbors(upserted_index, query_embedding, k=5):
+    query_result: QueryResponse = upserted_index.query(
+        vector=query_embedding,
+        top_k=k,
+        include_metadata=True
+    )
+    # Print the query results
+    print("Query results:")
+    for match in query_result.matches:
+        print(f"ID: {match.id}, Score: {match.score}, Metadata: {match.metadata}")
+    return [match for match in query_result.matches]
 
 
-def retrieve_texts(text_index, query_embedding, k):
-    # TODO: this code is generated - need to rewrite
-    query_embedding_np = query_embedding.cpu().numpy().reshape(1, -1)
-    _, indices = text_index.search(query_embedding_np, k)
-    return indices
+def get_imgs_by_text_indices(matches):
+    images = []
+    for match in matches:
+        img_path = DATASET_PATH + match.metadata.get('Content') + match.metadata.get('image_format')
+        if img_path:
+            img = Image.open(img_path)
+            images.append(img)
+    return images
 
 
-def get_imgs_by_text_indices(text_index, retrieved_indices):
-    # TODO: this code is generated - need to rewrite
-    return [text_index[idx]['image'].permute(1, 2, 0).numpy() for idx in retrieved_indices[0]]
+def get_texts_by_img_indices(matches):
+    texts = []
+    for match in matches:
+        text = match.metadata.get('Content')
+        if text:
+            texts.append(text)
 
-
-def get_texts_by_img_indices(img_index, retrieved_indices):
-    # TODO: this code is generated - need to rewrite
-    return [img_index[idx]['name'] for idx in retrieved_indices[0]]
+    return texts
 
 
 def retrieve_landmarks_images(text_index, landmark_name_queries):
+    retrieved_images = []
     query_embeddings = get_text_embeddings(landmark_name_queries)
-    retrieved_indices = retrieve_texts(text_index, query_embeddings, k=1)
-    retrieved_images = get_imgs_by_text_indices(text_index, retrieved_indices)
+    for query_embedding in query_embeddings:
+        matches = retrieve_neighbors(text_index, query_embedding, k=1)
+        retrieved_images.extend(get_imgs_by_text_indices(matches))
     return retrieved_images
 
 
 def retrieve_landmarks_names(img_index, embedded_img_query):
-    retrieved_indices = retrieve_images(img_index, embedded_img_query, k=1)
-    retrieved_text_vectors = get_texts_by_img_indices(img_index, retrieved_indices)
+    matches = retrieve_neighbors(img_index, embedded_img_query, k=1)
+    retrieved_text_vectors = get_texts_by_img_indices(matches)
     return retrieved_text_vectors
 
 

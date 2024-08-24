@@ -8,22 +8,24 @@ from src.utils import get_start_time, get_end_time
 import numpy as np
 from random import random
 from pinecone import QueryResponse
+from sentence_transformers import SentenceTransformer
+from datetime import datetime
 
 
 # system response pipeline
 def get_RAG_response(request, text_index, id=None):
-    start_time = get_start_time()
+    start_time = datetime.now()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
     retrieved_images = retrieve_landmarks_images(text_index, landmarks_list)
-    end_time = get_end_time()
-    accuracy = evaluate_retrieved_images(retrieved_images, landmarks_list)
+    end_time = datetime.now()
+    # accuracy = evaluate_retrieved_images(retrieved_images, landmarks_list)
     # save results
     results = {
         "id": id,
         "travel_plan": travel_plan,
         "landmarks_list": landmarks_list,
         "images": retrieved_images,
-        "accuracy": accuracy,
+        "accuracy": 0,
         "start_time": start_time,
         "end_time": end_time,
         "response_by": "RAG",
@@ -103,20 +105,13 @@ def eval_pipeline_Use_Case_1():
 def test_pipeline():
     # TODO: move this function to tests folder
     # Initialize and upsert data to the index
-    index_upserted = create_index_and_upsert(rec_num=50)
+    index_upserted = create_index_and_upsert(rec_num=50, embedding_model=SentenceTransformer('all-MiniLM-L6-v2'))
 
     # Simulate a query to the Pinecone index
-    query_embedding = [random() for i in range(384)]  # Random query embedding for testing
-    query_result: QueryResponse = index_upserted.query(
-        vector=query_embedding,
-        top_k=5,
-        include_metadata=True
-    )
+    query_embedding = "Plan a 2 week trip to Italy"  # Random query embedding for testing
 
-    # Print the query results
-    print("Query results:")
-    for match in query_result.matches:
-        print(f"ID: {match.id}, Score: {match.score}, Metadata: {match.metadata}")
+    result = get_RAG_response(query_embedding, index_upserted)
+    print(result)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 from src.data import get_true_images
 import google.generativeai as genai
 
-with open("./API_keys/gemini_api_key.txt") as f:
+with open("../API_keys/gemini_api_key.txt") as f:
     GEMINI_API_KEY = f.read().strip()
 genai.configure(api_key=GEMINI_API_KEY)
 
