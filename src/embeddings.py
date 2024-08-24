@@ -60,7 +60,7 @@ def get_img_embeddings(imgs: list,
 
 
 def get_text_embeddings(
-        texts: str,
+        texts: list,
         model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2'),
 ) -> np.array:
     # query_embedding = model.encode(text_queries)

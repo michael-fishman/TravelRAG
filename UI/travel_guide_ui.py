@@ -3,7 +3,8 @@ from PIL import Image
 import requests
 from io import BytesIO
 import os
-from src.embeddings import get_text_query_embeddings
+from src.embeddings import get_text_embeddings
+from src.retrieve import retrieve_landmarks_images
 from src.index import create_index_and_upsert
 from src.data import DATASET_PATH
 
@@ -25,8 +26,9 @@ def identify_location(image):
 
 
 def get_image(site_name, index_upserted):
-    query_embedding = get_text_query_embeddings(text_query=site_name)
-    query_result = index_upserted.query(vector=query_embedding, top_k=1,include_metadata=True)
+    # query_embedding = get_text_embeddings(texts=[site_name])
+    # query_result = index_upserted.query(vector=query_embedding, top_k=1,include_metadata=True)
+    retrieve_landmarks_images()
     img_name = query_result.matches[0].metadata['Content']
     img_format = query_result.matches[0].metadata['image_format']
     retrieved_image_url = os.path.join(DATASET_PATH, f'{img_name}{img_format}')
