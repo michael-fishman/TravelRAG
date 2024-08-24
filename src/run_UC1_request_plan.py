@@ -1,7 +1,6 @@
 from src.data import load_user_requests
 from src.index import create_index_and_upsert
-from src.prompts import get_travel_plan_prompt
-from src.LLM_answers import get_plan_using_LLM, create_final_travel_plan
+from src.LLM_answers import get_plan_using_LLM
 from src.retrieve import retrieve_landmarks_images
 from src.img_generation import generate_images
 from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
@@ -12,18 +11,16 @@ from pinecone import QueryResponse
 
 
 # system response pipeline
-def get_RAG_response(request, text_index):
+def get_RAG_response(request, text_index, id=None):
     start_time = get_start_time()
-    prompt = get_travel_plan_prompt(request)
-    travel_plan, landmarks_list = get_plan_using_LLM(prompt)
+    travel_plan, landmarks_list = get_plan_using_LLM(request)
     retrieved_images = retrieve_landmarks_images(text_index, landmarks_list)
-    final_travel_plan = create_final_travel_plan(travel_plan, retrieved_images)
     end_time = get_end_time()
     accuracy = evaluate_retrieved_images(retrieved_images, landmarks_list)
     # save results
     results = {
         "id": id,
-        "final_travel_plan": final_travel_plan,
+        "travel_plan": travel_plan,
         "landmarks_list": landmarks_list,
         "images": retrieved_images,
         "accuracy": accuracy,
@@ -36,18 +33,16 @@ def get_RAG_response(request, text_index):
 
 
 # baseline response pipeline
-def get_baseline_response(request):
+def get_baseline_response(request, id=None):
     start_time = get_start_time()
-    prompt = get_travel_plan_prompt(request)
-    travel_plan, landmarks_list = get_plan_using_LLM(prompt)
+    travel_plan, landmarks_list = get_plan_using_LLM(request)
     generated_imgs = generate_images(landmarks_list)
-    final_travel_plan = create_final_travel_plan(travel_plan, generated_imgs)
     end_time = get_end_time()
     accuracy = evaluate_generated_images(generated_imgs, landmarks_list)
     # save results
     results = {
         "id": id,
-        "final_travel_plan": final_travel_plan,
+        "travel_plan": travel_plan,
         "landmarks_list": landmarks_list,
         "images": generated_imgs,
         "accuracy": accuracy,
@@ -60,6 +55,7 @@ def get_baseline_response(request):
 
 
 def load_user_requests():
+    # TODO: there is already a fuction with the same name in src/data.py
     # Simulate loading user requests
     return ["(Venice) Doge's Palace and campanile of St. Mark's Basilica facing the sea.jpg",
             "Petřín Lookout Tower in Prague, 2012.jpg",
@@ -69,6 +65,7 @@ def load_user_requests():
 
 
 def load_and_embedd_dataset(rec_num=10):
+    # TODO: move this function to src/data.py or tests folder
     # Simulate loading and embedding a dataset
     file_names = [
         "(Venice) Doge's Palace and campanile of St. Mark's Basilica facing the sea.jpg",
@@ -86,6 +83,7 @@ def load_and_embedd_dataset(rec_num=10):
 
 
 def eval_pipeline_Use_Case_1():
+    # TODO: implement comparison of RAG and baseline results for Use Case 1
     # User pipeline
     ids, requests = load_user_requests()
     # Prepare Data
@@ -103,6 +101,7 @@ def eval_pipeline_Use_Case_1():
 
 
 def test_pipeline():
+    # TODO: move this function to tests folder
     # Initialize and upsert data to the index
     index_upserted = create_index_and_upsert(rec_num=50)
 

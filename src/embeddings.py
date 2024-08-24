@@ -9,10 +9,10 @@ processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 
 def load_and_embedd_dataset(
-        split: str = 'train',
-        is_text_index: bool = True,
-        embedding_model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2'),
-        rec_num: int = 2
+    split: str = 'train',
+    is_text_index: bool = True,
+    embedding_model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2'),
+    rec_num: int = 2
 ) -> tuple:
     """
     Load a dataset and embedd the text field using a sentence-transformer model
@@ -48,7 +48,7 @@ def load_and_embedd_dataset(
 
 
 def get_img_embeddings(imgs: list,
-                       model=CLIPModel.from_pretrained("openai/clip-vit-base-patch32")) -> np.array:
+    model=CLIPModel.from_pretrained("openai/clip-vit-base-patch32")) -> np.array:
     images_embeddings = []
     for img in imgs:
         inputs = processor(images=img, return_tensors="pt")

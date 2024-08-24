@@ -1,24 +1,22 @@
-from src.data import load_user_requests, load_img_text_dataset
-from src.index import init_img_index
+from src.data import load_user_requests
+from src.index import create_index_and_upsert
+from src.embeddings import get_img_embeddings
 from src.LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_using_RAG
 from src.retrieve import retrieve_landmarks_names
 from src.evaluation import evaluate_landmark_answer, compare_results_Use_Case_2
 from src.utils import get_start_time, get_end_time
 from transformers import CLIPProcessor, CLIPModel
-import torch
 
-model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
-
+# TODO: move these to the relevant functions and not in the global scope
+# model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+# processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 # system response pipeline
-def get_RAG_response(embedded_query, img_index, true_answer=None, id=None):
+def get_RAG_response(img_query, img_index, true_answer=None, id=None, user_name=None):
     start_time = get_start_time()
+    embedded_query = get_img_embeddings(img_query)
     retrieved_answer = retrieve_landmarks_names(img_index, embedded_query)
-    prompt = get_location_recognizer_prompt(embedded_query)
-    full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(prompt, retrieved_answer)
-    retrieved_answer = retrive_landmarks_names(img_index, img_query)
-    full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(img_query, retrieved_answer)
+    full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(retrieved_answer, user_name)
     end_time = get_end_time()
     if true_answer:
         correct = evaluate_landmark_answer(landmark_RAG_answer, true_answer)
@@ -39,9 +37,9 @@ def get_RAG_response(embedded_query, img_index, true_answer=None, id=None):
 
 
 # baseline response pipeline
-def get_baseline_response(img_query, true_answer=None):
+def get_baseline_response(img_query, true_answer=None, user_name=None, id=None):
     start_time = get_start_time()
-    full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(img_query)
+    full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(img_query, user_name)
     end_time = get_end_time()
     if true_answer:
         correct = evaluate_landmark_answer(landmark_LLM_answer, true_answer)
@@ -62,14 +60,12 @@ def get_baseline_response(img_query, true_answer=None):
 
 
 def eval_pipeline_Use_Case_2():
+     # TODO: implement comparison of RAG and baseline results for Use Case 2
     # User pipeline
     ids, requests, true_answers = load_user_requests()
-    # new_requests = load_new_requests() # requests without true answers
 
-    # Prepare Data
-    images = load_images()
     # prepare DB
-    img_index = init_img_index(images)
+    img_index =  create_index_and_upsert(is_text_index=False, rec_num=50)
 
     all_RAG_results = []
     all_baseline_results = []
