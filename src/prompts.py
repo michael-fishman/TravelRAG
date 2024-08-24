@@ -1,4 +1,3 @@
-
 def get_travel_plan_prompt(user_request):
     prompt = (
         "You are an advanced travel planning AI. Your task is to generate a detailed travel itinerary based on the user's request. "
@@ -26,8 +25,9 @@ def get_travel_plan_prompt(user_request):
         "Based on these guidelines, generate a travel itinerary for the following user request:\n"
         f"'{user_request}'"
     )
-    
+
     return prompt
+
 
 def get_location_recognizer_prompt(img_query):
     prompt = (
@@ -39,6 +39,7 @@ def get_location_recognizer_prompt(img_query):
     )
     return [prompt, img_query]
 
+
 def get_prompt_for_creating_full_answer(user_name, landmark):
     landmark_answer_example = (
         "part 1: Hi <name>!\nIt looks like your picture is from <landmark>.\n"
@@ -46,7 +47,7 @@ def get_prompt_for_creating_full_answer(user_name, landmark):
         "part 3: You're also welcome to try our travel planner, TravelRAG, "
         "where you can explore the best images of more landmarks in that country!"
     )
-    
+
     prompt = (
         "You are a creative and knowledgeable AI model. Your task is to generate a personalized message "
         "for a user based on the landmark identified from a photo they uploaded."

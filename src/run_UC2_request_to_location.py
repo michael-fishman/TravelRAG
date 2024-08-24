@@ -6,18 +6,17 @@ from src.retrieve import retrieve_landmarks_names
 from src.evaluation import evaluate_landmark_answer, compare_results_Use_Case_2
 from src.utils import get_start_time, get_end_time
 from transformers import CLIPProcessor, CLIPModel
+from datetime import datetime
+from PIL import Image
 
-# TODO: move these to the relevant functions and not in the global scope
-# model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-# processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 # system response pipeline
 def get_RAG_response(img_query, img_index, true_answer=None, id=None, user_name=None):
-    start_time = get_start_time()
-    embedded_query = get_img_embeddings(img_query)
+    start_time = datetime.now()
+    embedded_query = get_img_embeddings([img_query])[0]
     retrieved_answer = retrieve_landmarks_names(img_index, embedded_query)
     full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(retrieved_answer, user_name)
-    end_time = get_end_time()
+    end_time = datetime.now()
     if true_answer:
         correct = evaluate_landmark_answer(landmark_RAG_answer, true_answer)
     # save results
@@ -27,7 +26,7 @@ def get_RAG_response(img_query, img_index, true_answer=None, id=None, user_name=
         "answer": landmark_RAG_answer,
         "retrieved_answer": retrieved_answer,
         "true_answer": true_answer,
-        "correct": correct,
+        "correct": None,
         "start_time": start_time,
         "end_time": end_time,
         "response_by": "RAG",
@@ -60,12 +59,12 @@ def get_baseline_response(img_query, true_answer=None, user_name=None, id=None):
 
 
 def eval_pipeline_Use_Case_2():
-     # TODO: implement comparison of RAG and baseline results for Use Case 2
+    # TODO: implement comparison of RAG and baseline results for Use Case 2
     # User pipeline
     ids, requests, true_answers = load_user_requests()
 
     # prepare DB
-    img_index =  create_index_and_upsert(is_text_index=False, rec_num=50)
+    img_index = create_index_and_upsert(is_text_index=False, rec_num=50)
 
     all_RAG_results = []
     all_baseline_results = []
@@ -78,18 +77,22 @@ def eval_pipeline_Use_Case_2():
     compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
 
 
-def inference_pipenine_Use_Case_2(img):
+def inference_pipeline_Use_Case_2(img):
+    model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
     # prepare DB
-    img_index = create_index_and_upsert(is_text_index=False, rec_num=50)
-
+    img_index = create_index_and_upsert(is_text_index=False, rec_num=50, embedding_model=model)
     # Embedding
-    query_embedding = get_img_embeddings(img)
-
-    RAG_results = get_RAG_response(query_embedding, img_index)
+    RAG_results = get_RAG_response(img, img_index)
     full_answer = RAG_results["full_answer"]
     retrieved_answer = RAG_results["retrieved_answer"]
     return full_answer, retrieved_answer
 
 
 if __name__ == "__main__":
-    eval_pipeline_Use_Case_2()
+    # eval_pipeline_Use_Case_2()
+    # Run unit test for inference_pipenine_Use_Case_2
+    img = "C:\GitBash\Git\TravelRAG\datasets\images\(Venice)_Doge_s_Palace_and_campanile_of_St._Mark_s_Basilica_facing_the_sea.jpg"
+    # Read image
+    img = Image.open(img)
+    full_answer, retrieved_answer = inference_pipeline_Use_Case_2(img)
+    print(f"Full Answer: {full_answer}")
