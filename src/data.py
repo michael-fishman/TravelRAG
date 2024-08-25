@@ -4,7 +4,7 @@ from PIL import Image
 from torchvision import transforms
 
 # Define the path to your dataset
-DATASET_PATH = '../datasets/images'
+DATASET_PATH = 'datasets/images'
 REQUESTS_PATH = "requests.pkl"
 
 

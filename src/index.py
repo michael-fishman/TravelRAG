@@ -5,11 +5,12 @@ from tqdm import tqdm
 import numpy as np
 from src.embeddings import load_and_embedd_dataset
 from transformers import CLIPProcessor, CLIPModel
+from sentence_transformers import SentenceTransformer
 
 TEXT_INDEX_NAME = "travel-rag-text-index"
 IMAGE_INDEX_NAME = "travel-rag-image-index"
 
-with open("../API_keys/pinecone_api_key.txt") as f:
+with open("./API_keys/pinecone_api_key.txt") as f:
     PINECONE_API_KEY = f.read().strip()
 
 
@@ -78,7 +79,7 @@ def upsert_vectors(
     return index
 
 
-def create_index_and_upsert(is_text_index=True, rec_num=10, embedding_model=None):
+def create_index_and_upsert(is_text_index=True, rec_num=10, embedding_model=SentenceTransformer('all-MiniLM-L6-v2')):
     index_name = TEXT_INDEX_NAME if is_text_index else IMAGE_INDEX_NAME
     places_names, images_formats, embeddings = load_and_embedd_dataset(is_text_index=is_text_index, rec_num=rec_num, embedding_model=embedding_model)
     embedding_shape = len(embeddings[0])
