@@ -6,26 +6,27 @@ from src.img_generation import generate_images
 from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
 from src.utils import get_start_time, get_end_time
 import numpy as np
-from random import random
-from pinecone import QueryResponse
 from sentence_transformers import SentenceTransformer
 from datetime import datetime
 
 
 # system response pipeline
-def get_RAG_response(request, text_index, id=None):
+def get_RAG_response(request, text_index, id=None, eval=False):
     start_time = datetime.now()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
     retrieved_images = retrieve_landmarks_images(text_index, landmarks_list)
     end_time = datetime.now()
-    # accuracy = evaluate_retrieved_images(retrieved_images, landmarks_list)
+    if eval:
+        accuracy = evaluate_retrieved_images(retrieved_images, landmarks_list)
+    else: 
+        accuracy = None
     # save results
     results = {
         "id": id,
         "travel_plan": travel_plan,
         "landmarks_list": landmarks_list,
         "images": retrieved_images,
-        "accuracy": 0,
+        "accuracy": accuracy,
         "start_time": start_time,
         "end_time": end_time,
         "response_by": "RAG",
@@ -35,12 +36,15 @@ def get_RAG_response(request, text_index, id=None):
 
 
 # baseline response pipeline
-def get_baseline_response(request, id=None):
+def get_baseline_response(request, id=None, eval=False):
     start_time = get_start_time()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
     generated_imgs = generate_images(landmarks_list)
     end_time = get_end_time()
-    accuracy = evaluate_generated_images(generated_imgs, landmarks_list)
+    if eval:
+        accuracy = evaluate_generated_images(generated_imgs, landmarks_list)
+    else:
+        accuracy = None
     # save results
     results = {
         "id": id,
@@ -83,7 +87,6 @@ def load_and_embedd_dataset(rec_num=10):
     embeddings = np.random.rand(rec_num, 512)  # Assuming embedding dimension is 512
     return selected_names, embeddings
 
-
 def eval_pipeline_Use_Case_1():
     # TODO: implement comparison of RAG and baseline results for Use Case 1
     # User pipeline
@@ -94,25 +97,28 @@ def eval_pipeline_Use_Case_1():
     all_RAG_results = []
     all_baseline_results = []
     for id, request, true_answer in zip(ids, requests):
-        RAG_results = get_RAG_response(request, text_index, id)
-        baseline_results = get_baseline_response(request, id)
+        RAG_results = get_RAG_response(request, text_index, id, eval=True)
+        baseline_results = get_baseline_response(request, id, eval=True)
         all_RAG_results.append(RAG_results)
         all_baseline_results.append(baseline_results)
 
     compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
 
+def inference_pipeline_Use_Case_1(query):
+    # Prepare DB
+    text_index = create_index_and_upsert(rec_num=50, embedding_model=SentenceTransformer('all-MiniLM-L6-v2'))
+    # Get RAG response
+    RAG_results = get_RAG_response(query, text_index)
+    full_answer = RAG_results["full_answer"]
+    retrieved_answer = RAG_results["retrieved_answer"]
+    return full_answer, retrieved_answer
 
 def test_pipeline():
-    # TODO: move this function to tests folder
-    # Initialize and upsert data to the index
-    index_upserted = create_index_and_upsert(rec_num=50, embedding_model=SentenceTransformer('all-MiniLM-L6-v2'))
-
-    # Simulate a query to the Pinecone index
-    query_embedding = "Plan a 2 week trip to Italy"  # Random query embedding for testing
-
-    result = get_RAG_response(query_embedding, index_upserted)
+    # Query Example
+    query = "Plan a 2 week trip to Italy"
+    # Get Results
+    result = inference_pipeline_Use_Case_1(query)
     print(result)
-
 
 if __name__ == "__main__":
     test_pipeline()
