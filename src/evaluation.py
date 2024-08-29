@@ -7,11 +7,34 @@ with open(GEMINI_KEY_PATH) as f:
     GEMINI_API_KEY = f.read().strip()
 genai.configure(api_key=GEMINI_API_KEY)
 
+def evaluate_landmark_name(predicted_answer, true_answer):    
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+    
+    # Construct the prompt to ask the LLM to evaluate the match between the two landmarks
+    prompt = (
+        f"I have two landmark names. The first is the predicted landmark: '{predicted_answer}'. "
+        f"The second is the true landmark: '{true_answer}'.\n\n"
+        "Please evaluate whether the predicted landmark matches the true landmark. "
+        "Respond with either 'True' or 'False'."
+    )
+    
+    # Generate the evaluation using the LLM)
+    llm_response = model.generate_content(prompt)
+    evaluation = llm_response.text.replace("\n", "").strip()
+    
+    # Ensure the response is either "Correct" or "Incorrect"
+    if "True" in evaluation:
+        return "True"
+    else:
+        return "False"
 
-def evaluate_retrieved_images(retrieved_images, landmarks_list):
-    # TODO: complete
-    # true_images = get_true_images(landmarks_list)
-    raise NotImplementedError
+def evaluate_retrieved_images(retrieved_names, landmarks_list):
+    evaluation = []
+    for retrieved_name, true_name in zip(retrieved_names, landmarks_list):
+        correct = evaluate_landmark_name(retrieved_name, true_name)
+        evaluation.append({"retrieved_name": retrieved_name, "true_name": true_name, "correct": correct})
+    accuracy = sum(evaluation[i]["correct"] == "True" for i in range(len(evaluation))) / len(evaluation)
+    return accuracy, evaluation
 
 def evaluate_generated_images(generated_imgs, landmarks_list):
     model = genai.GenerativeModel(model_name="gemini-1.5-flash")
@@ -56,27 +79,6 @@ def evaluate_generated_images(generated_imgs, landmarks_list):
     # Calculate accuracy
     accuracy = sum(answer.lower() == 'yes' for answer in bool_answers) / len(landmarks_list)
     return accuracy, evaluation
-
-def evaluate_landmark_answer(landmark_RAG_answer, true_answer):    
-    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
-    
-    # Construct the prompt to ask the LLM to evaluate the match between the two landmarks
-    prompt = (
-        f"I have two landmark names. The first is the predicted landmark: '{landmark_RAG_answer}'. "
-        f"The second is the true landmark: '{true_answer}'.\n\n"
-        "Please evaluate whether the predicted landmark matches the true landmark. "
-        "Respond with either 'True' or 'False'."
-    )
-    
-    # Generate the evaluation using the LLM)
-    llm_response = model.generate_content(prompt)
-    evaluation = llm_response.text.replace("\n", "").strip()
-    
-    # Ensure the response is either "Correct" or "Incorrect"
-    if "True" in evaluation:
-        return "True"
-    else:
-        return "False"
 
 def compare_results_Use_Case_1(RAG_results, baseline_results):
     # TODO: complete

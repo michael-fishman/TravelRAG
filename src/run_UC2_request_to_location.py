@@ -3,7 +3,7 @@ from src.index import create_index_and_upsert
 from src.embeddings import get_img_embeddings
 from src.LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_using_RAG
 from src.retrieve import retrieve_landmarks_names
-from src.evaluation import evaluate_landmark_answer, compare_results_Use_Case_2
+from src.evaluation import evaluate_landmark_name, compare_results_Use_Case_2
 from src.utils import get_start_time, get_end_time
 from transformers import CLIPModel
 from datetime import datetime
@@ -18,7 +18,7 @@ def get_RAG_response(img_query, img_index, true_answer=None, id=None, user_name=
     full_answer, landmark_RAG_answer = get_landmark_answer_using_RAG(retrieved_answer, user_name)
     end_time = datetime.now()
     if eval:
-        correct = evaluate_landmark_answer(landmark_RAG_answer, true_answer)
+        correct = evaluate_landmark_name(landmark_RAG_answer, true_answer)
     else:
         correct = None
     # save results
@@ -43,7 +43,7 @@ def get_baseline_response(img_query, true_answer=None, user_name=None, id=None, 
     full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(img_query, user_name)
     end_time = get_end_time()
     if eval:
-        correct = evaluate_landmark_answer(landmark_LLM_answer, true_answer)
+        correct = evaluate_landmark_name(landmark_LLM_answer, true_answer)
     else:
         correct = None
     # save results

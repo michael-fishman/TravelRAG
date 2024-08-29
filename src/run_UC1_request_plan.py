@@ -14,10 +14,10 @@ from datetime import datetime
 def get_RAG_response(request, text_index, id=None, eval=False):
     start_time = datetime.now()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
-    retrieved_images = retrieve_landmarks_images(text_index, landmarks_list)
+    retrieved_images, retrieved_names = retrieve_landmarks_images(text_index, landmarks_list, return_names=True)
     end_time = datetime.now()
     if eval:
-        accuracy, evaluation = evaluate_retrieved_images(retrieved_images, landmarks_list)
+        accuracy, evaluation = evaluate_retrieved_images(x, landmarks_list)
     else: 
         accuracy, evaluation = None
     # save results
