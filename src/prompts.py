@@ -34,7 +34,7 @@ def get_location_recognizer_prompt(img_query):
         "You are an advanced AI model specialized in recognizing and identifying landmarks and famous places from images. "
         "Analyze the image provided and return **only** the name of the most likely landmark or location depicted in the image. "
         "Do not provide any additional information, descriptions, or explanations."
-        "The final answe should be retuned in the following dict format {'name': landmark_name, 'location': landmark_location}."
+        "The final answer should be returned in the following dict format {'name': landmark_name, 'location': landmark_location}."
         "Here is the image:\n"
     )
     return [prompt, img_query]
