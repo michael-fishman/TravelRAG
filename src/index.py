@@ -6,11 +6,15 @@ import numpy as np
 from src.embeddings import load_and_embedd_dataset
 from transformers import CLIPProcessor, CLIPModel
 from sentence_transformers import SentenceTransformer
+import os
 
 TEXT_INDEX_NAME = "travel-rag-text-index"
 IMAGE_INDEX_NAME = "travel-rag-image-index"
 
-with open("./API_keys/pinecone_api_key.txt") as f:
+
+current_dir = os.path.dirname(__file__)
+PINECONE_KEY_PATH = os.path.join(current_dir, 'API_keys', 'pinecone_api_key.txt')
+with open(PINECONE_KEY_PATH) as f:
     PINECONE_API_KEY = f.read().strip()
 
 

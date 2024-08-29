@@ -4,12 +4,14 @@ from PIL import Image
 from torchvision import transforms
 
 # Define the path to your dataset
-DATASET_PATH = 'datasets/images'
-REQUESTS_PATH = "requests.pkl"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+DATASET_PATH = os.path.join(current_dir, '../datasets/images')
+REQUESTS_PATH = os.path.join(current_dir, "requests.pkl")
 
 
 def load_names(sample_size=5):
     images_names, images_formats = [], []
+    print(f"Data set path is: {DATASET_PATH}")
     image_paths = [os.path.join(DATASET_PATH, img) for img in os.listdir(DATASET_PATH)]
 
     # for img_path in image_paths[:sample_size]:

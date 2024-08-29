@@ -85,10 +85,13 @@ with st.form(key='travel_form'):
 
 # if st.button("Generate Itinerary"):
 if submit_button:
-    if text_index_upserted is None:
-        # Initialize and upsert data to the index
-        text_index_upserted = create_index_and_upsert(rec_num=370, is_text_index=True)
     if user_input:
+        if text_index_upserted is None:
+            # Initialize and upsert data to the index
+            print("#" * 50)
+            print("Upserting text index")
+            print("#" * 50)
+            text_index_upserted = create_index_and_upsert(rec_num=370, is_text_index=True)
         st.subheader(f"Here is the itinerary:")
         results_dict = get_RAG_response_UC1(request=user_input, text_index=text_index_upserted)
         travel_plan_dict, retreived_images = results_dict.get('travel_plan'), results_dict.get('images')
@@ -110,18 +113,9 @@ if submit_button:
         # st.image(image, caption="Uploaded Image", use_column_width=True)
         # city_name, itinerary = identify_location(image)
         st.subheader(f"Here is the itinerary:")
-        results_dict = get_RAG_response_UC2(img_query=image, img_index=text_index_upserted)
-        travel_plan_dict, retreived_images = results_dict.get('travel_plan'), results_dict.get('images')
-        days, landmarks, descriptions = travel_plan_dict.get('days'), travel_plan_dict.get(
-            'landmarks'), travel_plan_dict.get('descriptions')
-        for day, landmark, description, img in zip(days, landmarks, descriptions, retreived_images):
-            col1, col2 = st.columns([2, 1])  # 2:1 ratio for text and image columns
-            with col1:
-                st.write(f'Day {day}: {description}')
-            with col2:
-                print(f'landmark = {landmark}, img.filename = {img.filename}')
-                img = resize_image_to_max(img, 200)
-                st.image(img, caption=landmark)
+        results_dict = get_RAG_response_UC2(img_query=image, img_index=img_index_upserted)
+        full_answer = results_dict.get('full_answer')
+        st.write(full_answer)
     else:
         st.error("Please enter a city name or upload an image.")
 

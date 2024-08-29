@@ -5,8 +5,8 @@ import google.generativeai as genai
 from src.prompts import get_location_recognizer_prompt
 import json
 
-print(f'cwd = {os.getcwd()}')
-GEMINI_KEY_PATH = os.path.join('API_keys', 'gemini_api_key.txt')
+current_dir = os.path.dirname(__file__)
+GEMINI_KEY_PATH = os.path.join(current_dir, 'API_keys', 'gemini_api_key.txt')
 # with open("./API_keys/gemini_api_key.txt") as f:
 with open(GEMINI_KEY_PATH) as f:
     GEMINI_API_KEY = f.read().strip()

@@ -30,9 +30,11 @@ def load_and_embedd_dataset(
     # Load the dataset
     if is_text_index:
         names, formats = load_names()
+        embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
     else:
         images, names, formats = load_images()
         images = images[:rec_num]
+        embedding_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
     used_places_names = names[:rec_num]
     used_places_formats = formats[:rec_num]
     print(used_places_names)
