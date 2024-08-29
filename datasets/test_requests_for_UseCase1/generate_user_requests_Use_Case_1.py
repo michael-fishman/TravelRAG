@@ -20,7 +20,7 @@ for i in range(100):
     requests.append({"user_request": user_request, "destination": destination})
 
 # Write the requests to a CSV file
-csv_file = "travel_requests.csv"
+csv_file = "datasets/test_requests_for_UseCase1/travel_requests.csv"
 with open(csv_file, mode='w', newline='') as file:
     writer = csv.DictWriter(file, fieldnames=["user_request", "destination"])
     writer.writeheader()
