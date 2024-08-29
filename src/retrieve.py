@@ -3,8 +3,10 @@ from PIL import Image
 
 from src.embeddings import get_text_embeddings
 from pinecone import QueryResponse
+import os
 
-DATASET_PATH = './datasets/images/'
+current_dir = os.path.dirname(os.path.abspath(__file__))
+DATASET_PATH = os.path.join(current_dir, '../datasets/images/')
 
 
 def retrieve_neighbors(upserted_index, query_embedding, k=5):
@@ -40,14 +42,18 @@ def get_texts_by_img_indices(matches):
     return texts
 
 
-def retrieve_landmarks_images(text_index, landmark_name_queries):
-    retrieved_images = []
+def retrieve_landmarks_images(text_index, landmark_name_queries, return_names=False):
+    retrieved_images, images_names = [], []
     print(f'landmark_name_queries = {landmark_name_queries}')
     query_embeddings = get_text_embeddings(landmark_name_queries)
     for query_embedding in query_embeddings:
         matches = retrieve_neighbors(text_index, query_embedding, k=1)
+        images_names.extend([match.metadata.get('Content') for match in matches])
         retrieved_images.extend(get_imgs_by_text_indices(matches))
-    return retrieved_images
+    if return_names:
+        return retrieved_images, images_names
+    else:
+        return retrieved_images
 
 
 def retrieve_landmarks_names(img_index, embedded_img_query):

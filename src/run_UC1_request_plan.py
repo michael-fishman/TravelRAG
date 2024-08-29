@@ -109,16 +109,16 @@ def inference_pipeline_Use_Case_1(query):
     text_index = create_index_and_upsert(rec_num=50, embedding_model=SentenceTransformer('all-MiniLM-L6-v2'))
     # Get RAG response
     RAG_results = get_RAG_response(query, text_index)
-    full_answer = RAG_results["full_answer"]
-    retrieved_answer = RAG_results["retrieved_answer"]
-    return full_answer, retrieved_answer
+    travel_plan = RAG_results["travel_plan"]
+    images = RAG_results['images']
+    return travel_plan, images
 
 def test_pipeline():
     # Query Example
     query = "Plan a 2 week trip to Italy"
     # Get Results
-    result = inference_pipeline_Use_Case_1(query)
-    print(result)
+    travel_plan, images_list = inference_pipeline_Use_Case_1(query)
+    print(travel_plan)
 
 if __name__ == "__main__":
     test_pipeline()
