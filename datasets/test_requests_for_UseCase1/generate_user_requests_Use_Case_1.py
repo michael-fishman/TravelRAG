@@ -2,14 +2,12 @@ import csv
 
 # Define a list of example destinations and durations
 destinations = [
-    "Amsterdam", "Paris", "Tokyo", "New York", "London", "Rome", "Sydney",
-    "Berlin", "Barcelona", "Dubai", "Moscow", "Los Angeles", "Toronto",
-    "Vienna", "Bangkok", "Singapore", "Istanbul", "Prague", "Seoul", "Madrid"
+    "Amsterdam", "Paris", "Tokyo", "New York", "London", "Italy", "Holland",
+    "Berlin", "Madrid", "Brussels", "Budapest", "Munich", "Lisbon", "Russia",
+    "Greece"
 ]
 
-durations = [
-    "2 weeks", "1 week", "10 days", "5 days", "3 days", "a weekend", "4 days"
-]
+durations = ["1 week", "a weekend"]
 
 # Generate 100 requests
 requests = []
