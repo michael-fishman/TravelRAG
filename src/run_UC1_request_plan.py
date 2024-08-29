@@ -17,9 +17,9 @@ def get_RAG_response(request, text_index, id=None, eval=False):
     retrieved_images = retrieve_landmarks_images(text_index, landmarks_list)
     end_time = datetime.now()
     if eval:
-        accuracy = evaluate_retrieved_images(retrieved_images, landmarks_list)
+        accuracy, evaluation = evaluate_retrieved_images(retrieved_images, landmarks_list)
     else: 
-        accuracy = None
+        accuracy, evaluation = None
     # save results
     results = {
         "id": id,
@@ -27,6 +27,7 @@ def get_RAG_response(request, text_index, id=None, eval=False):
         "landmarks_list": landmarks_list,
         "images": retrieved_images,
         "accuracy": accuracy,
+        "evaluation": evaluation,
         "start_time": start_time,
         "end_time": end_time,
         "response_by": "RAG",

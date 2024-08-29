@@ -1,4 +1,3 @@
-import numpy as np
 from sentence_transformers import SentenceTransformer
 from src.data import load_names, load_images
 from transformers import CLIPProcessor, CLIPModel
