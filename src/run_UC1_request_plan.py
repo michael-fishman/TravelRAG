@@ -3,7 +3,7 @@ from src.index import create_index_and_upsert
 from src.LLM_answers import get_plan_using_LLM
 from src.retrieve import retrieve_landmarks_images
 from src.img_generation import generate_images
-from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
+from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1, save_results
 from src.utils import get_start_time, get_end_time
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -103,6 +103,7 @@ def eval_pipeline_Use_Case_1():
         all_RAG_results.append(RAG_results)
         all_baseline_results.append(baseline_results)
 
+    save_results(RAG_results, baseline_results)
     compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
 
 def inference_pipeline_Use_Case_1(query):
