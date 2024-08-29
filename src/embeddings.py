@@ -48,7 +48,7 @@ def load_and_embedd_dataset(
 
 
 def get_img_embeddings(imgs: list,
-                       model=CLIPModel.from_pretrained("openai/clip-vit-base-patch32")) -> list:
+    model=CLIPModel.from_pretrained("openai/clip-vit-base-patch32")) -> list:
     images_embeddings = []
     for img in imgs:
         inputs = processor(images=img, return_tensors="pt")
