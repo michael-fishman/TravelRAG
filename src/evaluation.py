@@ -73,7 +73,7 @@ def evaluate_landmark_answer(landmark_RAG_answer, true_answer):
     evaluation = llm_response.text.replace("\n", "").strip()
     
     # Ensure the response is either "Correct" or "Incorrect"
-    if "Correct" in evaluation:
+    if "True" in evaluation:
         return "True"
     else:
         return "False"
