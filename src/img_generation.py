@@ -38,7 +38,7 @@ if __name__ == "__main__":
     display_img(generated_image)
 
     # TODO: change example here
-    landmarks_list_example = ["Amsterdam"]
-    generated_imgs = generate_images(landmarks_list_example)
-    for img in generated_imgs:
-        display_img(img)
+    # landmarks_list_example = ["Amsterdam"]
+    # generated_imgs = generate_images(landmarks_list_example)
+    # for img in generated_imgs:
+    #     display_img(img)
