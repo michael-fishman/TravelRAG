@@ -1,4 +1,4 @@
-from src.data import load_user_requests
+from src.data import load_user_requests_Use_Case_1
 from src.index import create_index_and_upsert
 from src.LLM_answers import get_plan_using_LLM
 from src.retrieve import retrieve_landmarks_images
@@ -92,20 +92,20 @@ def load_and_embedd_dataset(rec_num=10):
 def eval_pipeline_Use_Case_1():
     # TODO: implement comparison of RAG and baseline results for Use Case 1
     # User pipeline
-    ids, requests = load_user_requests()
+    ids, requests = load_user_requests_Use_Case_1()
     # Prepare Data
     text_index = create_index_and_upsert(rec_num=50)
 
     all_RAG_results = []
     all_baseline_results = []
-    for id, request, true_answer in zip(ids, requests):
+    for id, request in zip(ids, requests):
         RAG_results = get_RAG_response(request, text_index, id, eval=True)
         baseline_results = get_baseline_response(request, id, eval=True)
         save_results_Use_Case_1(RAG_results, baseline_results)
         all_RAG_results.append(RAG_results)
         all_baseline_results.append(baseline_results)
 
-    compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
+    # compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
 
 def inference_pipeline_Use_Case_1(query):
     # Prepare DB

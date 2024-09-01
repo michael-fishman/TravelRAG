@@ -78,7 +78,7 @@ def eval_pipeline_Use_Case_2():
         all_RAG_results.append(RAG_results)
         all_baseline_results.append(baseline_results)
 
-    compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
+    # compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
 
 def inference_pipeline_Use_Case_2(img):
     model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
