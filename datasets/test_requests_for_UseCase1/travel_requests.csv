@@ -1,101 +1,101 @@
-user_request,destination
-Give me a plan for 2 weeks to Amsterdam,Amsterdam
-Give me a plan for 1 week to Paris,Paris
-Give me a plan for 10 days to Tokyo,Tokyo
-Give me a plan for 5 days to New York,New York
-Give me a plan for 3 days to London,London
-Give me a plan for a weekend to Rome,Rome
-Give me a plan for 4 days to Sydney,Sydney
-Give me a plan for 2 weeks to Berlin,Berlin
-Give me a plan for 1 week to Barcelona,Barcelona
-Give me a plan for 10 days to Dubai,Dubai
-Give me a plan for 5 days to Moscow,Moscow
-Give me a plan for 3 days to Los Angeles,Los Angeles
-Give me a plan for a weekend to Toronto,Toronto
-Give me a plan for 4 days to Vienna,Vienna
-Give me a plan for 2 weeks to Bangkok,Bangkok
-Give me a plan for 1 week to Singapore,Singapore
-Give me a plan for 10 days to Istanbul,Istanbul
-Give me a plan for 5 days to Prague,Prague
-Give me a plan for 3 days to Seoul,Seoul
-Give me a plan for a weekend to Madrid,Madrid
-Give me a plan for 4 days to Amsterdam,Amsterdam
-Give me a plan for 2 weeks to Paris,Paris
-Give me a plan for 1 week to Tokyo,Tokyo
-Give me a plan for 10 days to New York,New York
-Give me a plan for 5 days to London,London
-Give me a plan for 3 days to Rome,Rome
-Give me a plan for a weekend to Sydney,Sydney
-Give me a plan for 4 days to Berlin,Berlin
-Give me a plan for 2 weeks to Barcelona,Barcelona
-Give me a plan for 1 week to Dubai,Dubai
-Give me a plan for 10 days to Moscow,Moscow
-Give me a plan for 5 days to Los Angeles,Los Angeles
-Give me a plan for 3 days to Toronto,Toronto
-Give me a plan for a weekend to Vienna,Vienna
-Give me a plan for 4 days to Bangkok,Bangkok
-Give me a plan for 2 weeks to Singapore,Singapore
-Give me a plan for 1 week to Istanbul,Istanbul
-Give me a plan for 10 days to Prague,Prague
-Give me a plan for 5 days to Seoul,Seoul
-Give me a plan for 3 days to Madrid,Madrid
-Give me a plan for a weekend to Amsterdam,Amsterdam
-Give me a plan for 4 days to Paris,Paris
-Give me a plan for 2 weeks to Tokyo,Tokyo
-Give me a plan for 1 week to New York,New York
-Give me a plan for 10 days to London,London
-Give me a plan for 5 days to Rome,Rome
-Give me a plan for 3 days to Sydney,Sydney
-Give me a plan for a weekend to Berlin,Berlin
-Give me a plan for 4 days to Barcelona,Barcelona
-Give me a plan for 2 weeks to Dubai,Dubai
-Give me a plan for 1 week to Moscow,Moscow
-Give me a plan for 10 days to Los Angeles,Los Angeles
-Give me a plan for 5 days to Toronto,Toronto
-Give me a plan for 3 days to Vienna,Vienna
-Give me a plan for a weekend to Bangkok,Bangkok
-Give me a plan for 4 days to Singapore,Singapore
-Give me a plan for 2 weeks to Istanbul,Istanbul
-Give me a plan for 1 week to Prague,Prague
-Give me a plan for 10 days to Seoul,Seoul
-Give me a plan for 5 days to Madrid,Madrid
-Give me a plan for 3 days to Amsterdam,Amsterdam
-Give me a plan for a weekend to Paris,Paris
-Give me a plan for 4 days to Tokyo,Tokyo
-Give me a plan for 2 weeks to New York,New York
-Give me a plan for 1 week to London,London
-Give me a plan for 10 days to Rome,Rome
-Give me a plan for 5 days to Sydney,Sydney
-Give me a plan for 3 days to Berlin,Berlin
-Give me a plan for a weekend to Barcelona,Barcelona
-Give me a plan for 4 days to Dubai,Dubai
-Give me a plan for 2 weeks to Moscow,Moscow
-Give me a plan for 1 week to Los Angeles,Los Angeles
-Give me a plan for 10 days to Toronto,Toronto
-Give me a plan for 5 days to Vienna,Vienna
-Give me a plan for 3 days to Bangkok,Bangkok
-Give me a plan for a weekend to Singapore,Singapore
-Give me a plan for 4 days to Istanbul,Istanbul
-Give me a plan for 2 weeks to Prague,Prague
-Give me a plan for 1 week to Seoul,Seoul
-Give me a plan for 10 days to Madrid,Madrid
-Give me a plan for 5 days to Amsterdam,Amsterdam
-Give me a plan for 3 days to Paris,Paris
-Give me a plan for a weekend to Tokyo,Tokyo
-Give me a plan for 4 days to New York,New York
-Give me a plan for 2 weeks to London,London
-Give me a plan for 1 week to Rome,Rome
-Give me a plan for 10 days to Sydney,Sydney
-Give me a plan for 5 days to Berlin,Berlin
-Give me a plan for 3 days to Barcelona,Barcelona
-Give me a plan for a weekend to Dubai,Dubai
-Give me a plan for 4 days to Moscow,Moscow
-Give me a plan for 2 weeks to Los Angeles,Los Angeles
-Give me a plan for 1 week to Toronto,Toronto
-Give me a plan for 10 days to Vienna,Vienna
-Give me a plan for 5 days to Bangkok,Bangkok
-Give me a plan for 3 days to Singapore,Singapore
-Give me a plan for a weekend to Istanbul,Istanbul
-Give me a plan for 4 days to Prague,Prague
-Give me a plan for 2 weeks to Seoul,Seoul
-Give me a plan for 1 week to Madrid,Madrid
+Continent,Country,Plan Request
+Africa,Morocco,Give me a plan for a weekend to Morocco
+Africa,Nigeria,Give me a plan for 1 week to Nigeria
+Africa,Nigeria,Give me a plan for 1 week to Nigeria
+Africa,Nigeria,Give me a plan for a weekend to Nigeria
+Africa,South Africa,Give me a plan for 1 week to South Africa
+Africa,Tanzania,Give me a plan for 1 week to Tanzania
+Asia,China,Give me a plan for 1 week to China
+Asia,China,Give me a plan for a weekend to China
+Asia,China,Give me a plan for 1 week to China
+Asia,China,Give me a plan for 1 week to China
+Asia,India,Give me a plan for 1 week to India
+Asia,India,Give me a plan for a weekend to India
+Asia,Indonesia,Give me a plan for 1 week to Indonesia
+Asia,Indonesia,Give me a plan for 1 week to Indonesia
+Asia,Israel,Give me a plan for 1 week to Israel
+Asia,Israel,Give me a plan for a weekend to Israel
+Asia,Japan,Give me a plan for a weekend to Japan
+Asia,Japan,Give me a plan for a weekend to Japan
+Asia,Thailand,Give me a plan for 1 week to Thailand
+Asia,Thailand,Give me a plan for 1 week to Thailand
+Asia,Turkey,Give me a plan for 1 week to Turkey
+Asia,Turkey,Give me a plan for 1 week to Turkey
+Asia,Turkey,Give me a plan for a weekend to Turkey
+Asia,Vietnam,Give me a plan for a weekend to Vietnam
+Asia,Vietnam,Give me a plan for a weekend to Vietnam
+Europe,Austria,Give me a plan for a weekend to Austria
+Europe,Austria,Give me a plan for 1 week to Austria
+Europe,Belgium,Give me a plan for a weekend to Belgium
+Europe,Belgium,Give me a plan for a weekend to Belgium
+Europe,Belgium,Give me a plan for 1 week to Belgium
+Europe,Belgium,Give me a plan for a weekend to Belgium
+Europe,Croatia,Give me a plan for 1 week to Croatia
+Europe,Czech Republic,Give me a plan for 1 week to Czech Republic
+Europe,Denmark,Give me a plan for 1 week to Denmark
+Europe,Denmark,Give me a plan for a weekend to Denmark
+Europe,Denmark,Give me a plan for 1 week to Denmark
+Europe,Estonia,Give me a plan for 1 week to Estonia
+Europe,France,Give me a plan for 1 week to France
+Europe,France,Give me a plan for a weekend to France
+Europe,France,Give me a plan for a weekend to France
+Europe,Germany,Give me a plan for a weekend to Germany
+Europe,Germany,Give me a plan for 1 week to Germany
+Europe,Germany,Give me a plan for 1 week to Germany
+Europe,Germany,Give me a plan for 1 week to Germany
+Europe,Germany,Give me a plan for a weekend to Germany
+Europe,Hungary,Give me a plan for 1 week to Hungary
+Europe,Iceland,Give me a plan for 1 week to Iceland
+Europe,Iceland,Give me a plan for a weekend to Iceland
+Europe,Ireland,Give me a plan for 1 week to Ireland
+Europe,Ireland,Give me a plan for 1 week to Ireland
+Europe,Ireland,Give me a plan for 1 week to Ireland
+Europe,Italy,Give me a plan for a weekend to Italy
+Europe,Italy,Give me a plan for a weekend to Italy
+Europe,Italy,Give me a plan for a weekend to Italy
+Europe,Italy,Give me a plan for a weekend to Italy
+Europe,Italy,Give me a plan for 1 week to Italy
+Europe,Italy,Give me a plan for a weekend to Italy
+Europe,Italy,Give me a plan for 1 week to Italy
+Europe,Netherlands,Give me a plan for 1 week to Netherlands
+Europe,Netherlands,Give me a plan for a weekend to Netherlands
+Europe,Netherlands,Give me a plan for 1 week to Netherlands
+Europe,Poland,Give me a plan for 1 week to Poland
+Europe,Poland,Give me a plan for a weekend to Poland
+Europe,Russia,Give me a plan for 1 week to Russia
+Europe,Slovenia,Give me a plan for a weekend to Slovenia
+Europe,Slovenia,Give me a plan for 1 week to Slovenia
+Europe,Spain,Give me a plan for 1 week to Spain
+Europe,Spain,Give me a plan for a weekend to Spain
+Europe,Spain,Give me a plan for a weekend to Spain
+Europe,Spain,Give me a plan for 1 week to Spain
+Europe,Spain,Give me a plan for a weekend to Spain
+Europe,Spain,Give me a plan for a weekend to Spain
+Europe,Sweden,Give me a plan for a weekend to Sweden
+Europe,Switzerland,Give me a plan for a weekend to Switzerland
+Europe,Switzerland,Give me a plan for a weekend to Switzerland
+Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
+Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
+Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
+Europe,United Kingdom,Give me a plan for 1 week to United Kingdom
+Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
+North America,Mexico,Give me a plan for a weekend to Mexico
+North America,Mexico,Give me a plan for a weekend to Mexico
+North America,Mexico,Give me a plan for 1 week to Mexico
+North America,USA,Give me a plan for 1 week to USA
+North America,USA,Give me a plan for a weekend to USA
+North America,USA,Give me a plan for 1 week to USA
+North America,USA,Give me a plan for 1 week to USA
+North America,USA,Give me a plan for a weekend to USA
+North America,USA,Give me a plan for 1 week to USA
+North America,USA,Give me a plan for 1 week to USA
+North America,USA,Give me a plan for a weekend to USA
+Oceania,Australia,Give me a plan for a weekend to Australia
+South America,Argentina,Give me a plan for a weekend to Argentina
+South America,Brazil,Give me a plan for 1 week to Brazil
+South America,Peru,Give me a plan for a weekend to Peru
+South America,Peru,Give me a plan for 1 week to Peru
+South America,Peru,Give me a plan for a weekend to Peru
+South America,Peru,Give me a plan for a weekend to Peru
+South America,Peru,Give me a plan for a weekend to Peru
+South America,Peru,Give me a plan for a weekend to Peru
