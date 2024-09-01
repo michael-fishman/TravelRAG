@@ -1,13 +1,12 @@
 import os
-
+import pandas as pd
 from PIL import Image
-from torchvision import transforms
 
 # Define the path to your dataset
 current_dir = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(current_dir, '../datasets/images')
-REQUESTS_PATH = os.path.join(current_dir, "requests.pkl")
-
+DATASET_PATH = 'src/datasets/images'
+TRAVEL_REQUESTS_PATH = 'src/datasets/test_requests_for_UseCase1/travel_requests.csv'
+IMAGES_TO_IDENTIFY_PATH = 'src/datasets/test_images_for_UseCase2/images'
 
 def load_names(sample_size=5):
     images_names, images_formats = [], []
@@ -38,11 +37,24 @@ def load_images():
     return images, images_names, images_formats
 
 
-def load_user_requests(requests_path):
-    # TODO: complete
-    raise NotImplementedError
+def load_user_requests_Use_Case_1():
+    df = pd.read_csv(TRAVEL_REQUESTS_PATH)
+    df["id"] = df.index
+    return df['id'].to_list(), df['Plan Request'].to_list()
+    
+def load_user_requests_Use_Case_2():
+    images, images_names, images_formats, ids = [], [], [], []
+    image_paths = [os.path.join(IMAGES_TO_IDENTIFY_PATH, img) for img in os.listdir(IMAGES_TO_IDENTIFY_PATH)]
 
+    for i, img_path in enumerate(image_paths):
+        img = Image.open(img_path)
+        img_name, img_format = os.path.splitext(os.path.basename(img_path))
+        images.append(img)
+        images_names.append(img_name)
+        images_formats.append(img_format)
+        ids.append(i)
+    
+    return ids, images, images_names
 
-def get_true_images(landmarks_list):
-    # TODO: complete
-    raise NotImplementedError
+if __name__ == "__main__":
+    load_user_requests_Use_Case_1()
