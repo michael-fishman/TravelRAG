@@ -17,6 +17,8 @@ def load_names(sample_size=5):
     for img_path in image_paths:
         # extract the image name without the extension
         img_name, img_format = os.path.splitext(os.path.basename(img_path))
+        if img_format == ".avif":
+            print(img_name)
         images_names.append(img_name)
         images_formats.append(img_format)
 
@@ -57,4 +59,6 @@ def load_user_requests_Use_Case_2():
     return ids, images, images_names
 
 if __name__ == "__main__":
-    load_user_requests_Use_Case_1()
+    # load_user_requests_Use_Case_1()
+    # load_user_requests_Use_Case_2()
+    load_names()
