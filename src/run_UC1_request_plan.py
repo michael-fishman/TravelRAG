@@ -3,7 +3,7 @@ from src.index import create_index_and_upsert
 from src.LLM_answers import get_plan_using_LLM
 from src.retrieve import retrieve_landmarks_images
 from src.img_generation import generate_images
-from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1, save_results
+from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1, save_results_Use_Case_1
 from src.utils import get_start_time, get_end_time
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -43,7 +43,7 @@ def get_baseline_response(request, id=None, eval=False):
     generated_imgs = generate_images(landmarks_list)
     end_time = get_end_time()
     if eval:
-        accuracy = evaluate_generated_images(generated_imgs, landmarks_list)
+        accuracy, evaluation = evaluate_generated_images(generated_imgs, landmarks_list)
     else:
         accuracy = None
     # save results
@@ -53,6 +53,7 @@ def get_baseline_response(request, id=None, eval=False):
         "landmarks_list": landmarks_list,
         "images": generated_imgs,
         "accuracy": accuracy,
+        "evaluation": evaluation,
         "start_time": start_time,
         "end_time": end_time,
         "response_by": "Generative Model",
@@ -100,10 +101,10 @@ def eval_pipeline_Use_Case_1():
     for id, request, true_answer in zip(ids, requests):
         RAG_results = get_RAG_response(request, text_index, id, eval=True)
         baseline_results = get_baseline_response(request, id, eval=True)
+        save_results_Use_Case_1(RAG_results, baseline_results)
         all_RAG_results.append(RAG_results)
         all_baseline_results.append(baseline_results)
 
-    save_results(RAG_results, baseline_results)
     compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
 
 def inference_pipeline_Use_Case_1(query):
