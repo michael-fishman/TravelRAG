@@ -69,14 +69,10 @@ def eval_pipeline_Use_Case_2():
     # prepare DB
     img_index = create_index_and_upsert(is_text_index=False, rec_num=50)
 
-    all_RAG_results = []
-    all_baseline_results = []
     for id, request, true_answer in zip(ids, requests, true_answers):
         RAG_results = get_RAG_response(request, img_index, true_answer, id, eval=True)
         baseline_results = get_baseline_response(request, true_answer, id, eval=True)
         save_results_Use_Case_2(RAG_results, baseline_results)
-        all_RAG_results.append(RAG_results)
-        all_baseline_results.append(baseline_results)
 
     # compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
 
