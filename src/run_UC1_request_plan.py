@@ -90,7 +90,6 @@ def load_and_embedd_dataset(rec_num=10):
     return selected_names, embeddings
 
 def eval_pipeline_Use_Case_1():
-    # TODO: implement comparison of RAG and baseline results for Use Case 1
     # User pipeline
     ids, requests = load_user_requests_Use_Case_1()
     # Prepare Data
@@ -102,6 +101,7 @@ def eval_pipeline_Use_Case_1():
         save_results_Use_Case_1(RAG_results, baseline_results)
 
     # compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
+    # TODO: implement comparison of RAG and baseline results for Use Case 1
 
 def inference_pipeline_Use_Case_1(query):
     # Prepare DB
