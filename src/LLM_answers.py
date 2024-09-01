@@ -1,8 +1,6 @@
 import os.path
-
-from src.prompts import get_travel_plan_prompt, get_prompt_for_creating_full_answer
+from src.prompts import get_travel_plan_prompt, get_prompt_for_creating_full_answer, get_location_recognizer_prompt
 import google.generativeai as genai
-from src.prompts import get_location_recognizer_prompt
 import json
 
 current_dir = os.path.dirname(__file__)

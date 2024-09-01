@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 from PIL import Image
-
 from src.embeddings import get_text_embeddings
 from pinecone import QueryResponse
 import os

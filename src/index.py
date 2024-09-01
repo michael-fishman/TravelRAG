@@ -4,7 +4,7 @@ from pinecone import Pinecone, ServerlessSpec
 from tqdm import tqdm
 import numpy as np
 from src.embeddings import load_and_embedd_dataset
-from transformers import CLIPProcessor, CLIPModel
+# from transformers import CLIPProcessor, CLIPModel
 from sentence_transformers import SentenceTransformer
 import os
 

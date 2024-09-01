@@ -1,3 +1,7 @@
+"""
+This module contains functions that return prompts for various tasks.
+"""
+
 def get_travel_plan_prompt(user_request):
     prompt = (
         "You are an advanced travel planning AI. Your task is to generate a detailed travel itinerary based on the user's request. "
