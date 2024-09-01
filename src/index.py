@@ -55,7 +55,7 @@ def upsert_vectors(
         images_formats: list,
         text_field: str = 'Content',
         batch_size: int = 128
-):
+)->Pinecone:
     """
     Upsert vectors to a pinecone index
     Args:
@@ -83,7 +83,18 @@ def upsert_vectors(
     return index
 
 
-def create_index_and_upsert(is_text_index=True, rec_num=10, embedding_model=SentenceTransformer('all-MiniLM-L6-v2')):
+def create_index_and_upsert(is_text_index=True, rec_num=10, embedding_model=SentenceTransformer('all-MiniLM-L6-v2'))->Pinecone:
+    """
+    Create a pinecone index and upsert the embeddings
+
+    Args:
+        is_text_index (bool, optional): . Defaults to True.
+        rec_num (int, optional): . Defaults to 10.
+        embedding_model (_type_, optional): . Defaults to SentenceTransformer('all-MiniLM-L6-v2').
+
+    Returns:
+        Pinecone: A pinecone object which can later be used for upserting vectors and connecting to VectorDBs
+    """
     index_name = TEXT_INDEX_NAME if is_text_index else IMAGE_INDEX_NAME
     places_names, images_formats, embeddings = load_and_embedd_dataset(is_text_index=is_text_index, rec_num=rec_num, embedding_model=embedding_model)
     embedding_shape = len(embeddings[0])

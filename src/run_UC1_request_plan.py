@@ -11,7 +11,19 @@ from datetime import datetime
 
 
 # system response pipeline
-def get_RAG_response(request, text_index, id=None, eval=False):
+def get_RAG_response(request: str, text_index, id=None, eval=False)->dict:
+    """
+    Get response from RAG model.
+
+    Args:
+        request (str): the user's request for a travel plan.
+        text_index (_type_): Pincone index for text embeddings.
+        id (_type_, optional): the request id. Defaults to None.
+        eval (bool, optional): wether to eval or not . Defaults to False.
+
+    Returns:
+        dict: the response from the RAG model.
+    """
     start_time = datetime.now()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
     retrieved_images, retrieved_names = retrieve_landmarks_images(text_index, landmarks_list, return_names=True)
@@ -37,7 +49,18 @@ def get_RAG_response(request, text_index, id=None, eval=False):
 
 
 # baseline response pipeline
-def get_baseline_response(request, id=None, eval=False):
+def get_baseline_response(request: str, id=None, eval=False) -> dict:
+    """
+    Get response from the baseline model.
+
+    Args:
+        request (str): the user's request for a travel plan.
+        id (_type_, optional): the request id. Defaults to None.
+        eval (bool, optional): wether to eval or not . Defaults to False.
+
+    Returns:
+        dict: the response from the baseline model.
+    """
     start_time = get_start_time()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
     generated_imgs = generate_images(landmarks_list)

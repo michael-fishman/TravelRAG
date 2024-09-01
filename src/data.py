@@ -8,7 +8,17 @@ DATASET_PATH = 'src/datasets/images'
 TRAVEL_REQUESTS_PATH = 'src/datasets/test_requests_for_UseCase1/travel_requests.csv'
 IMAGES_TO_IDENTIFY_PATH = 'src/datasets/test_images_for_UseCase2/images'
 
-def load_names(sample_size=5):
+def load_names(sample_size: int = 5):
+    """
+    Load the names of the images in the dataset
+
+    Args:
+        sample_size (int, optional): . Defaults to 5.
+
+    Returns:
+        list: List of image names
+        list: List of image formats
+    """
     images_names, images_formats = [], []
     print(f"Data set path is: {DATASET_PATH}")
     image_paths = [os.path.join(DATASET_PATH, img) for img in os.listdir(DATASET_PATH)]
@@ -26,6 +36,14 @@ def load_names(sample_size=5):
 
 
 def load_images():
+    """
+    Load the images in the dataset
+
+    Returns:
+        list: List of images
+        list: List of image names
+        list: List of image formats
+    """
     images, images_names, images_formats = [], [], []
     image_paths = [os.path.join(DATASET_PATH, img) for img in os.listdir(DATASET_PATH)]
 
@@ -40,11 +58,26 @@ def load_images():
 
 
 def load_user_requests_Use_Case_1():
+    """
+    Load the user requests for Use Case 1
+
+    Returns:
+        list: List of user request ids
+        list: List of user requests
+    """
     df = pd.read_csv(TRAVEL_REQUESTS_PATH)
     df["id"] = df.index
     return df['id'].to_list(), df['Plan Request'].to_list()
     
 def load_user_requests_Use_Case_2():
+    """
+    Load the user requests for Use Case 2
+
+    Returns:
+        list: List of user request ids
+        list: List of user requests
+        list: List of true answers
+    """
     images, images_names, images_formats, ids = [], [], [], []
     image_paths = [os.path.join(IMAGES_TO_IDENTIFY_PATH, img) for img in os.listdir(IMAGES_TO_IDENTIFY_PATH)]
 

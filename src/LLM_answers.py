@@ -2,6 +2,7 @@ import os.path
 from src.prompts import get_travel_plan_prompt, get_prompt_for_creating_full_answer, get_location_recognizer_prompt
 import google.generativeai as genai
 import json
+from PIL import Image
 
 current_dir = os.path.dirname(__file__)
 GEMINI_KEY_PATH = os.path.join(current_dir, 'API_keys', 'gemini_api_key.txt')
@@ -11,7 +12,26 @@ with open(GEMINI_KEY_PATH) as f:
 genai.configure(api_key=GEMINI_API_KEY)
 
 
-def get_plan_using_LLM(request):
+def get_plan_using_LLM(request: str):
+    """
+    Generate a travel plan using the Generative AI model.
+
+    Args:
+        request (str): The user's request for a travel plan.
+
+    Raises:
+        ValueError: The LLM did not return the output in the expected format.
+
+    Returns:
+        dict: The generated travel plan.
+            travel_plan = {
+                'days': days_list,
+                'landmarks': landmarks_list,
+                'descriptions': descriptions_list
+            }
+        list: The list of landmarks in the travel plan.
+    """
+
     model = genai.GenerativeModel(model_name="gemini-1.5-flash")
     prompt = get_travel_plan_prompt(request)
 
@@ -59,7 +79,17 @@ def get_plan_using_LLM(request):
     return travel_plan, landmarks_list
 
 
-def get_landmark_answer_using_LLM(img_query, user_name):
+def get_landmark_answer_using_LLM(img_query: Image.Image, user_name: str):
+    """
+    Generate a landmark answer using the Generative AI model
+
+    Args:
+        img_query (Image.Image): the image query
+        user_name (str): the user's name
+
+    Returns:
+        tuple: A tuple containing the full answer and the landmark answer
+    """
     model = genai.GenerativeModel(model_name="gemini-1.5-flash")
     # Landmark Answer
     prompt = get_location_recognizer_prompt(img_query)
@@ -72,7 +102,17 @@ def get_landmark_answer_using_LLM(img_query, user_name):
     return full_answer, landmark_answer
 
 
-def get_landmark_answer_using_RAG(retrieved_answer, user_name):
+def get_landmark_answer_using_RAG(retrieved_answer: str, user_name: str):
+    """
+    Generate a landmark answer using the Generative AI model.
+
+    Args:
+        retrieved_answer (str): The retrieved answer.
+        user_name (str): The user's name.
+
+    Returns:
+        tuple: A tuple containing the full answer and the retrieved answer.
+    """
     model = genai.GenerativeModel(model_name="gemini-1.5-flash")
     # Full Answer
     prompt = get_prompt_for_creating_full_answer(user_name, retrieved_answer)
