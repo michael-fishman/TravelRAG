@@ -49,13 +49,13 @@ def get_RAG_response(request: str, text_index, id=None, eval=False)->dict:
 
 
 # baseline response pipeline
-def get_baseline_response(request: str, id=None, eval=False) -> dict:
+def get_baseline_response(request: str, id: int=None, eval: bool=False) -> dict:
     """
     Get response from the baseline model.
 
     Args:
         request (str): the user's request for a travel plan.
-        id (_type_, optional): the request id. Defaults to None.
+        id (int, optional): the request id. Defaults to None.
         eval (bool, optional): wether to eval or not . Defaults to False.
 
     Returns:

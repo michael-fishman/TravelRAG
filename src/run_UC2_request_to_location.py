@@ -8,10 +8,25 @@ from src.utils import get_start_time, get_end_time
 from transformers import CLIPModel
 from datetime import datetime
 from PIL import Image
+from pinecone import Pinecone
 
 
 # system response pipeline
-def get_RAG_response(img_query, img_index, true_answer=None, id=None, user_name=None, eval=False):
+def get_RAG_response(img_query: Image.Image, img_index: Pincone, true_answer: str = None, id: int = None, user_name: str = None, eval: bool = False):
+    """
+    Get response from RAG model.
+
+    Args:
+        img_query (Image.Image): the user's request for a travel plan.
+        img_index (Pincone): Pincone index for image embeddings.
+        true_answer (str, optional): the true answer. Defaults to None.
+        id (int, optional): the request id. Defaults to None.
+        user_name (str, optional): the user's name. Defaults to None.
+        eval (bool, optional): wether to eval or not . Defaults to False.
+
+    Returns:
+        dict: the response from the RAG model.
+    """
     start_time = datetime.now()
     embedded_query = get_img_embeddings([img_query])[0]
     retrieved_answer = retrieve_landmarks_names(img_index, embedded_query)
@@ -38,7 +53,20 @@ def get_RAG_response(img_query, img_index, true_answer=None, id=None, user_name=
 
 
 # baseline response pipeline
-def get_baseline_response(img_query, true_answer=None, user_name=None, id=None, eval=False):
+def get_baseline_response(img_query: Image.Image, true_answer: str=None, user_name: str=None, id: int=None, eval: bool=False):
+    """
+    Get response from the baseline model.
+
+    Args:
+        img_query (Image.Image): the user's request for a travel plan.
+        true_answer (str, optional): the true answer. Defaults to None.
+        user_name (str, optional): the user's name. Defaults to None.
+        id (int, optional): the request id. Defaults to None.
+        eval (bool, optional): wether to eval or not . Defaults to False.
+
+    Returns:
+        dict: the response from the baseline model.
+    """
     start_time = get_start_time()
     full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(img_query, user_name)
     end_time = get_end_time()
