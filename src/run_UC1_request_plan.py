@@ -1,9 +1,9 @@
-from src.data import load_user_requests
+from src.data import load_user_requests_Use_Case_1
 from src.index import create_index_and_upsert
 from src.LLM_answers import get_plan_using_LLM
 from src.retrieve import retrieve_landmarks_images
 from src.img_generation import generate_images
-from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1
+from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1, save_results_Use_Case_1
 from src.utils import get_start_time, get_end_time
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -11,13 +11,25 @@ from datetime import datetime
 
 
 # system response pipeline
-def get_RAG_response(request, text_index, id=None, eval=False):
+def get_RAG_response(request: str, text_index, id=None, eval=False)->dict:
+    """
+    Get response from RAG model.
+
+    Args:
+        request (str): the user's request for a travel plan.
+        text_index (_type_): Pincone index for text embeddings.
+        id (_type_, optional): the request id. Defaults to None.
+        eval (bool, optional): wether to eval or not . Defaults to False.
+
+    Returns:
+        dict: the response from the RAG model.
+    """
     start_time = datetime.now()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
     retrieved_images, retrieved_names = retrieve_landmarks_images(text_index, landmarks_list, return_names=True)
     end_time = datetime.now()
     if eval:
-        accuracy, evaluation = evaluate_retrieved_images(x, landmarks_list)
+        accuracy, evaluation = evaluate_retrieved_images(retrieved_names, landmarks_list)
     else: 
         accuracy, evaluation = None
     # save results
@@ -37,13 +49,24 @@ def get_RAG_response(request, text_index, id=None, eval=False):
 
 
 # baseline response pipeline
-def get_baseline_response(request, id=None, eval=False):
+def get_baseline_response(request: str, id: int=None, eval: bool=False) -> dict:
+    """
+    Get response from the baseline model.
+
+    Args:
+        request (str): the user's request for a travel plan.
+        id (int, optional): the request id. Defaults to None.
+        eval (bool, optional): wether to eval or not . Defaults to False.
+
+    Returns:
+        dict: the response from the baseline model.
+    """
     start_time = get_start_time()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
     generated_imgs = generate_images(landmarks_list)
     end_time = get_end_time()
     if eval:
-        accuracy = evaluate_generated_images(generated_imgs, landmarks_list)
+        accuracy, evaluation = evaluate_generated_images(generated_imgs, landmarks_list)
     else:
         accuracy = None
     # save results
@@ -53,6 +76,7 @@ def get_baseline_response(request, id=None, eval=False):
         "landmarks_list": landmarks_list,
         "images": generated_imgs,
         "accuracy": accuracy,
+        "evaluation": evaluation,
         "start_time": start_time,
         "end_time": end_time,
         "response_by": "Generative Model",
@@ -89,21 +113,18 @@ def load_and_embedd_dataset(rec_num=10):
     return selected_names, embeddings
 
 def eval_pipeline_Use_Case_1():
-    # TODO: implement comparison of RAG and baseline results for Use Case 1
     # User pipeline
-    ids, requests = load_user_requests()
+    ids, requests = load_user_requests_Use_Case_1()
     # Prepare Data
     text_index = create_index_and_upsert(rec_num=50)
 
-    all_RAG_results = []
-    all_baseline_results = []
-    for id, request, true_answer in zip(ids, requests):
+    for id, request in zip(ids, requests):
         RAG_results = get_RAG_response(request, text_index, id, eval=True)
         baseline_results = get_baseline_response(request, id, eval=True)
-        all_RAG_results.append(RAG_results)
-        all_baseline_results.append(baseline_results)
+        save_results_Use_Case_1(RAG_results, baseline_results)
 
-    compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
+    # compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
+    # TODO: implement comparison of RAG and baseline results for Use Case 1
 
 def inference_pipeline_Use_Case_1(query):
     # Prepare DB

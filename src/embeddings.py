@@ -6,7 +6,6 @@ import torch
 model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
 processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
-
 def load_and_embedd_dataset(
         split: str = 'train',
         is_text_index: bool = True,
@@ -50,6 +49,16 @@ def load_and_embedd_dataset(
 
 def get_img_embeddings(imgs: list,
     model=CLIPModel.from_pretrained("openai/clip-vit-base-patch32")) -> list:
+    """
+    Get the image embeddings using the CLIP model.
+
+    Args:
+        imgs (list): List of images
+        model (_type_, optional): . Defaults to CLIPModel.from_pretrained("openai/clip-vit-base-patch32").
+
+    Returns:
+        list: List of image embeddings
+    """
     images_embeddings = []
     for img in imgs:
         inputs = processor(images=img, return_tensors="pt")
@@ -70,6 +79,16 @@ def get_text_embeddings(
         texts: list,
         model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2'),
 ) -> list:
+    """
+    Get the text embeddings using a sentence-transformer
+
+    Args:
+        texts (list): List of texts
+        model (SentenceTransformer, optional): . Defaults to SentenceTransformer('all-MiniLM-L6-v2').
+
+    Returns:
+        list: List of text embeddings
+    """
     texts_embeddings = model.encode(texts)
 
     # Convert the numpy array to a list of lists of floats

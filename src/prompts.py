@@ -1,4 +1,18 @@
-def get_travel_plan_prompt(user_request):
+"""
+This module contains functions that return prompts for various tasks.
+"""
+from PIL import Image
+
+def get_travel_plan_prompt(user_request: str) -> str:
+    """
+    Generate a prompt for the travel planning task based on the user's request.
+
+    Args:
+        user_request (str): The user's request for a travel plan.
+
+    Returns:
+        str: The prompt for the travel planning task.
+    """
     prompt = (
         "You are an advanced travel planning AI. Your task is to generate a detailed travel itinerary based on the user's request. "
         "Here are some key points to consider when creating the itinerary:\n\n"
@@ -29,7 +43,16 @@ def get_travel_plan_prompt(user_request):
     return prompt
 
 
-def get_location_recognizer_prompt(img_query):
+def get_location_recognizer_prompt(img_query: Image.Image) -> list:
+    """
+    Generate a prompt for the location recognition task based on the image query.
+
+    Args:
+        img_query (Image.Image): The image query for location recognition.
+
+    Returns:
+        list: A list containing the prompt and the image query.
+    """
     prompt = (
         "You are an advanced AI model specialized in recognizing and identifying landmarks and famous places from images. "
         "Analyze the image provided and return **only** the name of the most likely landmark or location depicted in the image. "
@@ -40,7 +63,17 @@ def get_location_recognizer_prompt(img_query):
     return [prompt, img_query]
 
 
-def get_prompt_for_creating_full_answer(user_name, landmark):
+def get_prompt_for_creating_full_answer(user_name: str, landmark: str) -> str:
+    """
+    Generate a prompt for creating a full answer based on the user's name and the identified landmark.
+
+    Args:
+        user_name (str): The name of the user.
+        landmark (str): The name of the identified landmark.
+
+    Returns:
+        str: The prompt for creating a full answer.
+    """
     landmark_answer_example = (
         "part 1: Hi <name>!\nIt looks like your picture is from <landmark>.\n"
         "part 2: You should definitely plan a trip there—it's a fantastic destination!\n"

@@ -1,15 +1,15 @@
 import streamlit as st
 from PIL import Image
-import requests
-from io import BytesIO
-import os
-from src.embeddings import get_text_embeddings
-from src.retrieve import retrieve_landmarks_images
 from src.index import create_index_and_upsert
 from src.run_UC1_request_plan import get_RAG_response as get_RAG_response_UC1
 from src.run_UC2_request_to_location import get_RAG_response as get_RAG_response_UC2
-from src.data import DATASET_PATH
 
+# import requests
+# from io import BytesIO
+# import os
+# from src.embeddings import get_text_embeddings
+# from src.retrieve import retrieve_landmarks_images
+# from src.data import DATASET_PATH
 
 # Placeholder function to simulate LLM response and image retrieval
 # def generate_itinerary(user_request: str, text_index):
