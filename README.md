@@ -4,6 +4,9 @@ or to identify famous landmarks in images. By using this interface, users can ei
 - Enter a text description of their desired trip, or
 - Upload an image of a tourist site to identify its location
 
+## Usage example
+![image](https://github.com/user-attachments/assets/a53f845e-e4ab-4d9b-b846-63bf0407056b)
+
 ## Features
 - **Text-based Itinerary Generation**: Users can type in their desired travel destination and duration, and the application will generate a detailed travel plan with suggestions for places to visit alongside their images.
 - **Image-based Landmark Identification**: Users can upload an image of a famous tourist landmark. The system identifies the location and generates an appropriate response.
