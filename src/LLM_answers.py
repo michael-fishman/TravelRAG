@@ -1,4 +1,6 @@
 import os.path
+import time
+
 from src.prompts import get_travel_plan_prompt, get_prompt_for_creating_full_answer, get_location_recognizer_prompt
 import google.generativeai as genai
 import json
@@ -98,6 +100,7 @@ def get_landmark_answer_using_LLM(img_query: Image.Image, user_name: str):
     # Full Answer
     prompt = get_prompt_for_creating_full_answer(user_name, landmark_answer)
     llm_response = model.generate_content(prompt)
+    time.sleep(5)
     full_answer = llm_response.text
     return full_answer, landmark_answer
 
@@ -117,6 +120,7 @@ def get_landmark_answer_using_RAG(retrieved_answer: str, user_name: str):
     # Full Answer
     prompt = get_prompt_for_creating_full_answer(user_name, retrieved_answer)
     llm_response = model.generate_content(prompt)
+    time.sleep(5)
     full_answer = llm_response.text
     return full_answer, retrieved_answer
 

@@ -4,7 +4,6 @@ from src.embeddings import get_img_embeddings
 from src.LLM_answers import get_landmark_answer_using_LLM, get_landmark_answer_using_RAG
 from src.retrieve import retrieve_landmarks_names
 from src.evaluation import evaluate_landmark_name, compare_results_Use_Case_2, save_results_Use_Case_2
-from src.utils import get_start_time, get_end_time
 from transformers import CLIPModel
 from datetime import datetime
 from PIL import Image
@@ -12,7 +11,7 @@ from pinecone import Pinecone
 
 
 # system response pipeline
-def get_RAG_response(img_query: Image.Image, img_index: Pincone, true_answer: str = None, id: int = None, user_name: str = None, eval: bool = False):
+def get_RAG_response(img_query: Image.Image, img_index: Pinecone, true_answer: str = None, id: int = None, user_name: str = None, eval: bool = False):
     """
     Get response from RAG model.
 
@@ -67,9 +66,9 @@ def get_baseline_response(img_query: Image.Image, true_answer: str=None, user_na
     Returns:
         dict: the response from the baseline model.
     """
-    start_time = get_start_time()
+    start_time = datetime.now()
     full_answer, landmark_LLM_answer = get_landmark_answer_using_LLM(img_query, user_name)
-    end_time = get_end_time()
+    end_time = datetime.now()
     if eval:
         correct = evaluate_landmark_name(landmark_LLM_answer, true_answer)
     else:
@@ -94,7 +93,7 @@ def eval_pipeline_Use_Case_2():
     ids, requests, true_answers = load_user_requests_Use_Case_2()
 
     # prepare DB
-    img_index = create_index_and_upsert(is_text_index=False, rec_num=50)
+    img_index = create_index_and_upsert(is_text_index=False, rec_num=-1)
 
     for id, request, true_answer in zip(ids, requests, true_answers):
         RAG_results = get_RAG_response(request, img_index, true_answer, id, eval=True)

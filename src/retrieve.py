@@ -5,7 +5,7 @@ from pinecone import QueryResponse
 import os
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(current_dir, '../datasets/images/')
+DATASET_PATH = os.path.join(current_dir, 'datasets/images/')
 
 
 def retrieve_neighbors(upserted_index, query_embedding, k=5):

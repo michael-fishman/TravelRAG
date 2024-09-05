@@ -6,13 +6,13 @@ import time
 import os
 from PIL import Image
 from matplotlib import pyplot as plt
+import google.generativeai as genai
 
 webui_server_url = 'http://127.0.0.1:7860'
 
-out_dir = ''
-out_dir_t2i = os.path.join(out_dir, 'generated_images')
+out_dir_t2i = './datasets/generated_images'
 os.makedirs(out_dir_t2i, exist_ok=True)
-
+print(f'Images will be saved in {out_dir_t2i}')
 
 def timestamp():
     return datetime.fromtimestamp(time.time()).strftime("%Y%m%d-%H%M%S")

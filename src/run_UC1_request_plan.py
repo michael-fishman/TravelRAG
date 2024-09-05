@@ -3,15 +3,15 @@ from src.index import create_index_and_upsert
 from src.LLM_answers import get_plan_using_LLM
 from src.retrieve import retrieve_landmarks_images
 from src.img_generation import generate_images
-from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1, save_results_Use_Case_1
-from src.utils import get_start_time, get_end_time
+from src.evaluation import evaluate_retrieved_images, evaluate_generated_images, compare_results_Use_Case_1, \
+    save_results_Use_Case_1
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from datetime import datetime
 
 
 # system response pipeline
-def get_RAG_response(request: str, text_index, id=None, eval=False)->dict:
+def get_RAG_response(request: str, text_index, id=None, eval=False) -> dict:
     """
     Get response from RAG model.
 
@@ -30,7 +30,7 @@ def get_RAG_response(request: str, text_index, id=None, eval=False)->dict:
     end_time = datetime.now()
     if eval:
         accuracy, evaluation = evaluate_retrieved_images(retrieved_names, landmarks_list)
-    else: 
+    else:
         accuracy, evaluation = None
     # save results
     results = {
@@ -49,7 +49,7 @@ def get_RAG_response(request: str, text_index, id=None, eval=False)->dict:
 
 
 # baseline response pipeline
-def get_baseline_response(request: str, id: int=None, eval: bool=False) -> dict:
+def get_baseline_response(request: str, id: int = None, eval: bool = False) -> dict:
     """
     Get response from the baseline model.
 
@@ -61,10 +61,10 @@ def get_baseline_response(request: str, id: int=None, eval: bool=False) -> dict:
     Returns:
         dict: the response from the baseline model.
     """
-    start_time = get_start_time()
+    start_time = datetime.now()
     travel_plan, landmarks_list = get_plan_using_LLM(request)
     generated_imgs = generate_images(landmarks_list)
-    end_time = get_end_time()
+    end_time = datetime.now()
     if eval:
         accuracy, evaluation = evaluate_generated_images(generated_imgs, landmarks_list)
     else:
@@ -85,46 +85,18 @@ def get_baseline_response(request: str, id: int=None, eval: bool=False) -> dict:
     return results
 
 
-def load_user_requests():
-    # TODO: there is already a fuction with the same name in src/data.py
-    # Simulate loading user requests
-    return ["(Venice) Doge's Palace and campanile of St. Mark's Basilica facing the sea.jpg",
-            "Petřín Lookout Tower in Prague, 2012.jpg",
-            "Rzym Fontanna piazza navona.jpg",
-            # Add more file names as needed
-            ], np.random.rand(50, 512)  # Random embeddings for testing
-
-
-def load_and_embedd_dataset(rec_num=10):
-    # TODO: move this function to src/data.py or tests folder
-    # Simulate loading and embedding a dataset
-    file_names = [
-        "(Venice) Doge's Palace and campanile of St. Mark's Basilica facing the sea.jpg",
-        "Petřín Lookout Tower in Prague, 2012.jpg",
-        "Rzym Fontanna piazza navona.jpg",
-        "St. Vitus Prague September 2016-21.jpg",
-        "The Dancing House in Prague.jpg",
-        # Add more file names as needed
-    ]
-    # Select a subset based on rec_num
-    selected_names = file_names[:rec_num]
-    # Generate random embeddings for the selected files
-    embeddings = np.random.rand(rec_num, 512)  # Assuming embedding dimension is 512
-    return selected_names, embeddings
-
 def eval_pipeline_Use_Case_1():
     # User pipeline
     ids, requests = load_user_requests_Use_Case_1()
     # Prepare Data
-    text_index = create_index_and_upsert(rec_num=50)
+    text_index = create_index_and_upsert(rec_num=-1)
 
     for id, request in zip(ids, requests):
         RAG_results = get_RAG_response(request, text_index, id, eval=True)
         baseline_results = get_baseline_response(request, id, eval=True)
         save_results_Use_Case_1(RAG_results, baseline_results)
 
-    # compare_results_Use_Case_1(all_RAG_results, all_baseline_results)
-    # TODO: implement comparison of RAG and baseline results for Use Case 1
+
 
 def inference_pipeline_Use_Case_1(query):
     # Prepare DB
@@ -135,6 +107,7 @@ def inference_pipeline_Use_Case_1(query):
     images = RAG_results['images']
     return travel_plan, images
 
+
 def test_pipeline():
     # Query Example
     query = "Plan a 2 week trip to Italy"
@@ -142,5 +115,6 @@ def test_pipeline():
     travel_plan, images_list = inference_pipeline_Use_Case_1(query)
     print(travel_plan)
 
+
 if __name__ == "__main__":
-    test_pipeline()
+    eval_pipeline_Use_Case_1()

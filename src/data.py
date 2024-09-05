@@ -4,9 +4,10 @@ from PIL import Image
 
 # Define the path to your dataset
 current_dir = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = 'src/datasets/images'
-TRAVEL_REQUESTS_PATH = 'src/datasets/test_requests_for_UseCase1/travel_requests.csv'
-IMAGES_TO_IDENTIFY_PATH = 'src/datasets/test_images_for_UseCase2/images'
+DATASET_PATH = './datasets/images'
+TRAVEL_REQUESTS_PATH = './datasets/test_requests_for_UseCase1/test.csv'
+IMAGES_TO_IDENTIFY_PATH = './datasets/test_images_for_UseCase2/images'
+
 
 def load_names(sample_size: int = 5):
     """
@@ -68,7 +69,8 @@ def load_user_requests_Use_Case_1():
     df = pd.read_csv(TRAVEL_REQUESTS_PATH)
     df["id"] = df.index
     return df['id'].to_list(), df['Plan Request'].to_list()
-    
+
+
 def load_user_requests_Use_Case_2():
     """
     Load the user requests for Use Case 2
@@ -88,8 +90,9 @@ def load_user_requests_Use_Case_2():
         images_names.append(img_name)
         images_formats.append(img_format)
         ids.append(i)
-    
+
     return ids, images, images_names
+
 
 if __name__ == "__main__":
     # load_user_requests_Use_Case_1()
