@@ -1,0 +1,752 @@
+id,full_answer,answer,retrieved_answer,true_answer,correct_by_llm,correct_by_human,correct_type,correct_country,start_time,end_time,response_by,use_case
+0,"It looks like your picture is from the stunning Chefchaouen Medina in Morocco. The vibrant blue buildings are truly a sight to behold! You should definitely plan a trip there – it's a magical and enchanting destination. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Morocco! 
+",['morocco Chefchaouen Medina'],['morocco Chefchaouen Medina'],Africa Morocco Chefchaouen Medina,FALSE,TRUE,TRUE,TRUE,42:12.3,42:19.7,RAG,2
+,"It seems like your picture was taken in the beautiful Chefchaouen, known as the ""Blue Pearl"" of Morocco. It's a vibrant and charming city, a true must-see for anyone visiting Morocco. You should definitely add it to your travel bucket list! 
+
+To discover more amazing destinations in Morocco, feel free to check out our TravelRAG system. It features a wide range of stunning images and information about various landmarks across the country. 
+","{'name': 'Chefchaouen', 'location': 'Morocco'}",,Africa Morocco Chefchaouen Medina,TRUE,TRUE,TRUE,TRUE,42:20.2,42:27.9,Generative Model,2
+1,"It looks like your picture is from the Cathedral of St. Michael and St. Gudula in Brussels! This stunning cathedral is a must-see for any visitor to the city. Its intricate architecture and beautiful stained glass windows are truly awe-inspiring. You should definitely plan a trip to Brussels and see it for yourself! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! 
+",['Cathedral of St. Michael and St. Gudula Brussels'],['Cathedral of St. Michael and St. Gudula Brussels'],"Africa Nigeria Cathedral Church of Christ, Marina",FALSE,FALSE,TRUE,FALSE,42:28.4,42:35.1,RAG,2
+,"Hi 1!
+
+It looks like your picture is from St. Andrew's Cathedral in Singapore. 
+
+This majestic cathedral is a beautiful example of Gothic architecture and is a must-see for any visitor to Singapore. You should definitely plan a trip there! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Singapore! 
+","{'name': 'St. Andrew's Cathedral', 'location': 'Singapore'}",,"Africa Nigeria Cathedral Church of Christ, Marina",FALSE,FALSE,TRUE,FALSE,42:35.6,42:44.6,Generative Model,2
+2,"It looks like your picture is from the Lekki Conservation Centre in Nigeria!  This beautiful reserve is a great place to escape the city and enjoy nature. You can take a walk along the canopy walkway, spot a variety of birds, and learn about the local flora and fauna. If you're interested in exploring more of Nigeria's natural wonders, you should definitely check out our TravelRAG system! It's full of incredible images from landmarks all over the country. 
+",['nigeria Lekki Conservation Centre'],['nigeria Lekki Conservation Centre'],Africa Nigeria Lekki Conservation Centre,FALSE,TRUE,TRUE,TRUE,42:45.1,42:51.7,RAG,2
+,"Hi 2! It looks like your picture is from the Treetop Walk in Singapore. That's a fantastic destination—you should definitely add it to your travel bucket list!  The Treetop Walk is a unique experience that offers incredible views of the rainforest canopy.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Singapore! 
+","{'name': 'Treetop Walk', 'location': 'Singapore'}",,Africa Nigeria Lekki Conservation Centre,FALSE,FALSE,FALSE,FALSE,42:52.1,42:58.8,Generative Model,2
+0,"It looks like your picture is from the beautiful Chefchaouen Medina in Morocco!  The blue-washed buildings of this ancient city are a sight to behold. If you haven't been there, you should definitely plan a trip – it's a truly magical destination. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Morocco! 
+",['morocco Chefchaouen Medina'],['morocco Chefchaouen Medina'],Africa Morocco Chefchaouen Medina,TRUE,TRUE,TRUE,TRUE,51:15.4,51:22.9,RAG,2
+,"It looks like your picture is from Chefchaouen, a beautiful city in Morocco!  Known as the ""Blue Pearl"" for its stunning blue-washed buildings, it's a truly captivating place.  You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Morocco! 
+","{'name': 'Chefchaouen', 'location': 'Morocco'}",,Africa Morocco Chefchaouen Medina,TRUE,TRUE,TRUE,TRUE,51:28.3,51:36.1,Generative Model,2
+1,"It looks like your picture is from the Cathedral of St. Michael and St. Gudula in Brussels! This magnificent cathedral is a true architectural masterpiece and a must-see for anyone visiting the city.  You should definitely plan a trip there – it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! 
+",['Cathedral of St. Michael and St. Gudula Brussels'],['Cathedral of St. Michael and St. Gudula Brussels'],"Africa Nigeria Cathedral Church of Christ, Marina",FALSE,FALSE,TRUE,FALSE,51:41.6,51:48.2,RAG,2
+,"Hi 1! 
+
+It looks like your picture is from St. Andrew's Cathedral in Singapore. This beautiful cathedral is a stunning example of Gothic architecture, and a must-see when visiting Singapore! 
+
+You should definitely plan a trip there - it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Singapore! 
+","{'name': 'St. Andrew's Cathedral', 'location': 'Singapore'}",,"Africa Nigeria Cathedral Church of Christ, Marina",FALSE,FALSE,TRUE,FALSE,51:53.7,52:02.6,Generative Model,2
+2,"It looks like your picture is from the Lekki Conservation Centre in Nigeria! This beautiful nature reserve is home to a variety of wildlife, including monkeys, birds, and snakes. It's a great place to escape the hustle and bustle of Lagos and enjoy some peace and quiet. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Nigeria! 
+",['nigeria Lekki Conservation Centre'],['nigeria Lekki Conservation Centre'],Africa Nigeria Lekki Conservation Centre,FALSE,TRUE,TRUE,TRUE,52:08.0,52:14.7,RAG,2
+,"Hi 2! 
+It looks like your picture is from the Treetop Walk in Singapore. 
+This elevated walkway is a truly unique experience, offering breathtaking views of the lush greenery and diverse wildlife of the Singapore Botanic Gardens. You should definitely plan a trip there—it's a fantastic destination! 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Singapore! 
+","{'name': 'Treetop Walk', 'location': 'Singapore'}",,Africa Nigeria Lekki Conservation Centre,FALSE,FALSE,FALSE,FALSE,52:20.1,52:27.1,Generative Model,2
+3,"It looks like your picture is from Goa Jomblang Cave in Java, Indonesia!  This stunning cave is a must-see for anyone visiting the area. The sunlight streaming through the opening creates an otherworldly atmosphere, making it a photographer's dream.  You should definitely plan a trip there—it's an unforgettable experience! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Indonesia! 
+","['Goa Jomblang Cave, Java indonesia']","['Goa Jomblang Cave, Java indonesia']",Africa Nigeria Ogbunike Cave,FALSE,FALSE,FALSE,FALSE,52:32.6,52:39.4,RAG,2
+,"Hi 3! It looks like your picture is from Hang Son Doong, the world's largest cave! You should definitely plan a trip there—it's an awe-inspiring destination.  You can explore more of Vietnam's incredible landmarks through our TravelRAG system, where you'll find the best images from across the country! 
+","{'name': 'Hang Son Doong', 'location': 'Vietnam'}",,Africa Nigeria Ogbunike Cave,FALSE,FALSE,FALSE,FALSE,52:44.9,52:51.8,Generative Model,2
+4,"It looks like your picture is from Khao Yai National Park in Thailand. You should definitely consider a trip there! Khao Yai is a great destination for wildlife enthusiasts, with elephants, gibbons, and even tigers roaming the park. And if you're looking for more amazing landmarks in Thailand, be sure to check out our TravelRAG system—you'll be able to explore stunning images and plan your next adventure! 
+",['thailand Khao Yai National Park'],['thailand Khao Yai National Park'],Africa South Africa Blyde River Canyon,FALSE,FALSE,FALSE,FALSE,52:57.3,53:03.6,RAG,2
+,"Hi 4! 
+It looks like your picture is from the Blyde River Canyon in South Africa. 
+Did you know it's known as the ""Green Canyon"" due to the lush vegetation that lines its walls? It's a truly stunning sight and a must-see for any traveler to South Africa. You should definitely plan a trip there!  
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in that country! 
+","{'name': 'Blyde River Canyon', 'location': 'South Africa'}",,Africa South Africa Blyde River Canyon,TRUE,TRUE,TRUE,TRUE,53:09.2,53:16.0,Generative Model,2
+5,"It looks like your picture is from the ancient Gereza at Kilwa Kisiwani in Tanzania!  This site, a UNESCO World Heritage Site, is a fascinating example of Swahili architecture and history. You should definitely plan a trip there—it's a great place to explore the remnants of a once-powerful trading center. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Tanzania! 
+",['tanzania Gereza at Kilwa Kisiwani'],['tanzania Gereza at Kilwa Kisiwani'],Africa Tanzania Gereza at Kilwa Kisiwani,FALSE,TRUE,TRUE,TRUE,53:21.7,53:28.5,RAG,2
+,"Hi 5! 
+
+It looks like your picture is from Kilwa Kisiwani in Tanzania. It's a truly captivating place! The ruins of this ancient Swahili trading city are a UNESCO World Heritage Site and offer a fascinating glimpse into the past. You should definitely plan a trip there—it's a fantastic destination! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Tanzania! 
+","{'name': 'Kilwa Kisiwani', 'location': 'Tanzania'}",,Africa Tanzania Gereza at Kilwa Kisiwani,TRUE,TRUE,TRUE,TRUE,53:33.9,53:41.3,Generative Model,2
+6,"It appears your picture was taken at the majestic Potala Palace in Tibet, China!  This iconic structure is a must-see for any traveler interested in history and culture.  It served as the winter palace of the Dalai Lamas for centuries, and its intricate architecture and breathtaking views are truly unforgettable.  Why not plan a trip to experience its grandeur for yourself?  You can also use our TravelRAG system to discover more incredible landmarks in China and start planning your next adventure! 
+",['Potala Palace china'],['Potala Palace china'],Asia China Potala Palace china,FALSE,TRUE,TRUE,TRUE,53:46.9,53:53.4,RAG,2
+,"Hi 6! 
+
+It looks like your picture is from the Potala Palace in Lhasa, Tibet!  This magnificent palace, once the winter residence of the Dalai Lamas, is a UNESCO World Heritage Site and offers breathtaking views of the surrounding city. You should definitely plan a trip there—it's a truly awe-inspiring destination!
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Tibet and beyond! 
+","{'name': 'Potala Palace', 'location': 'Lhasa, Tibet'}",,Asia China Potala Palace china,FALSE,TRUE,TRUE,TRUE,53:58.9,54:06.3,Generative Model,2
+7,"It looks like your picture is from the beautiful Ulun Danu Beratan temple in Bali, Indonesia!  This serene temple complex, floating on the surface of a volcanic lake, is a must-see for anyone visiting the island. You should definitely plan a trip there - it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more stunning landmarks in Indonesia! 
+","['Ulun Danu Beratan, Bali indonesia']","['Ulun Danu Beratan, Bali indonesia']",Asia China Summer Palace china,FALSE,FALSE,FALSE,FALSE,54:12.0,54:18.6,RAG,2
+,"Hi 7!
+
+It looks like your picture is from the Summer Palace in Beijing, China. 
+
+The Summer Palace is a beautiful example of traditional Chinese architecture, and it's definitely worth a visit if you ever get the chance. It's a great place to relax and enjoy the scenery, and there's always something new to discover. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in China! 
+","{'name': 'Summer Palace', 'location': 'Beijing, China'}",,Asia China Summer Palace china,FALSE,TRUE,TRUE,TRUE,54:24.1,54:31.1,Generative Model,2
+8,"It appears your photo was taken at the magnificent Temple of Heaven in China! This iconic landmark is a must-see for anyone visiting Beijing. It's a truly awe-inspiring place, steeped in history and spiritual significance. If you're looking for more travel inspiration, be sure to check out our TravelRAG system. It can help you discover stunning images of other incredible landmarks in China and beyond! 
+",['Temple of Heaven china'],['Temple of Heaven china'],Asia China The Forbidden City china,FALSE,FALSE,FALSE,TRUE,54:36.6,54:43.0,RAG,2
+,"Hi 8! 
+It looks like your picture is from the Forbidden City in Beijing, China. 
+That's a truly remarkable place! You should definitely add it to your travel list – it's one of the most impressive historical sites in the world. 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in China! Did you know that the Forbidden City was home to 24 emperors for over 500 years? 
+","{'name': 'Forbidden City', 'location': 'Beijing, China'}",,Asia China The Forbidden City china,TRUE,TRUE,TRUE,TRUE,54:48.5,54:56.5,Generative Model,2
+9,"It looks like your picture is from the Akrotiri Ruins on Santorini.  What a fascinating place!  If you haven't been there yet, you should definitely add it to your travel list.  The Akrotiri Ruins are a remarkable example of a Bronze Age Minoan settlement, preserved under volcanic ash.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Greece! 
+","['Akrotiri Ruins, Santorini']","['Akrotiri Ruins, Santorini']",Asia China The Terracotta Army Museum china,FALSE,FALSE,FALSE,FALSE,55:02.0,55:08.5,RAG,2
+,"Hi 9! 
+
+It looks like your picture is from the Terracotta Army in Xi'an, China! You should definitely plan a trip there—it's an incredible historical site and a must-see for anyone visiting China.  Did you know that these life-sized terracotta warriors were created to protect the first emperor of China in the afterlife? It's truly a fascinating and awe-inspiring sight.
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in China! 
+","{'name': 'Terracotta Army', 'location': 'Xi\'an, China'}",,Asia China The Terracotta Army Museum china,FALSE,TRUE,TRUE,TRUE,55:13.9,55:21.0,Generative Model,2
+10,"It looks like your picture is from the Dhankar Gompa Monastery in Spiti Valley, Himachal Pradesh, India! This stunning monastery perched on a cliff is a sight to behold, offering breathtaking views of the surrounding mountains. You should definitely plan a trip there – it's an incredible destination!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in India! 
+",[' Dhankar Gompa Monastery in Spiti Valley – Himachal Pradesh india'],[' Dhankar Gompa Monastery in Spiti Valley – Himachal Pradesh india'],"Asia India Dhankar Gompa Monastery in Spiti Valley, Himachal Pradesh india",TRUE,TRUE,TRUE,TRUE,55:26.7,55:32.9,RAG,2
+,"Hi 10! 
+It looks like your picture is from Dhankar Gompa in Spiti Valley, Himachal Pradesh, India.  
+This ancient monastery perched high on a cliff is a truly breathtaking sight.  You should definitely plan a trip there—the views from Dhankar Gompa are incredible, and the history and culture of the region are fascinating.  
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in India! 
+","{'name': 'Dhankar Gompa', 'location': 'Spiti Valley, Himachal Pradesh, India'}",,"Asia India Dhankar Gompa Monastery in Spiti Valley, Himachal Pradesh india",TRUE,TRUE,TRUE,TRUE,55:38.5,55:46.2,Generative Model,2
+11,"It seems like your picture captures the breathtaking beauty of Pangong Tso Lake in Ladakh, India!  This high-altitude lake is truly a sight to behold, with its crystal clear waters reflecting the majestic Himalayas. You should definitely consider visiting this incredible destination – the experience is unforgettable. You can also explore more landmarks in India by checking out our travel planner, TravelRAG. It's a great way to find inspiration for your next adventure! 
+",['Pangong Tso – Ladakh india'],['Pangong Tso – Ladakh india'],Asia India Pangong Tso – Ladakh india,FALSE,TRUE,TRUE,TRUE,55:51.7,55:58.1,RAG,2
+,"Hi 11! 
+
+It looks like your picture is from Pangong Tso, a stunning high-altitude lake in Ladakh, India. You should definitely plan a trip there - the views are breathtaking and the experience is unforgettable!
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in India! 
+","{'name': 'Pangong Tso', 'location': 'Ladakh, India'}",,Asia India Pangong Tso – Ladakh india,TRUE,TRUE,TRUE,TRUE,56:03.6,56:10.4,Generative Model,2
+12,"It looks like your picture is from the Raja Ampat Islands in West Papua, Indonesia! These islands are known for their incredible biodiversity and breathtaking underwater scenery. You should definitely plan a trip there—it's a scuba diver's paradise! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Indonesia and discover other amazing destinations! 
+","['Raja Ampat Islands, West Papua indonesia']","['Raja Ampat Islands, West Papua indonesia']","Asia Indonesia Raja Ampat Islands, West Papua indonesia",TRUE,TRUE,TRUE,TRUE,56:15.9,56:22.1,RAG,2
+,"Hi 12!
+
+It looks like your picture is from Wayag in Raja Ampat.  This breathtaking archipelago is known for its stunning emerald waters and limestone islands scattered across the landscape. You should definitely plan a trip there—it's a fantastic destination for snorkeling, diving, and enjoying the natural beauty of Indonesia!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Indonesia! 
+","{'name': 'Wayag', 'location': 'Raja Ampat'}",,"Asia Indonesia Raja Ampat Islands, West Papua indonesia",TRUE,TRUE,TRUE,TRUE,56:27.6,56:35.8,Generative Model,2
+13,"It looks like your picture is from Uluwatu Temple in Bali, Indonesia!  This cliffside temple is a truly breathtaking sight, and a visit to Bali wouldn't be complete without experiencing its spiritual energy. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Indonesia! 
+","['Uluwatu Temple, Bali indonesia']","['Uluwatu Temple, Bali indonesia']","Asia Indonesia Uluwatu Temple, Bali indonesia",TRUE,TRUE,TRUE,TRUE,56:41.3,56:47.4,RAG,2
+,"Hi 13! 
+
+It looks like your picture is from Uluwatu Temple in Bali. It's a stunning location perched on a cliff overlooking the ocean, and definitely worth a visit if you haven't been there before. It's known for its breathtaking sunsets and traditional Kecak dance performances. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Indonesia! 
+","{'name': 'Uluwatu Temple', 'location': 'Bali, Indonesia'}",,"Asia Indonesia Uluwatu Temple, Bali indonesia",TRUE,TRUE,TRUE,TRUE,56:52.9,57:00.7,Generative Model,2
+14,"It looks like your picture is from Caesarea in Israel! This ancient Roman port city is a truly fascinating place, with ruins that transport you back in time. You should definitely plan a trip there – it's a fantastic destination for history buffs and anyone who enjoys exploring the past. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Israel and discover even more amazing places to visit! 
+",['israel  Caesarea'],['israel  Caesarea'],Asia Israel Caesarea,FALSE,TRUE,TRUE,TRUE,57:06.2,57:12.5,RAG,2
+,"Hi 14! 
+
+It looks like your picture is from the Roman Amphitheatre in Caesarea Maritima.  This impressive amphitheater, built by King Herod the Great, is a must-see for history buffs and anyone who appreciates Roman architecture.  You should definitely plan a trip there—it's a fantastic destination! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Israel! 
+","{'name': 'Roman Amphitheatre', 'location': 'Caesarea Maritima'}",,Asia Israel Caesarea,FALSE,TRUE,TRUE,TRUE,57:17.9,57:25.2,Generative Model,2
+15,"It looks like your picture is from the Chelsea Market in New York City! It's a vibrant and eclectic food hall, perfect for trying everything from artisanal cheeses to freshly baked goods. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the US! 
+",['new york Chelsea Market'],['new york Chelsea Market'],Asia Israel Mahane Yehuda Market,FALSE,FALSE,TRUE,FALSE,57:30.7,57:37.3,RAG,2
+,"Hi 15! 
+
+It looks like your picture is from the vibrant Mahane Yehuda Market in Jerusalem.  This bustling market is a sensory feast, with tantalizing aromas, colorful displays, and friendly vendors. It's a must-visit for anyone exploring Jerusalem!  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Israel! 
+","{'name': 'Mahane Yehuda Market', 'location': 'Jerusalem, Israel'}",,Asia Israel Mahane Yehuda Market,FALSE,TRUE,TRUE,TRUE,57:42.8,57:51.0,Generative Model,2
+16,"It looks like your picture is from Times Square in New York City!  That's one of the most iconic places in the world - you should definitely plan a trip there. It's a vibrant and exciting place to visit, especially at night when the lights are on!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+",['Times Square new york'],['Times Square new york'],Asia Japan Takeshita Dori tokyo japan,FALSE,FALSE,FALSE,FALSE,57:56.4,58:02.6,RAG,2
+,"Hi 16!
+
+It looks like your picture is from Takeshita Street in Harajuku, Tokyo. 
+
+This vibrant street is a must-visit for anyone traveling to Tokyo! It's a paradise for fashion lovers, with unique clothing boutiques and street food vendors.
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Japan! 
+","{'name': 'Takeshita Street', 'location': 'Harajuku, Tokyo'}",,Asia Japan Takeshita Dori tokyo japan,FALSE,TRUE,TRUE,TRUE,58:08.1,58:15.6,Generative Model,2
+17,"It looks like your picture is from the impressive Unicorn Gundam Statue in Tokyo, Japan! This towering robotic masterpiece is a must-see for any anime fan or lover of pop culture. You should definitely plan a trip there to witness it in person – it's a truly awe-inspiring sight! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Japan and plan your perfect adventure! 
+",['Unicorn Gundam Statue tokyo japan'],['Unicorn Gundam Statue tokyo japan'],Asia Japan Unicorn Gundam Statue tokyo japan,FALSE,TRUE,TRUE,TRUE,58:21.1,58:27.3,RAG,2
+,"Hi 17! 
+It looks like your picture is from the iconic Gundam statue in Odaiba, Tokyo! 
+You should definitely plan a trip there—it's a fantastic destination, especially for anime and robot enthusiasts. 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Japan! 
+Did you know that the Gundam statue is actually a life-sized replica of the RX-78-2 Gundam from the original Mobile Suit Gundam series? 
+","{'name': 'Gundam', 'location': 'Odaiba, Tokyo'}",,Asia Japan Unicorn Gundam Statue tokyo japan,TRUE,TRUE,TRUE,TRUE,58:32.7,58:40.2,Generative Model,2
+18,"It looks like your picture is from Doi Inthanon National Park in Thailand! This park is home to the highest peak in Thailand, making it a popular destination for hikers and nature lovers. You should definitely plan a trip there—it's a fantastic place to experience the diverse flora and fauna of Thailand. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Thailand! 
+",['thailand Doi Inthanon National Park'],['thailand Doi Inthanon National Park'],Asia Thailand Big Buddha Phuket,FALSE,FALSE,FALSE,TRUE,58:45.7,58:52.0,RAG,2
+,"Hi 18!
+
+It looks like your picture is from the iconic Big Buddha in Phuket, Thailand.  The statue is a truly impressive sight, perched atop a hill overlooking the island. You should definitely plan a trip there - it's a fantastic destination with beautiful beaches, delicious food, and vibrant culture. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Thailand! 
+","{'name': 'Big Buddha', 'location': 'Phuket, Thailand'}",,Asia Thailand Big Buddha Phuket,FALSE,TRUE,TRUE,TRUE,58:57.5,59:04.5,Generative Model,2
+19,"It looks like your picture is from Tumpak Sewu Waterfall in East Java, Indonesia! This stunning waterfall is a true natural wonder, with cascading waters plunging over a series of cliffs. You should definitely plan a trip there—it's an incredible destination for nature lovers! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Indonesia! 
+","['Tumpak Sewu Waterfall, East Java indonesia']","['Tumpak Sewu Waterfall, East Java indonesia']",Asia Thailand Khao Yai National Park,FALSE,FALSE,FALSE,FALSE,59:09.9,59:16.0,RAG,2
+,"Hi 19! It looks like your picture is from the stunning Erawan Waterfall in Kanchanaburi, Thailand.  You should definitely plan a trip there—it's a truly magical place! With its seven cascading tiers and crystal-clear pools, Erawan Waterfall offers a refreshing escape into nature. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Thailand! 
+","{'name': 'Erawan Waterfall', 'location': 'Kanchanaburi, Thailand'}",,Asia Thailand Khao Yai National Park,FALSE,TRUE,TRUE,TRUE,59:21.5,59:28.7,Generative Model,2
+20,"It looks like your picture is from the iconic Hagia Sophia in Istanbul!  This architectural masterpiece has served as a church, a mosque, and now a museum, making it a truly unique historical site. You should definitely plan a trip there - Istanbul is a vibrant city full of culture and incredible sights. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Turkey! 
+",['Hagia Sophia Istanbul'],['Hagia Sophia Istanbul'],Asia Turkey Blue Mosque Istanbul,FALSE,TRUE,TRUE,TRUE,59:34.4,59:40.6,RAG,2
+,"Hi 20!
+
+It looks like your picture is from the Hagia Sophia in Istanbul, Turkey. It's a truly awe-inspiring building with a fascinating history spanning centuries.  You should definitely plan a trip there—it's a must-see for any visitor to Istanbul!
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Turkey!  
+","{'name': 'Hagia Sophia', 'location': 'Istanbul, Turkey'}",,Asia Turkey Blue Mosque Istanbul,FALSE,TRUE,TRUE,TRUE,59:46.0,59:53.1,Generative Model,2
+21,"It looks like your picture is from the Grand Bazaar in Istanbul! This vibrant marketplace is a must-see for any visitor to the city, offering a dazzling array of goods, from traditional Turkish carpets and ceramics to spices and jewellery. You should definitely plan a trip there—it's a sensory overload in the best way possible! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Turkey! 
+",['Grand Bazaar Istanbul'],['Grand Bazaar Istanbul'],Asia Turkey Grand Bazaar Istanbul,FALSE,TRUE,TRUE,TRUE,59:58.6,00:04.8,RAG,2
+,"Hi 21!
+
+It looks like your picture is from the Grand Bazaar in Istanbul, Turkey. 
+
+You should definitely plan a trip there! It's a vibrant and historic marketplace, overflowing with textiles, ceramics, spices, and everything in between. You could easily spend an entire day exploring its winding alleys and haggling for treasures. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Turkey! 
+","{'name': 'Grand Bazaar', 'location': 'Istanbul, Turkey'}",,Asia Turkey Grand Bazaar Istanbul,TRUE,TRUE,TRUE,TRUE,00:10.3,00:17.5,Generative Model,2
+22,"It looks like your picture is from the Grand Bazaar in Istanbul!  What a beautiful and vibrant place! You should definitely plan a trip there—it's one of the oldest and largest covered markets in the world, filled with incredible shops and a fascinating atmosphere. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Turkey! 
+",['Grand Bazaar Istanbul'],['Grand Bazaar Istanbul'],Asia Turkey Spice Bazaar Istanbul,FALSE,TRUE,TRUE,TRUE,00:22.9,00:29.1,RAG,2
+,"Hi 22!
+
+It looks like your picture is from the Grand Bazaar in Istanbul, Turkey. The Grand Bazaar is one of the oldest and largest covered markets in the world, with a history stretching back to the 15th century! You should definitely plan a trip there—it's a fantastic destination, with a bustling atmosphere and endless opportunities for shopping and exploring.  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Turkey! 
+","{'name': 'Grand Bazaar', 'location': 'Istanbul, Turkey'}",,Asia Turkey Spice Bazaar Istanbul,FALSE,TRUE,TRUE,TRUE,00:34.5,00:42.1,Generative Model,2
+23,"It looks like your picture is from the magnificent Ban Gioc Waterfalls in Vietnam!  These cascading waterfalls are a sight to behold and make for a truly unforgettable experience. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Vietnam! 
+",['vietnam Ban Gioc waterfalls'],['vietnam Ban Gioc waterfalls'],Asia Vietnam Ban Gioc waterfalls,FALSE,TRUE,TRUE,TRUE,00:47.6,00:53.8,RAG,2
+,"Hi 23!
+
+It looks like your picture is from Detian Falls, a stunning waterfall located on the border of China and Vietnam! 
+
+You should definitely plan a trip there—it's a truly breathtaking sight. Detian Falls is the largest transnational waterfall in Southeast Asia, and its beauty is amplified by the lush green surroundings.
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in China!  
+","{'name': 'Detian Falls', 'location': 'China'}",,Asia Vietnam Ban Gioc waterfalls,FALSE,FALSE,TRUE,FALSE,00:59.2,01:06.3,Generative Model,2
+24,"It looks like your picture is from the charming ancient town of Hoi An in Vietnam!  This UNESCO World Heritage Site is truly a gem, with its vibrant history, colorful architecture, and delicious cuisine. You should definitely plan a trip there—it's a fantastic destination!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Vietnam! 
+",['vietnam Hoi An ancient town'],['vietnam Hoi An ancient town'],Asia Vietnam Hoi An Ancient Town,TRUE,TRUE,TRUE,TRUE,01:11.9,01:18.3,RAG,2
+,"Hi 24! 
+It looks like your picture is from Hoi An Ancient Town in Vietnam. 
+This charming town is a UNESCO World Heritage site, known for its beautifully preserved architecture, vibrant street life, and delicious cuisine. You should definitely plan a trip there – it's a fantastic destination! 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Vietnam! 
+","{'name': 'Hoi An Ancient Town', 'location': 'Vietnam'}",,Asia Vietnam Hoi An Ancient Town,TRUE,TRUE,TRUE,TRUE,01:23.8,01:31.0,Generative Model,2
+25,"It looks like your picture is from the Castello di Montebello in Switzerland!  This medieval castle perched high on a hill offers stunning views of the surrounding countryside. It's a truly magical place, and I highly recommend you plan a visit if you haven't already. You can also check out our travel planner, TravelRAG, to explore more incredible landmarks in Switzerland! 
+",['switzerland Castello di Montebello'],['switzerland Castello di Montebello'],"Europe Austria Hohensalzburg Fortress, Salzburg",FALSE,FALSE,TRUE,FALSE,01:36.5,01:42.6,RAG,2
+,"Hi 25! 
+
+It looks like your picture is from Hohensalzburg Fortress in Salzburg, Austria. This magnificent fortress is a must-see for any visitor to Salzburg! It's perched atop a hill overlooking the city, offering stunning views of the surrounding landscape. You should definitely plan a trip there to explore its history and soak in the breathtaking scenery. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Austria! 
+","{'name': 'Hohensalzburg Fortress', 'location': 'Salzburg, Austria'}",,"Europe Austria Hohensalzburg Fortress, Salzburg",TRUE,TRUE,TRUE,TRUE,01:48.1,01:55.1,Generative Model,2
+26,"It looks like your picture is from the Neue Hofburg in Vienna!  Did you know this impressive palace was once the winter residence of the Habsburg emperors? It's a truly stunning example of Baroque architecture and well worth a visit. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Austria! 
+","['Neue Hofburg, Vienna']","['Neue Hofburg, Vienna']","Europe Austria Neue Hofburg, Vienna",TRUE,TRUE,TRUE,TRUE,02:00.5,02:07.1,RAG,2
+,"Hi 26! 
+
+It looks like your picture is from Hofburg Palace in Vienna.  This stunning palace complex was once the winter residence of the Habsburg emperors, and it's full of history and grandeur. You should definitely plan a trip there—it's a fantastic destination! You'll be able to explore beautiful gardens, opulent state apartments, and even see the Imperial Silver Collection.
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Austria! 
+","{'name': 'Hofburg Palace', 'location': 'Vienna'}",,"Europe Austria Neue Hofburg, Vienna",TRUE,TRUE,TRUE,TRUE,02:12.6,02:20.2,Generative Model,2
+27,"It looks like your picture is from the enchanting Beguin Houses of Bruges, Belgium!  These charming white houses, built in the 13th century, are a UNESCO World Heritage Site and offer a glimpse into the history of the Beguines, a community of women dedicated to religious life. You should definitely plan a trip to Bruges—it's a captivating city with beautiful canals, medieval architecture, and a rich cultural heritage.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! 
+",['Beguin Houses of Bruges Belgium'],['Beguin Houses of Bruges Belgium'],Europe Belgium Begijnhof Bruges,FALSE,TRUE,TRUE,TRUE,02:25.6,02:32.0,RAG,2
+,"Hi 27! It looks like your picture is from the Begijnhof in Bruges.  This charming courtyard, home to a historic community of devout women, is a true gem of Bruges.  You should definitely plan a trip there—it's a beautiful and peaceful destination!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! 
+","{'name': 'Begijnhof', 'location': 'Bruges'}",,Europe Belgium Begijnhof Bruges,TRUE,TRUE,TRUE,TRUE,02:37.4,02:44.4,Generative Model,2
+28,"It looks like your picture is from the Dambulla Cave Temple in Sri Lanka! This ancient rock temple complex is truly a sight to behold, with stunning Buddha statues and intricate murals. You should definitely consider adding it to your travel bucket list—it's a unique and fascinating destination!  You're also welcome to explore our travel planner, TravelRAG, where you can discover more amazing landmarks like this in Sri Lanka and beyond! 
+",['sri lanka Dambulla Cave Temple'],['sri lanka Dambulla Cave Temple'],Europe Belgium Choco-Story Museum Bruges,FALSE,FALSE,FALSE,FALSE,02:49.9,02:56.0,RAG,2
+,"Hi 28!
+
+It looks like your picture is from the Museo de las Americas in San José, Costa Rica. 
+
+You should definitely plan a trip there—it's a fantastic destination! The museum showcases the diverse history and cultures of the Americas, with fascinating artifacts and exhibits.
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Costa Rica! 
+","{'name': 'Museo de las Americas', 'location': 'San José, Costa Rica'}",,Europe Belgium Choco-Story Museum Bruges,FALSE,FALSE,TRUE,FALSE,03:01.5,03:08.4,Generative Model,2
+29,"It seems your picture is from the Manneken Pis in Brussels! This iconic little statue is a must-see for any visitor to the city.  You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! 
+",['Manneken Pis Brussels'],['Manneken Pis Brussels'],Europe Belgium Manneken Pis Brussels,TRUE,TRUE,TRUE,TRUE,03:13.9,03:20.1,RAG,2
+,"Hey 29! 
+It looks like your picture is from the Manneken Pis in Brussels. 
+That little statue is a big deal! You should definitely plan a trip there—it's a fantastic destination! 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! Did you know the Manneken Pis is dressed up in different costumes for special occasions? It's quite the fashion icon! 
+","{'name': 'Manneken Pis', 'location': 'Brussels'}",,Europe Belgium Manneken Pis Brussels,TRUE,TRUE,TRUE,TRUE,03:25.6,03:32.6,Generative Model,2
+30,"It looks like your picture is from the Royal Palace of Brussels in Belgium!  This magnificent palace is a must-see for any visitor to Brussels, offering a glimpse into the rich history of the Belgian monarchy.  You should definitely plan a trip there – it's a truly awe-inspiring destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! 
+",['Royal Palace of Brussels Belgium'],['Royal Palace of Brussels Belgium'],"Europe Belgium Royal Palace, Brussels",FALSE,TRUE,TRUE,TRUE,03:38.0,03:44.2,RAG,2
+,"Hi 30! 
+
+It looks like your picture is from the Royal Palace of Brussels, a magnificent building in the heart of Belgium!  The palace is a stunning example of Baroque architecture and serves as the official residence of the Belgian monarch. You should definitely plan a trip there—it's a fantastic destination! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! 
+","{'name': 'Royal Palace of Brussels', 'location': 'Brussels, Belgium'}",,"Europe Belgium Royal Palace, Brussels",FALSE,TRUE,TRUE,TRUE,03:49.6,03:56.7,Generative Model,2
+31,"It looks like your picture is from St. Peter's Basilica in Vatican City! You should definitely consider a trip there - it's a magnificent example of Renaissance architecture and holds incredible religious significance. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","['italy St. Peter’s Cathedral, Vatican City']","['italy St. Peter’s Cathedral, Vatican City']",Europe Croatia Cathedral of the Assumption Dubrovnik,FALSE,FALSE,TRUE,FALSE,04:02.1,04:08.2,RAG,2
+,"Hi 31! It looks like your picture is from the Cathedral of St. James in Dubrovnik, Croatia. You should definitely plan a trip there—it's a stunning city with a rich history! Did you know that Dubrovnik's old town is a UNESCO World Heritage site? You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Croatia! 
+","{'name': 'Cathedral of St. James', 'location': 'Dubrovnik, Croatia'}",,Europe Croatia Cathedral of the Assumption Dubrovnik,FALSE,TRUE,TRUE,TRUE,04:13.7,04:20.7,Generative Model,2
+32,"It looks like your picture is from St. Vitus Cathedral in Prague! This iconic cathedral is a must-see for anyone visiting the Czech capital. It's a stunning example of Gothic architecture and is home to the Czech Crown Jewels.  You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Czech Republic! 
+",['St. Vitus Cathedral Prague'],['St. Vitus Cathedral Prague'],Europe Czech Republic St. Vitus Cathedral Prague,TRUE,TRUE,TRUE,TRUE,04:26.2,04:32.5,RAG,2
+,"Hi 32! 
+
+It looks like your picture is from St. Vitus Cathedral in Prague. That's a beautiful cathedral! You should definitely plan a trip there—it's a truly stunning example of Gothic architecture and a must-see in Prague. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Czech Republic! 
+","{'name': 'St. Vitus Cathedral', 'location': 'Prague'}",,Europe Czech Republic St. Vitus Cathedral Prague,TRUE,TRUE,TRUE,TRUE,04:38.0,04:45.5,Generative Model,2
+33,"It looks like your picture is from the National Museum Copenhagen!  This museum is a treasure trove of Danish history and art, from Viking artifacts to Renaissance paintings. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Denmark! 
+",['National Museum Copenhagen'],['National Museum Copenhagen'],Europe Denmark National Museum Copenhagen,FALSE,TRUE,TRUE,TRUE,04:51.0,04:57.1,RAG,2
+,"Hi 33! 
+
+It looks like your picture is from the Nationalmuseet in Copenhagen. You should definitely plan a trip there—it's a fantastic destination! The museum houses an impressive collection of Danish history and art, from the Viking Age to the present day. It's a great way to learn about the country's rich culture and heritage.  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Denmark! 
+","{'name': 'Nationalmuseet', 'location': 'Copenhagen'}",,Europe Denmark National Museum Copenhagen,FALSE,TRUE,TRUE,TRUE,05:02.6,05:10.5,Generative Model,2
+34,"It looks like your picture is from Rosenborg Palace in Copenhagen! This stunning Renaissance castle is a must-see for any visitor to the city. It's home to a collection of royal treasures, including the Danish Crown Jewels. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Denmark! 
+","['Rosenborg Palace, Copenhagen']","['Rosenborg Palace, Copenhagen']","Europe Denmark Rosenborg Palace, Copenhagen",FALSE,TRUE,TRUE,TRUE,05:16.0,05:22.3,RAG,2
+,"Hi 34! 
+
+It looks like your picture is from Rosenborg Castle in Copenhagen, Denmark. You should definitely plan a trip there—it's a fantastic destination!  The castle is a beautiful example of Renaissance architecture and houses the Danish Crown Jewels. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Denmark! 
+","{'name': 'Rosenborg Castle', 'location': 'Copenhagen, Denmark'}",,"Europe Denmark Rosenborg Palace, Copenhagen",TRUE,TRUE,TRUE,TRUE,05:27.8,05:34.9,Generative Model,2
+35,"It looks like your picture is from The Bund in Shanghai, China. This iconic waterfront is a must-see destination, boasting stunning views of the city's skyline and a vibrant atmosphere.  You should definitely plan a trip there! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in China! 
+",['The Bund china'],['The Bund china'],Europe Denmark Tivoli Gardens Copenhagen,FALSE,FALSE,FALSE,FALSE,05:40.4,05:46.6,RAG,2
+,"Hi 35! 
+
+It looks like your picture is from Tivoli Gardens in Copenhagen, Denmark. You should definitely plan a trip there—it's a fantastic destination!  Tivoli Gardens is known for its beautiful gardens, thrilling rides, and charming atmosphere.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Denmark! 
+","{'name': 'Tivoli Gardens', 'location': 'Copenhagen, Denmark'}",,Europe Denmark Tivoli Gardens Copenhagen,TRUE,TRUE,TRUE,TRUE,05:52.0,05:59.1,Generative Model,2
+36,"It looks like your picture is from Viru Gate in Tallinn! This historic gate is a fascinating glimpse into Tallinn's medieval past. You should definitely plan a trip there—it's a beautiful city with so much to offer. And if you're looking for more amazing landmarks to explore in Estonia, check out our TravelRAG system! 
+",['Viru Gate Tallinn'],['Viru Gate Tallinn'],Europe Estonia Viru Gate Tallinn,FALSE,TRUE,TRUE,TRUE,06:04.5,06:10.7,RAG,2
+,"Hi 36! 
+It looks like your picture is from Viru Gate in Tallinn, Estonia. 
+This historic gate is a must-see for anyone visiting Tallinn. It's a great example of medieval architecture and offers stunning views of the city. 
+You should definitely plan a trip there—it's a fantastic destination! 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Estonia! 
+","{'name': 'Viru Gate', 'location': 'Tallinn, Estonia'}",,Europe Estonia Viru Gate Tallinn,TRUE,TRUE,TRUE,TRUE,06:16.1,06:23.4,Generative Model,2
+37,"It seems like your picture is from the stunning islands of Murano and Burano, near Venice!  These islands are renowned for their colorful houses and world-famous glassmaking traditions. If you haven't been there yet, you should definitely consider adding it to your travel bucket list. You can even try our travel planner, TravelRAG, to explore more amazing landmarks in Italy and find some inspiration for your next trip! 
+",['Murano and Burano Venice'],['Murano and Burano Venice'],Europe France Montmartre Paris,FALSE,FALSE,FALSE,FALSE,06:28.8,06:35.0,RAG,2
+,"Hey 37!  It looks like your picture is from Rue Foyatier in Paris, France.  That charming street is known for its art galleries and boutiques, and you should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in France! 
+","{'name': 'Rue Foyatier', 'location': 'Paris, France'}",,Europe France Montmartre Paris,FALSE,TRUE,TRUE,TRUE,06:40.4,06:47.4,Generative Model,2
+38,"It seems like your picture was taken at the Serralves Museum!  This museum, with its stunning architecture and modern art collection, is a real gem in Portugal. It's a must-visit for art lovers and architecture enthusiasts alike. If you're interested in exploring more of Portugal's captivating landmarks, be sure to check out our TravelRAG system! It's filled with incredible images and information about fascinating destinations like this one. 
+",['Serralves Museum'],['Serralves Museum'],Europe France Museum of Modern and Contemporary Art Nice,FALSE,FALSE,TRUE,FALSE,06:52.9,06:59.1,RAG,2
+,"Hi 38!  
+It looks like your picture is from the Museo Nacional Centro de Arte Reina Sofía in Madrid, Spain.
+This museum is a must-see for art enthusiasts!  It houses a fantastic collection of modern and contemporary art, including Picasso's iconic ""Guernica."" 
+You should definitely plan a trip there!  
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+","{'name': 'Museo Nacional Centro de Arte Reina Sofía', 'location': 'Madrid, Spain'}",,Europe France Museum of Modern and Contemporary Art Nice,FALSE,FALSE,TRUE,FALSE,07:04.5,07:11.6,Generative Model,2
+39,"It looks like your picture is from Buckingham Palace in London!  This iconic landmark is a must-see for any visitor to the city. You should definitely plan a trip there – it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the UK! 
+",['Buckingham Palace London'],['Buckingham Palace London'],Europe France Versailles Palace Grand Canal,FALSE,FALSE,TRUE,FALSE,07:17.1,07:23.1,RAG,2
+,"Hi 39! 
+
+It looks like your picture is from the Palace of Versailles, a stunning example of French Baroque architecture. You should definitely plan a trip there—it's a fantastic destination! Take a stroll through the meticulously manicured gardens, explore the opulent halls of the palace, and learn about the lavish lifestyle of the French monarchy. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in France! 
+","{'name': 'Palace of Versailles', 'location': 'Versailles, France'}",,Europe France Versailles Palace Grand Canal,FALSE,TRUE,TRUE,TRUE,07:28.7,07:35.8,Generative Model,2
+40,"It looks like your picture is from Heidelberg Castle in Germany.  This iconic castle perched on a hill overlooking the Neckar River is a must-see!  You should definitely plan a trip there—it's a fantastic destination steeped in history and offering breathtaking views. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Germany! 
+",['germany Heidelberg Castle'],['germany Heidelberg Castle'],Europe Germany Heidelberg Castle,TRUE,TRUE,TRUE,TRUE,07:41.3,07:47.4,RAG,2
+,"Hi 40! 
+
+It looks like your picture is from Heidelberg Castle in Heidelberg, Germany. It's a stunning sight, perched high above the city. You should definitely plan a trip there – Heidelberg Castle is a fantastic destination, offering breathtaking views and a glimpse into German history.
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Germany! 
+","{'name': 'Heidelberg Castle', 'location': 'Heidelberg, Germany'}",,Europe Germany Heidelberg Castle,TRUE,TRUE,TRUE,TRUE,07:52.9,08:00.1,Generative Model,2
+41,"It looks like your picture is from the Imperial Hall in Munich! This stunning hall is a true masterpiece of architecture and a must-see for any visitor to Munich. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Germany! 
+",['Imperial Hall Munich'],['Imperial Hall Munich'],Europe Germany Imperial Hall Munich,TRUE,TRUE,TRUE,TRUE,08:05.5,08:11.7,RAG,2
+,"Hi 41!
+
+It looks like your picture is from the Hall of Mirrors in Vienna, Austria. You should definitely plan a trip there—it's a truly magnificent palace with a rich history! The Hall of Mirrors, with its intricate gilded décor and stunning chandeliers, is a breathtaking sight to behold. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Austria! 
+","{'name': 'Hall of Mirrors', 'location': 'Vienna, Austria'}",,Europe Germany Imperial Hall Munich,FALSE,FALSE,TRUE,FALSE,08:17.2,08:24.1,Generative Model,2
+42,"It looks like your picture is from Nymphenburg Palace in Germany!  It's a beautiful example of Baroque architecture and a must-see for any history buff or art lover. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Germany! 
+",['germany Nymphenburg Palace'],['germany Nymphenburg Palace'],Europe Germany Nymphenburg Palace,FALSE,TRUE,TRUE,TRUE,08:29.5,08:35.8,RAG,2
+,"Hi 42!
+
+It looks like your picture is from Nymphenburg Palace in Munich, Germany. 
+
+This stunning palace, with its beautiful gardens and rich history, is a must-see for any visitor to Munich. You should definitely plan a trip there! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Germany! Did you know that Nymphenburg Palace was the summer residence of the Bavarian monarchs for centuries? 
+","{'name': 'Nymphenburg Palace', 'location': 'Munich, Germany'}",,Europe Germany Nymphenburg Palace,TRUE,TRUE,TRUE,TRUE,08:41.2,08:48.5,Generative Model,2
+43,"It looks like your picture is from the Brandenburg Gate!  A symbol of German reunification, it's a must-see for anyone visiting Berlin. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Germany! 
+",['brandenburg_gate'],['brandenburg_gate'],"Europe Germany Reichstag, Berlin",FALSE,FALSE,FALSE,TRUE,08:54.2,09:00.6,RAG,2
+,"Hey 43! 
+
+It looks like your picture is from the Reichstag Building in Berlin, Germany!  You should definitely plan a trip there—it's a fantastic destination! The building itself is a stunning example of German architecture, and the city of Berlin is full of history and culture.  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Germany! 
+","{'name': 'Reichstag Building', 'location': 'Berlin, Germany'}",,"Europe Germany Reichstag, Berlin",TRUE,TRUE,TRUE,TRUE,09:06.2,09:13.2,Generative Model,2
+44,"It looks like your picture is from the Sint-Janskerk in Maastricht, Netherlands! This beautiful church is a must-see for anyone visiting the city. It's known for its stunning stained glass windows and impressive tower, offering panoramic views of Maastricht. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Netherlands! 
+","['Sint-Janskerk, Maastricht holland']","['Sint-Janskerk, Maastricht holland']",Europe Germany Viktualienmarkt Munich,FALSE,FALSE,FALSE,TRUE,09:18.8,09:25.1,RAG,2
+,"Hi 44!
+
+It looks like your picture is from the Viktualienmarkt in Munich, Germany! This lively marketplace is a must-visit for foodies and anyone who enjoys a bustling atmosphere. You should definitely plan a trip there—it's a fantastic destination to experience local Bavarian culture. You'll find everything from fresh produce and flowers to traditional snacks and handcrafted goods. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Germany! 
+","{'name': 'Viktualienmarkt', 'location': 'Munich, Germany'}",,Europe Germany Viktualienmarkt Munich,TRUE,TRUE,TRUE,TRUE,09:30.6,09:37.8,Generative Model,2
+45,"It looks like your picture is from the bustling Chelsea Market in New York City!  A feast for the senses, this historic building is home to a diverse range of food vendors, artisan shops, and even a food hall.  If you haven't been, you should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+",['new york Chelsea Market'],['new york Chelsea Market'],Europe Hungary Great Market Hall Budapest,FALSE,FALSE,TRUE,FALSE,09:43.4,09:49.6,RAG,2
+,"Hi 45!
+
+It seems like your picture is from the Great Market Hall in Budapest. This vibrant market is a must-visit for any foodie or souvenir hunter! You can find everything from Hungarian spices and local crafts to delicious pastries and fresh produce.
+
+You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Hungary! 
+","{'name': 'Great Market Hall', 'location': 'Budapest'}",,Europe Hungary Great Market Hall Budapest,TRUE,TRUE,TRUE,TRUE,09:55.1,10:02.2,Generative Model,2
+46,"It looks like your picture is from Strøget in Copenhagen!  This pedestrian-only street is one of the longest in Europe and is a shopper's paradise. You should definitely plan a trip there—it's a fantastic destination with charming shops, cozy cafes, and beautiful architecture. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Denmark! 
+","['Strøget, Copenhagen']","['Strøget, Copenhagen']",Europe Iceland Laugavegur Reykjavik,FALSE,FALSE,FALSE,FALSE,10:07.6,10:13.9,RAG,2
+,"Hi 46! It looks like your picture is from Rainbow Street in Reykjavik, Iceland. This vibrant street is a must-see for its colorful buildings, quirky shops, and lively atmosphere! You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Iceland! 
+","{'name': 'Rainbow Street', 'location': 'Reykjavik, Iceland'}",,Europe Iceland Laugavegur Reykjavik,FALSE,FALSE,FALSE,TRUE,10:19.3,10:26.3,Generative Model,2
+47,"It looks like your picture is from the Sun Voyager in Reykjavik, Iceland! This striking sculpture is a popular landmark and a must-see for any visitor to the city. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Iceland! 
+","['Sun Voyager, Reykjavik']","['Sun Voyager, Reykjavik']","Europe Iceland Sun Voyager, Reykjavik",FALSE,TRUE,TRUE,TRUE,10:31.8,10:37.9,RAG,2
+,"Hey 47!
+
+It seems like your photo is from The Sun Voyager in Reykjavik, Iceland. 
+
+This iconic sculpture is a must-see for any visitor to Iceland. Its abstract form, resembling a ship, beautifully captures the spirit of the country's rich maritime history and its breathtaking natural beauty. 
+
+You should definitely add it to your travel list!  
+
+Want to explore more amazing landmarks in Iceland?  Our travel planner, TravelRAG, is a great resource to help you discover hidden gems and plan your next adventure. 
+","{'name': 'The Sun Voyager', 'location': 'Reykjavik, Iceland'}",,"Europe Iceland Sun Voyager, Reykjavik",FALSE,TRUE,TRUE,TRUE,10:43.3,10:50.6,Generative Model,2
+48,"It looks like your picture is from the Guinness Storehouse in Dublin!  It's a fantastic destination for beer lovers and history buffs alike. You can learn all about the brewing process, enjoy panoramic views of the city from the Gravity Bar, and even try your hand at pouring the perfect pint of Guinness. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Ireland! 
+",['Guinness Storehouse Dublin'],['Guinness Storehouse Dublin'],Europe Ireland Guinness Storehouse Dublin,FALSE,TRUE,TRUE,TRUE,10:56.1,11:02.4,RAG,2
+,"Hi 48! 
+
+It looks like your picture is from the Guinness Storehouse in Dublin, Ireland! You should definitely plan a trip there—it's a fantastic destination!  The Guinness Storehouse offers stunning views of Dublin from its Gravity Bar, and you can learn everything there is to know about the famous stout! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Ireland! 
+","{'name': 'Guinness Storehouse', 'location': 'Dublin, Ireland'}",,Europe Ireland Guinness Storehouse Dublin,TRUE,TRUE,TRUE,TRUE,11:07.9,11:15.0,Generative Model,2
+49,"It looks like your picture is from the Temple Bar District in Dublin!  This lively area is known for its traditional Irish pubs, cobblestone streets, and lively atmosphere. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Ireland! 
+",['Temple Bar District Dublin'],['Temple Bar District Dublin'],Europe Ireland Temple Bar District Dublin,FALSE,TRUE,TRUE,TRUE,11:20.6,11:26.8,RAG,2
+,"Hi 49!
+
+It looks like your picture is from The Temple Bar in Dublin, Ireland. It's a lively spot, known for its historic charm and bustling pub scene.  You should definitely plan a trip there - Dublin is a fantastic city!
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Ireland! 
+","{'name': 'The Temple Bar', 'location': 'Dublin, Ireland'}",,Europe Ireland Temple Bar District Dublin,TRUE,TRUE,TRUE,TRUE,11:32.3,11:39.3,Generative Model,2
+50,"It looks like your picture is from Kensington Palace in London!  Did you know it's been the home to royalty for centuries, and was even the birthplace of Queen Victoria? It's a beautiful palace with lovely gardens, definitely worth a visit if you ever find yourself in London!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the UK! 
+",['Kensington Palace london'],['Kensington Palace london'],Europe Ireland Trinity College Dublin,FALSE,FALSE,FALSE,FALSE,11:44.8,11:51.1,RAG,2
+,"Hi 50! 
+
+It looks like your picture is from Trinity College in Dublin, Ireland. You should definitely plan a trip there—it's a fantastic destination! Trinity College is home to the iconic Book of Kells, a beautifully illustrated manuscript that dates back to the 9th century. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Ireland! 
+","{'name': 'Trinity College', 'location': 'Dublin, Ireland'}",,Europe Ireland Trinity College Dublin,TRUE,TRUE,TRUE,TRUE,11:56.5,12:03.5,Generative Model,2
+51,"It looks like your picture is from the beautiful Panagia Paraportiani church in Mykonos!  This stunning complex, with its whitewashed walls and intricate architecture, is a true icon of the Greek Islands.  You should definitely plan a trip there—it's a breathtaking destination that will leave you wanting to explore more of the charming Mykonos town.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Greece! 
+","['Panagia Paraportiani, Mykonos']","['Panagia Paraportiani, Mykonos']","Europe Italy Alberobello, Puglia",FALSE,FALSE,FALSE,FALSE,12:08.9,12:15.2,RAG,2
+,"Hi 51! 
+
+It looks like your picture is from the Trulli in Alberobello, Italy. These unique, cone-shaped houses are a UNESCO World Heritage site and a truly fascinating sight. You should definitely plan a trip there—it's a fantastic destination! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","{'name': 'Trulli', 'location': 'Alberobello, Italy'}",,"Europe Italy Alberobello, Puglia",FALSE,FALSE,FALSE,TRUE,12:20.7,12:27.6,Generative Model,2
+52,"It looks like your picture is from Florence Cathedral! This iconic landmark, with its stunning Renaissance architecture, is a must-see for any visitor to Florence. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+",['Florence Cathedral'],['Florence Cathedral'],Europe Italy Bardini Gardens Florence,FALSE,FALSE,FALSE,TRUE,12:33.1,12:39.2,RAG,2
+,"Hi 52! 
+
+It looks like your picture is from the magnificent Cathedral of Santa Maria del Fiore in Florence, Italy!  You should definitely plan a trip there—it's a breathtaking masterpiece of architecture and a true gem of Florence.  Did you know that the dome of the cathedral was designed by Filippo Brunelleschi, a genius who revolutionized Renaissance architecture? 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","{'name': 'Cathedral of Santa Maria del Fiore', 'location': 'Florence, Italy'}",,Europe Italy Bardini Gardens Florence,FALSE,FALSE,FALSE,TRUE,12:44.6,12:51.8,Generative Model,2
+53,"It looks like your picture is from the Canale Grande in Venice, Italy!  This iconic waterway is a must-see for any visitor to the city.  You should definitely plan a trip there – it's a truly magical experience, especially when you take a gondola ride along the canal.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","['italy Canale Grande, Venice']","['italy Canale Grande, Venice']","Europe Italy Canal Grande and Ponte di Rialto, Venice",FALSE,FALSE,FALSE,TRUE,12:57.2,13:03.5,RAG,2
+,"Hi 53! 
+It looks like your picture is from the Rialto Bridge in Venice, Italy. 
+This iconic bridge is a must-see for any visitor to Venice, offering breathtaking views of the Grand Canal and the city's charming architecture.  
+You should definitely plan a trip there—it's a truly magical destination! 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","{'name': 'Rialto Bridge', 'location': 'Venice, Italy'}",,"Europe Italy Canal Grande and Ponte di Rialto, Venice",TRUE,TRUE,TRUE,TRUE,13:08.9,13:16.0,Generative Model,2
+54,"It looks like your picture is from the stunning Amalfi Coast in Italy!  The Amalfi Coast is a UNESCO World Heritage Site, known for its dramatic cliffs, charming villages, and breathtaking coastline. You should definitely plan a trip there—it's a fantastic destination!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+",['italy Amalfi Coast'],['italy Amalfi Coast'],Europe Italy Capri Island,FALSE,FALSE,FALSE,TRUE,13:21.5,13:27.6,RAG,2
+,"Hey 54! It looks like your picture is from Capri, a beautiful island off the coast of Italy. You should definitely plan a trip there—it's a fantastic destination! Capri is known for its stunning cliffs, charming towns, and crystal-clear waters. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","{'name': 'Capri', 'location': 'Italy'}",,Europe Italy Capri Island,TRUE,TRUE,TRUE,TRUE,13:33.1,13:40.2,Generative Model,2
+55,"It looks like your picture is from the beautiful Cinque Terre in Italy! You should definitely plan a trip there—it's a stunning coastal region with charming villages, picturesque hiking trails, and breathtaking views of the Mediterranean Sea. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+",['italy Cinque Terre'],['italy Cinque Terre'],Europe Italy Cinque Terre,FALSE,TRUE,TRUE,TRUE,13:45.7,13:51.7,RAG,2
+,"Hi 55! 
+It looks like your picture is from Manarola, a stunning village perched on the cliffs of Italy's Cinque Terre region. 
+You should definitely plan a trip there—it's a fantastic destination!  Manarola is known for its colorful houses, picturesque harbor, and breathtaking views of the Mediterranean Sea. 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","{'name': 'Manarola', 'location': 'Italy'}",,Europe Italy Cinque Terre,TRUE,FALSE,FALSE,TRUE,13:57.2,14:04.0,Generative Model,2
+56,"It appears your photo is from Spaccanapoli in Naples!  This bustling pedestrian street is the heart of the city's historic center. You should definitely plan a trip to Naples—the city is full of vibrant culture, delicious food, and stunning architecture.  You can also explore our TravelRAG system to see more breathtaking images of other landmarks in Italy! 
+",['Spaccanapoli Naples'],['Spaccanapoli Naples'],Europe Italy Spaccanapoli Naples,FALSE,TRUE,TRUE,TRUE,14:09.5,14:15.7,RAG,2
+,"Hi 56! 
+
+It looks like your picture is from Spaccanapoli, one of the most vibrant streets in Naples, Italy!  You should definitely plan a trip there—it's a fantastic destination with delicious food, stunning architecture, and a lively atmosphere.  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy!  Spaccanapoli is known for its street vendors and artisan shops, so be sure to browse and find some unique souvenirs. 
+","{'name': 'Spaccanapoli', 'location': 'Naples, Italy'}",,Europe Italy Spaccanapoli Naples,TRUE,TRUE,TRUE,TRUE,14:21.1,14:28.3,Generative Model,2
+57,"It looks like your picture is from Mount Vesuvius in Italy!  The volcano is a truly awe-inspiring sight, and you should definitely add it to your travel bucket list.  You can even hike to the crater rim for breathtaking views of the surrounding landscape.  To see more amazing landmarks in Italy, try our TravelRAG system, where you'll find stunning pictures and information about countless destinations! 
+",['italy VESUVIUS VOLCANO'],['italy VESUVIUS VOLCANO'],Europe Italy Vesuvius Volcano,FALSE,TRUE,TRUE,TRUE,14:33.7,14:39.9,RAG,2
+,"Hey 57! 
+
+It looks like your photo is from Mount Vesuvius! It's a truly breathtaking landmark, and you should definitely add it to your travel bucket list.  Did you know that Mount Vesuvius is the only active volcano on mainland Europe?  It's definitely an impressive sight to see!
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","{'name': 'Mount Vesuvius', 'location': 'Italy'}",,Europe Italy Vesuvius Volcano,FALSE,TRUE,TRUE,TRUE,14:45.4,14:52.6,Generative Model,2
+58,"It looks like your picture is from the Anne Frank House in Amsterdam! This poignant and important landmark is a must-see for anyone visiting the city. It's a powerful reminder of the horrors of the Holocaust and a testament to the strength of the human spirit. You should definitely plan a trip to Amsterdam to experience it for yourself. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Netherlands! 
+",['Anne Frank House Amsterdam'],['Anne Frank House Amsterdam'],Europe Netherlands Anne Frank House and Museum holland,TRUE,TRUE,TRUE,TRUE,14:58.0,15:04.4,RAG,2
+,"Hey 58!  It seems your picture was taken at the Anne Frank House in Amsterdam.  A powerful and moving place, it's definitely worth a visit if you haven't been already.  It's a reminder of the importance of fighting for human rights and equality.  And if you're interested in exploring more of Amsterdam or other amazing landmarks in the Netherlands, be sure to check out our TravelRAG system! You can find tons of stunning images from other incredible locations there. 
+","{'name': 'Anne Frank House', 'location': 'Amsterdam'}",,Europe Netherlands Anne Frank House and Museum holland,TRUE,TRUE,TRUE,TRUE,15:09.8,15:16.8,Generative Model,2
+59,"It looks like your picture is from Giethoorn, Netherlands! This charming village, often called the ""Venice of the Netherlands,"" is famous for its canals and bridges, with no roads connecting its houses. You should definitely plan a trip there—it's a fantastic destination for a peaceful getaway! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Netherlands! 
+",['Giethoorn holland'],['Giethoorn holland'],Europe Netherlands Giethoorn Holland,FALSE,TRUE,TRUE,TRUE,15:22.4,15:28.6,RAG,2
+,"Hey 59! It seems like your photo was taken in Giethoorn, Netherlands. It's often called the ""Venice of the Netherlands"" for its charming canals and picturesque bridges. You should definitely plan a trip there—it's a truly magical place!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Netherlands! 
+","{'name': 'Giethoorn', 'location': 'Netherlands'}",,Europe Netherlands Giethoorn Holland,TRUE,TRUE,TRUE,TRUE,15:34.1,15:41.0,Generative Model,2
+60,"It looks like your picture is from the Anne Frank House and Museum in Amsterdam, Netherlands!  This poignant museum is a powerful reminder of the horrors of the Holocaust and the importance of fighting against injustice.  If you haven't visited, it's definitely worth adding to your travel bucket list.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Netherlands! 
+",['Anne Frank House and Museum holland'],['Anne Frank House and Museum holland'],Europe Netherlands Rijksmuseum Amsterdam,FALSE,FALSE,FALSE,TRUE,15:46.5,15:52.8,RAG,2
+,"Hi 60! 
+
+It looks like your picture is from the Rijksmuseum in Amsterdam.  It's a beautiful museum housing Dutch masterpieces, including works by Rembrandt and Vermeer. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Netherlands! 
+","{'name': 'Rijksmuseum', 'location': 'Amsterdam'}",,Europe Netherlands Rijksmuseum Amsterdam,TRUE,TRUE,TRUE,TRUE,15:58.3,16:06.2,Generative Model,2
+61,"It looks like your picture is from the Old Town Market Square in Warsaw! This vibrant square is a must-see when visiting Poland. It's full of colorful buildings, lively street performers, and delicious food stalls. You should definitely plan a trip there! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Poland! 
+",['Old Town Market Square Warsaw'],['Old Town Market Square Warsaw'],Europe Poland Royal Castle Warsaw,FALSE,FALSE,FALSE,TRUE,16:11.6,16:17.8,RAG,2
+,"Hi 61! It looks like your picture is from the Royal Castle in Warsaw. This stunning castle, a UNESCO World Heritage Site, is a must-see when visiting Poland.  You should definitely plan a trip there—it's a fantastic destination with a rich history and beautiful architecture. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Poland! 
+","{'name': 'Royal Castle', 'location': 'Warsaw'}",,Europe Poland Royal Castle Warsaw,TRUE,TRUE,TRUE,TRUE,16:23.2,16:30.3,Generative Model,2
+62,"It seems like your picture is from the Basilica of the Holy Blood in Bruges, Belgium! This beautiful basilica is a must-see for anyone visiting Bruges. Its ornate architecture and the relic of the Holy Blood housed within make it a truly unique and captivating destination. You might be interested in exploring more amazing landmarks in Belgium through our travel planner, TravelRAG.  It offers stunning images and information about destinations throughout the country! 
+",['Basilica of the Holy Blood in Bruges Belgium'],['Basilica of the Holy Blood in Bruges Belgium'],"Europe Poland St. Mary's Basilica, Krakow",FALSE,FALSE,TRUE,FALSE,16:35.7,16:41.9,RAG,2
+,"Hi 62! 
+
+It looks like your picture is from St. Mary's Basilica in Krakow, Poland.  This stunning church is a must-see! Its iconic red brick architecture and the haunting sound of the Hejnał Mariacki trumpet call every hour make it an unforgettable experience. You should definitely plan a trip there—it's a fantastic destination!
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Poland! 
+","{'name': 'St. Mary\'s Basilica', 'location': 'Krakow, Poland'}",,"Europe Poland St. Mary's Basilica, Krakow",TRUE,TRUE,TRUE,TRUE,16:47.3,16:54.7,Generative Model,2
+63,"It looks like your picture is from Peterhof Palace in Russia!  This beautiful palace, known as the ""Russian Versailles,"" is a must-see for any visitor to St. Petersburg. Be sure to explore the stunning gardens and fountains, and take a boat ride on the Grand Cascade. If you're interested in seeing more of Russia's amazing landmarks, you can check out our travel planner, TravelRAG. It's filled with beautiful images and information about destinations across the country. 
+",['russia Peterhof Palace'],['russia Peterhof Palace'],Europe Russia Catherine Palace,FALSE,FALSE,FALSE,TRUE,17:00.2,17:06.5,RAG,2
+,"Hi 63! It looks like your picture is from Catherine Palace in Saint Petersburg, Russia.  Did you know that Catherine Palace is the largest of all the palaces in the suburbs of Saint Petersburg? This former summer residence of Russian royalty is absolutely stunning and a must-see for anyone visiting Russia. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Russia! 
+","{'name': 'Catherine Palace', 'location': 'Saint Petersburg, Russia'}",,Europe Russia Catherine Palace,TRUE,TRUE,TRUE,TRUE,17:12.0,17:19.2,Generative Model,2
+64,"It looks like your picture is from the Saturnia hot springs in Italy!  These natural thermal pools are truly a sight to behold. The water is rich in minerals and said to have healing properties.  You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+",['italy Saturnia hot springs '],['italy Saturnia hot springs '],Europe Slovenia Ljubljana Zoo,FALSE,FALSE,FALSE,FALSE,17:24.7,17:30.9,RAG,2
+,"Hi 64! 
+It looks like your picture is from ZOO Dvůr Králové in Dvůr Králové nad Labem, Czech Republic. 
+This zoo is renowned for its large enclosures and focus on conservation efforts, especially for endangered species like white rhinos. You should definitely plan a trip there - it's a fantastic destination! 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the Czech Republic! 
+","{'name': 'ZOO Dvůr Králové', 'location': 'Dvůr Králové nad Labem, Czech Republic'}",,Europe Slovenia Ljubljana Zoo,FALSE,FALSE,TRUE,FALSE,17:36.4,17:43.8,Generative Model,2
+65,"It looks like your picture is from the vibrant La Boca neighborhood in Buenos Aires, Argentina! The colorful houses and lively atmosphere make it a truly unique place. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Argentina! 
+",['argentina La Boca'],['argentina La Boca'],Europe Slovenia Metelkova Ulica Ljubljana,FALSE,FALSE,FALSE,FALSE,17:49.2,17:55.3,RAG,2
+,"Hi 65! 
+
+It looks like your picture is from Szimpla Kert in Budapest, Hungary. You should definitely plan a trip there—it's a fantastic destination! Szimpla Kert is a famous ruin pub known for its eclectic atmosphere, unique decor, and vibrant nightlife.  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Hungary! 
+","{'name': 'Szimpla Kert', 'location': 'Budapest, Hungary'}",,Europe Slovenia Metelkova Ulica Ljubljana,FALSE,FALSE,FALSE,FALSE,18:00.8,18:08.0,Generative Model,2
+66,"It looks like your picture is from La Pedrera (Casa Milà) in Barcelona, Spain! This iconic building designed by Antoni Gaudí is a must-see for any visitor to the city. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+",['spain La Pedrera (Casa Mila)'],['spain La Pedrera (Casa Mila)'],Europe Spain Casa Milà (La Pedrera),FALSE,TRUE,TRUE,TRUE,18:13.5,18:19.7,RAG,2
+,"Hey 66! 
+
+It looks like your picture is from Casa Milà, a stunning architectural masterpiece in Barcelona, Spain. You should definitely plan a trip there - it's a fantastic destination! 
+
+Did you know that Casa Milà, also known as La Pedrera, is a UNESCO World Heritage Site and considered one of the most iconic works of Antoni Gaudí, a renowned Catalan architect?  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+","{'name': 'Casa Milà', 'location': 'Barcelona, Spain'}",,Europe Spain Casa Milà (La Pedrera),FALSE,TRUE,TRUE,TRUE,18:25.1,18:33.2,Generative Model,2
+67,"It looks like your picture is from El Rastro Market in Madrid! This vibrant flea market is a must-see for anyone visiting the city. You'll find everything from antiques and vintage clothing to handcrafted souvenirs and local delicacies. Be sure to bargain with the vendors and soak in the lively atmosphere! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+",['El Rastro Market Madrid'],['El Rastro Market Madrid'],Europe Spain El Rastro Market Madrid,FALSE,TRUE,TRUE,TRUE,18:38.7,18:44.9,RAG,2
+,"It looks like your picture is from La Boqueria Market in Barcelona, Spain!  That's a vibrant and delicious place to be.  You should definitely add a trip to Barcelona to your travel bucket list—it's a city full of culture, art, and fantastic food!  You're also welcome to explore our TravelRAG system, where you can discover stunning images of other incredible landmarks in Spain. 
+","{'name': 'La Boqueria Market', 'location': 'Barcelona, Spain'}",,Europe Spain El Rastro Market Madrid,FALSE,FALSE,FALSE,TRUE,18:50.3,18:57.4,Generative Model,2
+68,"It looks like your picture is from the Puerta del Sol in Madrid!  This iconic square is the heart of the city, and a fantastic spot to experience the vibrancy of Madrid.  You should definitely plan a visit – it's a great destination for people-watching, street performances, and enjoying the local culture.  If you're looking for more inspiration for your trip, you're also welcome to check out our travel planner, TravelRAG, where you can explore the best images of other amazing landmarks in Spain! 
+","['Puerta del Sol, Madrid']","['Puerta del Sol, Madrid']",Europe Spain Plaza de la Reina Valencia,FALSE,FALSE,FALSE,TRUE,19:02.9,19:09.4,RAG,2
+,"Hi 68! 
+
+It looks like your picture is from the Torres de Serranos in Valencia, Spain. It's a beautiful example of Valencian Gothic architecture and a must-see if you're ever in the city.  You should definitely plan a trip there—Valencia is a fantastic destination with delicious food, vibrant culture, and stunning beaches! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain!  
+","{'name': 'Torres de Serranos', 'location': 'Valencia, Spain'}",,Europe Spain Plaza de la Reina Valencia,FALSE,FALSE,FALSE,TRUE,19:14.8,19:22.3,Generative Model,2
+69,"It looks like your picture is from Puerta del Sol, Madrid!  This bustling square is a must-see when visiting the city, serving as the heart of Madrid. You should definitely plan a trip there – you'll be captivated by its lively atmosphere and iconic buildings.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+","['Puerta del Sol, Madrid']","['Puerta del Sol, Madrid']","Europe Spain Puerta del Sol, Madrid",TRUE,TRUE,TRUE,TRUE,19:27.7,19:33.9,RAG,2
+,"Hi 69! 
+
+It looks like your picture is from Plaza Mayor in Madrid, Spain. This stunning square is a must-see for any visitor to Madrid, with its impressive architecture and vibrant atmosphere. You should definitely plan a trip there—it's a fantastic destination! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+","{'name': 'Plaza Mayor', 'location': 'Madrid, Spain'}",,"Europe Spain Puerta del Sol, Madrid",FALSE,FALSE,FALSE,TRUE,19:39.3,19:46.3,Generative Model,2
+70,"It looks like your picture is from the ancient city of Anuradhapura in Sri Lanka! This UNESCO World Heritage Site is a must-see for any history buff, with magnificent ruins dating back to the 3rd century BC. You should definitely plan a trip there – it's a truly fascinating destination!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Sri Lanka! 
+",['sri lanka Ancient city of Anuradhapura'],['sri lanka Ancient city of Anuradhapura'],Europe Spain Turia Gardens Valencia,FALSE,FALSE,FALSE,FALSE,19:51.7,19:57.9,RAG,2
+,"Hi 70! It looks like your picture is from the City of Arts and Sciences in Valencia, Spain.  This futuristic complex is a true architectural masterpiece and a must-see for anyone visiting Valencia. You should definitely plan a trip there!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+","{'name': 'City of Arts and Sciences', 'location': 'Valencia, Spain'}",,Europe Spain Turia Gardens Valencia,FALSE,FALSE,FALSE,TRUE,20:03.3,20:10.2,Generative Model,2
+71,"It looks like your picture is from Valencia Cathedral! This beautiful cathedral is a true masterpiece of Gothic architecture, and a visit to Valencia wouldn't be complete without seeing it. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+",['Valencia Cathedral'],['Valencia Cathedral'],Europe Spain Valencia Cathedral,TRUE,TRUE,TRUE,TRUE,20:15.8,20:21.9,RAG,2
+,"Hi 71! 
+It looks like your picture is from the Valencia Cathedral. 
+Valencia is a vibrant city, and this stunning cathedral is a must-see. You should definitely plan a trip there to experience its rich history and beautiful architecture! 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+Did you know that the Valencia Cathedral features a unique combination of Gothic, Renaissance, and Baroque styles, making it a fascinating example of architectural evolution? 
+","{'name': 'Valencia Cathedral', 'location': 'Valencia, Spain'}",,Europe Spain Valencia Cathedral,TRUE,TRUE,TRUE,TRUE,20:27.4,20:34.7,Generative Model,2
+72,"It looks like your picture is from the Great Market Hall in Budapest! This iconic building is a must-see for any visitor to the city. You should definitely plan a trip there—it's a fantastic destination, filled with vibrant colors, delicious Hungarian food, and a lively atmosphere. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Hungary! 
+",['Great Market Hall Budapest'],['Great Market Hall Budapest'],Europe Sweden Fotografiska Museum Stockholm,FALSE,FALSE,FALSE,FALSE,20:40.1,20:46.4,RAG,2
+,"Hi 72! 
+
+It looks like your picture is from Fotografiska in Stockholm. It's a stunning museum dedicated to photography, and a must-visit for any art enthusiast. You should definitely plan a trip there—the exhibits are always changing and incredibly inspiring! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Sweden! 
+","{'name': 'Fotografiska', 'location': 'Stockholm'}",,Europe Sweden Fotografiska Museum Stockholm,TRUE,TRUE,TRUE,TRUE,20:51.9,21:00.3,Generative Model,2
+73,"It looks like your picture is from Fraumünster Zurich. This iconic church is a must-see, known for its stunning stained glass windows designed by Marc Chagall. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Switzerland! 
+",['Fraumünster Zurich'],['Fraumünster Zurich'],Europe Switzerland Fraumünster Zurich,TRUE,TRUE,TRUE,TRUE,21:05.8,21:12.0,RAG,2
+,"Hey 73! 
+
+It looks like your picture is from the Grossmünster in Zürich. You should definitely plan a trip there—it's a beautiful city with a rich history and stunning views from the top of the church towers. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Switzerland! 
+","{'name': 'Grossmünster', 'location': 'Zürich'}",,Europe Switzerland Fraumünster Zurich,FALSE,FALSE,FALSE,TRUE,21:17.4,21:24.4,Generative Model,2
+74,"It looks like your picture is from the Swiss National Museum in Zurich! You should definitely plan a trip there—it's a fantastic destination! The museum boasts a fascinating collection that tells the story of Switzerland's rich history and culture. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Switzerland! 
+","['Swiss National Museum, Zurich']","['Swiss National Museum, Zurich']","Europe Switzerland Swiss National Museum, Zurich",TRUE,TRUE,TRUE,TRUE,21:29.8,21:36.2,RAG,2
+,"It looks like your picture is from the Museum für Gestaltung Zürich in Zürich, Switzerland! It's a fascinating place to explore, showcasing a wide range of design and art. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Switzerland! 
+","{'name': 'Museum für Gestaltung Zürich', 'location': 'Zürich, Switzerland'}",,"Europe Switzerland Swiss National Museum, Zurich",FALSE,FALSE,FALSE,TRUE,21:41.6,21:48.6,Generative Model,2
+75,"It looks like your picture is from Buckingham Palace in London!  That's a truly iconic landmark.  You should definitely plan a trip there—it's a fantastic destination! Did you know that the Queen holds a weekly audience with the Prime Minister at Buckingham Palace? You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the UK! 
+",['Buckingham Palace London'],['Buckingham Palace London'],Europe United Kingdom Buckingham Palace London,FALSE,TRUE,TRUE,TRUE,21:54.0,22:00.3,RAG,2
+,"Hi 75!
+
+It looks like your picture is from Buckingham Palace in London, England.  It's a truly iconic landmark! You should definitely plan a trip there - it's a fantastic destination with so much to see and do. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in England! 
+","{'name': 'Buckingham Palace', 'location': 'London, England'}",,Europe United Kingdom Buckingham Palace London,TRUE,FALSE,FALSE,TRUE,22:05.7,22:12.9,Generative Model,2
+76,"It looks like your picture is from Hampton Court Palace in London! This magnificent palace, built by Cardinal Wolsey and later home to Henry VIII, is a must-see for any history buff or architecture enthusiast. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in England! 
+",['Hampton Court Palace  london'],['Hampton Court Palace  london'],Europe United Kingdom Kensington Palace London,FALSE,FALSE,FALSE,TRUE,22:18.4,22:24.6,RAG,2
+,"Hi 76! 
+
+It looks like your picture is from Kensington Palace in London, England. This beautiful palace is steeped in history, having been home to royal residents for centuries! It's a must-see for any visitor to London, with stunning gardens, fascinating exhibitions, and a glimpse into royal life. 
+
+You should definitely plan a trip there - it's a fantastic destination! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in England! 
+","{'name': 'Kensington Palace', 'location': 'London, England'}",,Europe United Kingdom Kensington Palace London,TRUE,TRUE,TRUE,TRUE,22:30.2,22:37.0,Generative Model,2
+77,"It looks like your picture is from Pudding Lane and the Monument to the Great Fire of London!  This historical site is a fascinating reminder of the Great Fire of London in 1666. You should definitely plan a trip there - it's a great way to explore London's rich history. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in England! 
+",['Pudding Lane and the Monument to the Great Fire of London '],['Pudding Lane and the Monument to the Great Fire of London '],Europe United Kingdom Pudding Lane and the Monument to the Great Fire of London,TRUE,TRUE,TRUE,TRUE,22:42.4,22:48.6,RAG,2
+,"Hi 77!
+
+It looks like your picture is from The Monument in London.  
+
+This iconic structure commemorates the Great Fire of London and offers stunning views of the city from its top. You should definitely plan a trip there—it's a fantastic destination!
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in England! 
+","{'name': 'The Monument', 'location': 'London'}",,Europe United Kingdom Pudding Lane and the Monument to the Great Fire of London,FALSE,TRUE,TRUE,TRUE,22:54.1,23:01.4,Generative Model,2
+78,"It looks like your picture is from The London Eye in London!  That iconic Ferris wheel offers breathtaking views of the city. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United Kingdom! 
+",['The London Eye london'],['The London Eye london'],Europe United Kingdom The London Eye london,FALSE,TRUE,TRUE,TRUE,23:06.9,23:13.1,RAG,2
+,"Hey 78! 
+
+It looks like your picture is from the London Eye, a truly iconic landmark in London, England! You should definitely plan a trip there—it offers breathtaking views of the city and is a must-see for any visitor.  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in England!  
+","{'name': 'London Eye', 'location': 'London, England'}",,Europe United Kingdom The London Eye london,TRUE,TRUE,TRUE,TRUE,23:18.5,23:25.7,Generative Model,2
+79,"It looks like your picture is from Westminster Abbey!  This iconic landmark is a must-see for any visitor to London. The abbey has been the site of coronations, weddings, and burials of British monarchs for centuries. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United Kingdom! 
+",['Westminster Abbey'],['Westminster Abbey'],Europe United Kingdom Westminster Abbey,FALSE,TRUE,TRUE,TRUE,23:31.2,23:37.5,RAG,2
+,"Hey 79! 
+It looks like your picture is from Westminster Abbey in London. 
+You should definitely add Westminster Abbey to your travel bucket list—it's an iconic landmark with centuries of history! 
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the UK! Did you know Westminster Abbey is where many British monarchs have been crowned? 
+","{'name': 'Westminster Abbey', 'location': 'London'}",,Europe United Kingdom Westminster Abbey,TRUE,TRUE,TRUE,TRUE,23:42.9,23:49.9,Generative Model,2
+80,"It looks like your picture is from the Santa Catalina Monastery in Peru! This historic monastery is a beautiful example of Spanish colonial architecture and a fascinating glimpse into Peru's past. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru! 
+",['peru Santa Catalina Monastery'],['peru Santa Catalina Monastery'],North America Mexico Desierto de los Leones National Park,FALSE,FALSE,FALSE,FALSE,23:55.3,24:01.4,RAG,2
+,"Hi 80! 
+
+It looks like your picture is from the Ex-Convento de San Jerónimo in Mexico City. This beautiful former monastery is a true architectural gem and a great example of the Spanish colonial style. You should definitely plan a trip there - it's a fantastic destination!  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Mexico! 
+","{'name': 'Ex-Convento de San Jerónimo', 'location': 'Mexico City'}",,North America Mexico Desierto de los Leones National Park,FALSE,TRUE,FALSE,TRUE,24:06.9,24:14.0,Generative Model,2
+81,"It looks like your picture is from La Ciudadela in Mexico! That's an incredible place with a rich history. It was once a vast Aztec marketplace and is now a fascinating archaeological site. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Mexico! 
+",['mexico La Ciudadela'],['mexico La Ciudadela'],North America Mexico La Ciudadela,FALSE,TRUE,TRUE,TRUE,24:19.5,24:25.7,RAG,2
+,"Hi 81! 
+
+It looks like your picture is from Mercado 20 de Noviembre in Oaxaca, Mexico. This vibrant market is a must-see for anyone visiting Oaxaca! The atmosphere is electric, filled with the sights, sounds, and smells of traditional Mexican life. You'll find everything from fresh produce and local crafts to delicious street food and unique souvenirs. 
+
+You should definitely plan a trip there – it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Mexico! 
+","{'name': 'Mercado 20 de Noviembre', 'location': 'Oaxaca, Mexico'}",,North America Mexico La Ciudadela,FALSE,TRUE,FALSE,TRUE,24:31.2,24:39.3,Generative Model,2
+82,"It looks like your picture is from the Mexico National Palace (Palacio Nacional). This stunning building is a must-see for anyone visiting Mexico City! It's steeped in history, having served as the seat of power for centuries. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Mexico! 
+",['mexico National Palace (Palacio Nacional)'],['mexico National Palace (Palacio Nacional)'],North America Mexico National Palace (Palacio Nacional,FALSE,TRUE,TRUE,TRUE,24:44.7,24:51.0,RAG,2
+,"Hi 82! 
+
+It looks like your picture is from the National Palace in Mexico City. 
+
+The National Palace is a beautiful and historic building that serves as the official residence of the President of Mexico. You should definitely plan a trip there – it's a fantastic destination!  Did you know that the palace houses a collection of murals by Diego Rivera that depict the history of Mexico? You can explore them while you visit. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Mexico! 
+","{'name': 'National Palace', 'location': 'Mexico City'}",,North America Mexico National Palace (Palacio Nacional,FALSE,FALSE,FALSE,TRUE,24:56.4,25:03.6,Generative Model,2
+83,"It looks like your picture is from the Brooklyn Botanic Garden in New York!  What a beautiful place to visit!  You should definitely plan a trip there—it's a fantastic destination, with stunning gardens and unique plant collections.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+",['new york Brooklyn Botanic Garden'],['new york Brooklyn Botanic Garden'],North America USA Brooklyn Botanic Garden,FALSE,TRUE,TRUE,TRUE,25:09.0,25:15.2,RAG,2
+,"Hi 83! 
+
+It looks like your picture is from the New York Botanical Garden in New York City.  
+
+This beautiful garden is a must-see for any nature lover! With its diverse plant collections, stunning landscapes, and peaceful atmosphere, it's a perfect place to escape the hustle and bustle of the city. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the USA! 
+","{'name': 'New York Botanical Garden', 'location': 'New York City'}",,North America USA Brooklyn Botanic Garden,FALSE,TRUE,TRUE,TRUE,25:20.6,25:28.6,Generative Model,2
+84,"It looks like your picture is from the vibrant Chelsea Market in New York City!  You should definitely plan a trip there - it's a fantastic destination filled with delicious food stalls, unique shops, and a lively atmosphere.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! Did you know Chelsea Market was once a historic Nabisco factory? 
+",['new york Chelsea Market'],['new york Chelsea Market'],North America USA Chelsea Market,FALSE,TRUE,TRUE,TRUE,25:34.0,25:40.2,RAG,2
+,"Hi 84!
+
+It looks like your picture is from Pike Place Market in Seattle, Washington.  Did you know it's the oldest continuously operating farmers market in the United States? You should definitely plan a trip there—it's a fantastic destination! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Washington! 
+","{'name': 'Pike Place Market', 'location': 'Seattle, Washington'}",,North America USA Chelsea Market,FALSE,FALSE,TRUE,FALSE,25:45.6,25:52.5,Generative Model,2
+85,"It looks like your picture is from Crater Lake, Oregon!  You should definitely plan a trip there—it's a stunning natural wonder.  The lake is the deepest in the United States, formed by the collapse of a volcano, and the surrounding landscape is truly breathtaking. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in that country! 
+","['Crater Lake, Oregon']","['Crater Lake, Oregon']","North America USA Crater Lake, Oregon",TRUE,TRUE,TRUE,TRUE,25:58.0,26:04.2,RAG,2
+,"Hi 85! It looks like your picture is from Crater Lake in Oregon.  Did you know Crater Lake is the deepest lake in the United States? It's absolutely breathtaking, and you should definitely plan a trip there sometime! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Oregon and beyond! 
+","{'name': 'Crater Lake', 'location': 'Oregon'}",,"North America USA Crater Lake, Oregon",TRUE,TRUE,TRUE,TRUE,26:09.6,26:16.7,Generative Model,2
+86,"It appears your picture is from the iconic Gateway Arch in Missouri! This magnificent monument is a must-see for any traveler exploring the heartland of America. It offers breathtaking views of the city and the Mississippi River.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+","['Gateway Arch, Missouri']","['Gateway Arch, Missouri']","North America USA Gateway Arch, Missouri",FALSE,TRUE,TRUE,TRUE,26:22.2,26:28.3,RAG,2
+,"Hi 86!
+
+It looks like your picture is from the iconic Gateway Arch in St. Louis, Missouri.  You should definitely plan a trip there—it's a fantastic destination!  The Gateway Arch is a must-see landmark, offering incredible views of the Mississippi River and the city skyline.  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+","{'name': 'Gateway Arch', 'location': 'St. Louis, Missouri'}",,"North America USA Gateway Arch, Missouri",TRUE,TRUE,TRUE,TRUE,26:33.8,26:41.0,Generative Model,2
+87,"It looks like your picture is from the Liberty Bell in Pennsylvania!  This iconic symbol of American independence is a must-see for any history buff. You should definitely plan a trip there - it's a fantastic destination!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+","['Liberty Bell, Pennsylvania']","['Liberty Bell, Pennsylvania']","North America USA Liberty Bell, Pennsylvania",TRUE,TRUE,TRUE,TRUE,26:46.4,26:52.6,RAG,2
+,"It looks like your picture is from the Liberty Bell in Philadelphia!  Did you know that the Liberty Bell is actually a symbol of American independence and freedom? It's a truly iconic landmark that everyone should see at least once. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+","{'name': 'Liberty Bell', 'location': 'Philadelphia'}",,"North America USA Liberty Bell, Pennsylvania",TRUE,TRUE,TRUE,TRUE,26:58.0,27:05.2,Generative Model,2
+88,"It looks like your picture is from the Boston Old South Meeting House! This historic building played a pivotal role in the American Revolution, hosting important meetings that sparked the fight for independence. If you're interested in history, a visit to this landmark is a must. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+",['boston Old South Meeting House'],['boston Old South Meeting House'],North America USA Old North Church,FALSE,FALSE,FALSE,FALSE,27:10.6,27:16.7,RAG,2
+,"Hi 88! 
+
+It looks like your picture is from the Old North Church in Boston, Massachusetts. It's one of the most iconic landmarks in the city, known for its role in the American Revolution!  You should definitely plan a trip there—it's a fantastic destination! Boston is a vibrant city with a rich history and tons to see and do. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+","{'name': 'Old North Church', 'location': 'Boston, Massachusetts'}",,North America USA Old North Church,FALSE,TRUE,TRUE,TRUE,27:22.2,27:29.1,Generative Model,2
+89,"It looks like your picture is from the United States Capitol in Washington, D.C.! You should definitely plan a trip there—it's a fantastic destination, filled with American history and architectural beauty. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! Did you know the Capitol Building is home to the Senate and House of Representatives, where laws are made for the entire country? 
+",['washingtoo d c The US Capitol'],['washingtoo d c The US Capitol'],North America USA The US Capitol,FALSE,TRUE,TRUE,TRUE,27:34.5,27:40.8,RAG,2
+,"Hey 89! 
+
+It looks like your picture is from the United States Capitol in Washington, D.C.  It's truly a sight to behold! You should definitely consider adding it to your travel list – the Capitol is a symbol of American democracy and a fascinating glimpse into the heart of the nation's government. You can even take a tour to learn about its history and architecture.
+
+Want to see more iconic American landmarks? You can check out our TravelRAG system to explore images of more incredible destinations across the country! 
+","{'name': 'United States Capitol', 'location': 'Washington, D.C.'}",,North America USA The US Capitol,FALSE,TRUE,TRUE,TRUE,27:46.3,27:53.4,Generative Model,2
+90,"It looks like your picture is from the iconic Waldorf Astoria in New York City!  This grand hotel has a rich history and has hosted countless celebrities and dignitaries over the years. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the United States! 
+",['new york The Waldorf-Astoria'],['new york The Waldorf-Astoria'],North America USA The Waldorf-Astoria,FALSE,TRUE,TRUE,TRUE,27:58.8,28:05.0,RAG,2
+,"Hi 90!
+
+It looks like your picture is from the Waldorf Astoria in New York City.  You should definitely plan a trip there—it's a fantastic destination! The Waldorf Astoria is known for its incredible history and luxurious accommodations.  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in the US! 
+","{'name': 'Waldorf Astoria', 'location': 'New York City'}",,North America USA The Waldorf-Astoria,FALSE,TRUE,TRUE,TRUE,28:10.4,28:17.1,Generative Model,2
+91,"It looks like your picture is from the iconic Sydney Opera House! You should definitely add it to your travel bucket list—it's a truly unique and unforgettable destination.  Did you know that the Sydney Opera House was designed by Danish architect Jørn Utzon and is a UNESCO World Heritage Site? You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Australia! 
+",['Sydney Opera House'],['Sydney Opera House'],Oceania Australia Sydney Opera House,TRUE,TRUE,TRUE,TRUE,28:22.5,28:28.7,RAG,2
+,"Hi 91! 
+
+It looks like your picture is from the iconic Sydney Opera House!  The building's unique design, resembling a series of seashells, is a true masterpiece of modern architecture. You should definitely plan a trip there—it's a fantastic destination! You can take a guided tour, enjoy a performance, or simply admire the structure from afar. It's a truly unforgettable experience.
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Australia! 
+","{'name': 'Sydney Opera House', 'location': 'Sydney, Australia'}",,Oceania Australia Sydney Opera House,TRUE,TRUE,TRUE,TRUE,28:34.2,28:41.5,Generative Model,2
+92,"It looks like your picture is from the majestic Matterhorn in Switzerland!  This iconic peak is a must-see for any nature lover or adventure enthusiast. You should definitely plan a trip there—the breathtaking views and challenging hikes are truly unforgettable. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Switzerland, including other stunning mountain ranges and picturesque villages. 
+",['switzerland The Matterhorn'],['switzerland The Matterhorn'],South America Argentina Tierra del Fuego National Park,FALSE,FALSE,FALSE,FALSE,28:47.0,28:53.1,RAG,2
+,"Hey 92! 
+
+It looks like your picture is from Torres del Paine National Park in Chile. What a stunning place! You should definitely plan a trip there—it's a must-see for nature lovers and hikers.  Did you know the park is home to some of the most dramatic mountain scenery in South America?  It's also a great place to spot wildlife like guanacos and condors.  
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Chile! 
+","{'name': 'Torres del Paine National Park', 'location': 'Chile'}",,South America Argentina Tierra del Fuego National Park,FALSE,FALSE,TRUE,FALSE,28:58.6,29:05.5,Generative Model,2
+93,"It looks like your picture is from Little Venice, Mykonos!  This picturesque neighborhood is known for its charming whitewashed houses built right on the water's edge. You should definitely plan a trip there—it's a fantastic destination!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Greece! 
+","['Little Venice, Mykonos']","['Little Venice, Mykonos']","South America Brazil Escadaria Selarón, Rio de Janeiro",FALSE,FALSE,FALSE,FALSE,29:10.9,29:17.1,RAG,2
+,"Hi 93! It looks like your picture is from the Selaron Steps in Rio de Janeiro, Brazil. This iconic staircase is a vibrant explosion of color, and a true testament to the artistic spirit of the city. If you haven't been there yet, you should definitely plan a trip! It's a fantastic destination. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Brazil! 
+","{'name': 'Selaron Steps', 'location': 'Rio de Janeiro, Brazil'}",,"South America Brazil Escadaria Selarón, Rio de Janeiro",TRUE,FALSE,FALSE,TRUE,29:22.5,29:29.7,Generative Model,2
+94,"It looks like your picture is from Laguna 69 in Peru! This stunning turquoise lake nestled high in the Andes mountains is a popular destination for hikers and nature lovers. You should definitely plan a trip there—it's a breathtaking experience. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru! 
+",['peru Laguna 69'],['peru Laguna 69'],South America Peru Apu Ausangate,FALSE,FALSE,FALSE,TRUE,29:35.1,29:41.3,RAG,2
+,"Hi 94! 
+
+It looks like your picture is from Laguna 69 in Peru.  This stunning turquoise lake is nestled high in the Andes Mountains and offers breathtaking views of the surrounding peaks. You should definitely plan a trip there - it's a must-see for any nature lover! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru! 
+","{'name': 'Laguna 69', 'location': 'Peru'}",,South America Peru Apu Ausangate,FALSE,FALSE,FALSE,TRUE,29:46.7,29:53.8,Generative Model,2
+95,"It looks like your picture is from the impressive Canteras de Sillar Añashuayco quarry in Peru! These ancient quarries are truly fascinating - the Incas used the white volcanic rock from here to build many of their magnificent structures. You should definitely plan a trip there to see this historical site in person! It's a fantastic destination for history buffs and anyone interested in the ancient world. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru and beyond! 
+",['peru Canteras de Sillar Añashuayco'],['peru Canteras de Sillar Añashuayco'],South America Peru Canteras de Sillar Añashuayco,FALSE,TRUE,TRUE,TRUE,29:59.4,30:05.7,RAG,2
+,"Hi 95! It looks like your picture is from the Unfinished Church in Monte Argentario, Italy.  This architectural marvel is a truly unique sight, with its unfinished dome and stunning views of the Tuscan coastline. You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Italy! 
+","{'name': 'Unfinished Church', 'location': 'Monte Argentario, Italy'}",,South America Peru Canteras de Sillar Añashuayco,FALSE,FALSE,FALSE,FALSE,30:11.2,30:18.1,Generative Model,2
+96,"It looks like your picture is from Huacachina in Peru!  This desert oasis is a truly unique destination, known for its stunning sand dunes and adventurous activities like dune buggy rides and sandboarding. You should definitely plan a trip there to experience its magic! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru! 
+",['peru Huacachina'],['peru Huacachina'],South America Peru Huacachina,FALSE,TRUE,TRUE,TRUE,30:23.6,30:29.9,RAG,2
+,"Hi 96! 
+
+It looks like your picture is from Huacachina Oasis in Peru. What a beautiful place! You should definitely plan a trip there—it's a fantastic destination! You can even try sandboarding down the dunes for an unforgettable adventure. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru! 
+","{'name': 'Huacachina Oasis', 'location': 'Peru'}",,South America Peru Huacachina,TRUE,TRUE,TRUE,TRUE,30:35.3,30:42.3,Generative Model,2
+97,"It looks like your picture is from the Kuelap Archaeological Complex in Peru! This ancient fortress, perched high in the Andes, is a truly fascinating place to explore.  You should definitely consider adding it to your travel bucket list - it's a unique and unforgettable experience.  Want to see more amazing places in Peru?  Try our TravelRAG system, where you can browse stunning images of other breathtaking landmarks in the country! 
+",['peru Kuelap Archaeological Complex'],['peru Kuelap Archaeological Complex'],South America Peru Machu Picchu,FALSE,FALSE,FALSE,TRUE,30:47.8,30:54.0,RAG,2
+,"Hi 97! It looks like your picture is from Machu Picchu, one of the most incredible archaeological sites in the world! It's a must-see for anyone visiting Peru. You should definitely plan a trip there—it's truly a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru! 
+","{'name': 'Machu Picchu', 'location': 'Peru'}",,South America Peru Machu Picchu,TRUE,TRUE,TRUE,TRUE,30:59.6,31:06.7,Generative Model,2
+98,"It looks like your picture is from the Dhankar Gompa Monastery in Spiti Valley, Himachal Pradesh, India!  This ancient monastery, perched high in the Himalayas, offers breathtaking views and a glimpse into Tibetan Buddhist culture. You should definitely plan a trip there—it's a truly unique and unforgettable destination!  You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in India! 
+",[' Dhankar Gompa Monastery in Spiti Valley – Himachal Pradesh india'],[' Dhankar Gompa Monastery in Spiti Valley – Himachal Pradesh india'],South America Peru Ollantaytambo Village,FALSE,FALSE,FALSE,FALSE,31:12.1,31:18.3,RAG,2
+,"Hi 98! 
+
+It looks like your picture is from Ollantaytambo, a remarkable Inca archaeological site in Peru. You should definitely plan a trip there - it's a fantastic destination! 
+
+Did you know Ollantaytambo was a strategic military, agricultural, and religious center for the Inca Empire? You'll be amazed by the well-preserved temples, terraces, and houses that remain to this day. 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru! 
+","{'name': 'Ollantaytambo', 'location': 'Peru'}",,South America Peru Ollantaytambo Village,TRUE,TRUE,TRUE,TRUE,31:23.7,31:31.1,Generative Model,2
+99,"It looks like your picture is from the Metropolitan Cathedral in Mexico City! This stunning cathedral is a must-see, standing as a symbol of Mexico's rich history and culture. You should definitely plan a trip there—it's a truly magnificent destination. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Mexico! 
+",['mexico Mexico City Metropolitan Cathedral'],['mexico Mexico City Metropolitan Cathedral'],South America Peru The White City of Arequipa,FALSE,FALSE,FALSE,FALSE,31:36.6,31:42.7,RAG,2
+,"Hi 99! 
+
+It looks like your picture is from the Basilica Cathedral of Arequipa, a stunning architectural masterpiece in the heart of Arequipa, Peru. You should definitely plan a trip there—it's a fantastic destination!  This historic cathedral is a true gem of colonial architecture,  known for its beautiful facade and intricate interior. It's worth taking a guided tour to learn about its fascinating history.
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Peru! 
+","{'name': 'Basilica Cathedral of Arequipa', 'location': 'Arequipa, Peru'}",,South America Peru The White City of Arequipa,FALSE,TRUE,TRUE,TRUE,31:48.2,31:55.2,Generative Model,2

@@ -100,8 +100,6 @@ def eval_pipeline_Use_Case_2():
         baseline_results = get_baseline_response(request, true_answer, id, eval=True)
         save_results_Use_Case_2(RAG_results, baseline_results)
 
-    # compare_results_Use_Case_2(all_RAG_results, all_baseline_results)
-    # TODO: implement comparison of RAG and baseline results for Use Case 2
 
 def inference_pipeline_Use_Case_2(img):
     model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
