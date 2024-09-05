@@ -217,7 +217,7 @@ def save_results_Use_Case_1(RAG_results: Dict, baseline_results: Dict,
 
     # Save images to the corresponding id folder
     for result in [RAG_results_copy, baseline_results_copy]:
-        images_folder = os.path.join(results_dir, str(result['id']))
+        images_folder = os.path.join(results_dir, str(int(result['id']) + 30))
         os.makedirs(images_folder, exist_ok=True)
         for i, img in enumerate(result['images']):
             img_filename = f"image_{i + 1}.jpg"

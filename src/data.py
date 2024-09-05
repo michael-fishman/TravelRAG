@@ -5,7 +5,7 @@ from PIL import Image
 # Define the path to your dataset
 current_dir = os.path.dirname(os.path.abspath(__file__))
 DATASET_PATH = './datasets/images'
-TRAVEL_REQUESTS_PATH = './datasets/test_requests_for_UseCase1/test.csv'
+TRAVEL_REQUESTS_PATH = './datasets/test_requests_for_UseCase1/first_30.csv'
 IMAGES_TO_IDENTIFY_PATH = './datasets/test_images_for_UseCase2/images'
 
 
