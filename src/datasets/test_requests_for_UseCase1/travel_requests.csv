@@ -1,74 +1,74 @@
 Continent,Country,Plan Request
 Africa,Morocco,Give me a plan for a weekend to Morocco
-Africa,Nigeria,Give me a plan for 1 week to Nigeria
-Africa,Nigeria,Give me a plan for 1 week to Nigeria
 Africa,Nigeria,Give me a plan for a weekend to Nigeria
-Africa,South Africa,Give me a plan for 1 week to South Africa
-Africa,Tanzania,Give me a plan for 1 week to Tanzania
-Asia,China,Give me a plan for 1 week to China
+Africa,Nigeria,Give me a plan for a weekend to Nigeria
+Africa,Nigeria,Give me a plan for a weekend to Nigeria
+Africa,South Africa,Give me a plan for a weekend to South Africa
+Africa,Tanzania,Give me a plan for a weekend to Tanzania
 Asia,China,Give me a plan for a weekend to China
-Asia,China,Give me a plan for 1 week to China
-Asia,China,Give me a plan for 1 week to China
-Asia,India,Give me a plan for 1 week to India
+Asia,China,Give me a plan for a weekend to China
+Asia,China,Give me a plan for a weekend to China
+Asia,China,Give me a plan for a weekend to China
 Asia,India,Give me a plan for a weekend to India
-Asia,Indonesia,Give me a plan for 1 week to Indonesia
-Asia,Indonesia,Give me a plan for 1 week to Indonesia
-Asia,Israel,Give me a plan for 1 week to Israel
+Asia,India,Give me a plan for a weekend to India
+Asia,Indonesia,Give me a plan for a weekend to Indonesia
+Asia,Indonesia,Give me a plan for a weekend to Indonesia
+Asia,Israel,Give me a plan for a weekend to Israel
 Asia,Israel,Give me a plan for a weekend to Israel
 Asia,Japan,Give me a plan for a weekend to Japan
 Asia,Japan,Give me a plan for a weekend to Japan
-Asia,Thailand,Give me a plan for 1 week to Thailand
-Asia,Thailand,Give me a plan for 1 week to Thailand
-Asia,Turkey,Give me a plan for 1 week to Turkey
-Asia,Turkey,Give me a plan for 1 week to Turkey
+Asia,Thailand,Give me a plan for a weekend to Thailand
+Asia,Thailand,Give me a plan for a weekend to Thailand
+Asia,Turkey,Give me a plan for a weekend to Turkey
+Asia,Turkey,Give me a plan for a weekend to Turkey
 Asia,Turkey,Give me a plan for a weekend to Turkey
 Asia,Vietnam,Give me a plan for a weekend to Vietnam
 Asia,Vietnam,Give me a plan for a weekend to Vietnam
 Europe,Austria,Give me a plan for a weekend to Austria
-Europe,Austria,Give me a plan for 1 week to Austria
+Europe,Austria,Give me a plan for a weekend to Austria
 Europe,Belgium,Give me a plan for a weekend to Belgium
 Europe,Belgium,Give me a plan for a weekend to Belgium
-Europe,Belgium,Give me a plan for 1 week to Belgium
 Europe,Belgium,Give me a plan for a weekend to Belgium
-Europe,Croatia,Give me a plan for 1 week to Croatia
-Europe,Czech Republic,Give me a plan for 1 week to Czech Republic
-Europe,Denmark,Give me a plan for 1 week to Denmark
+Europe,Belgium,Give me a plan for a weekend to Belgium
+Europe,Croatia,Give me a plan for a weekend to Croatia
+Europe,Czech Republic,Give me a plan for a weekend to Czech Republic
 Europe,Denmark,Give me a plan for a weekend to Denmark
-Europe,Denmark,Give me a plan for 1 week to Denmark
-Europe,Estonia,Give me a plan for 1 week to Estonia
-Europe,France,Give me a plan for 1 week to France
+Europe,Denmark,Give me a plan for a weekend to Denmark
+Europe,Denmark,Give me a plan for a weekend to Denmark
+Europe,Estonia,Give me a plan for a weekend to Estonia
+Europe,France,Give me a plan for a weekend to France
 Europe,France,Give me a plan for a weekend to France
 Europe,France,Give me a plan for a weekend to France
 Europe,Germany,Give me a plan for a weekend to Germany
-Europe,Germany,Give me a plan for 1 week to Germany
-Europe,Germany,Give me a plan for 1 week to Germany
-Europe,Germany,Give me a plan for 1 week to Germany
 Europe,Germany,Give me a plan for a weekend to Germany
-Europe,Hungary,Give me a plan for 1 week to Hungary
-Europe,Iceland,Give me a plan for 1 week to Iceland
+Europe,Germany,Give me a plan for a weekend to Germany
+Europe,Germany,Give me a plan for a weekend to Germany
+Europe,Germany,Give me a plan for a weekend to Germany
+Europe,Hungary,Give me a plan for a weekend to Hungary
 Europe,Iceland,Give me a plan for a weekend to Iceland
-Europe,Ireland,Give me a plan for 1 week to Ireland
-Europe,Ireland,Give me a plan for 1 week to Ireland
-Europe,Ireland,Give me a plan for 1 week to Ireland
+Europe,Iceland,Give me a plan for a weekend to Iceland
+Europe,Ireland,Give me a plan for a weekend to Ireland
+Europe,Ireland,Give me a plan for a weekend to Ireland
+Europe,Ireland,Give me a plan for a weekend to Ireland
 Europe,Italy,Give me a plan for a weekend to Italy
 Europe,Italy,Give me a plan for a weekend to Italy
 Europe,Italy,Give me a plan for a weekend to Italy
 Europe,Italy,Give me a plan for a weekend to Italy
-Europe,Italy,Give me a plan for 1 week to Italy
 Europe,Italy,Give me a plan for a weekend to Italy
-Europe,Italy,Give me a plan for 1 week to Italy
-Europe,Netherlands,Give me a plan for 1 week to Netherlands
+Europe,Italy,Give me a plan for a weekend to Italy
+Europe,Italy,Give me a plan for a weekend to Italy
 Europe,Netherlands,Give me a plan for a weekend to Netherlands
-Europe,Netherlands,Give me a plan for 1 week to Netherlands
-Europe,Poland,Give me a plan for 1 week to Poland
+Europe,Netherlands,Give me a plan for a weekend to Netherlands
+Europe,Netherlands,Give me a plan for a weekend to Netherlands
 Europe,Poland,Give me a plan for a weekend to Poland
-Europe,Russia,Give me a plan for 1 week to Russia
+Europe,Poland,Give me a plan for a weekend to Poland
+Europe,Russia,Give me a plan for a weekend to Russia
 Europe,Slovenia,Give me a plan for a weekend to Slovenia
-Europe,Slovenia,Give me a plan for 1 week to Slovenia
-Europe,Spain,Give me a plan for 1 week to Spain
+Europe,Slovenia,Give me a plan for a weekend to Slovenia
 Europe,Spain,Give me a plan for a weekend to Spain
 Europe,Spain,Give me a plan for a weekend to Spain
-Europe,Spain,Give me a plan for 1 week to Spain
+Europe,Spain,Give me a plan for a weekend to Spain
+Europe,Spain,Give me a plan for a weekend to Spain
 Europe,Spain,Give me a plan for a weekend to Spain
 Europe,Spain,Give me a plan for a weekend to Spain
 Europe,Sweden,Give me a plan for a weekend to Sweden
@@ -77,24 +77,24 @@ Europe,Switzerland,Give me a plan for a weekend to Switzerland
 Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
 Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
 Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
-Europe,United Kingdom,Give me a plan for 1 week to United Kingdom
+Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
 Europe,United Kingdom,Give me a plan for a weekend to United Kingdom
 North America,Mexico,Give me a plan for a weekend to Mexico
 North America,Mexico,Give me a plan for a weekend to Mexico
-North America,Mexico,Give me a plan for 1 week to Mexico
-North America,USA,Give me a plan for 1 week to USA
+North America,Mexico,Give me a plan for a weekend to Mexico
 North America,USA,Give me a plan for a weekend to USA
-North America,USA,Give me a plan for 1 week to USA
-North America,USA,Give me a plan for 1 week to USA
 North America,USA,Give me a plan for a weekend to USA
-North America,USA,Give me a plan for 1 week to USA
-North America,USA,Give me a plan for 1 week to USA
+North America,USA,Give me a plan for a weekend to USA
+North America,USA,Give me a plan for a weekend to USA
+North America,USA,Give me a plan for a weekend to USA
+North America,USA,Give me a plan for a weekend to USA
+North America,USA,Give me a plan for a weekend to USA
 North America,USA,Give me a plan for a weekend to USA
 Oceania,Australia,Give me a plan for a weekend to Australia
 South America,Argentina,Give me a plan for a weekend to Argentina
-South America,Brazil,Give me a plan for 1 week to Brazil
+South America,Brazil,Give me a plan for a weekend to Brazil
 South America,Peru,Give me a plan for a weekend to Peru
-South America,Peru,Give me a plan for 1 week to Peru
+South America,Peru,Give me a plan for a weekend to Peru
 South America,Peru,Give me a plan for a weekend to Peru
 South America,Peru,Give me a plan for a weekend to Peru
 South America,Peru,Give me a plan for a weekend to Peru
