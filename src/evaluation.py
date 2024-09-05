@@ -268,7 +268,7 @@ def save_results_Use_Case_2(RAG_results: Dict, baseline_results: Dict,
     Returns:
         _type_: _description_
     """
-    results_file = os.path.join(results_dir, "results.csv")
+    results_file = os.path.join(results_dir, "results_annotated.csv")
 
     # Create a DataFrame
     rag_df = pd.DataFrame([RAG_results])

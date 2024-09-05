@@ -12,7 +12,7 @@ class TestSaveResultsUseCase2(unittest.TestCase):
         self.test_dir = TemporaryDirectory()
         self.results_dir = os.path.join(self.test_dir.name, "eval_results/UseCase2_location_identifier")
         os.makedirs(self.results_dir, exist_ok=True)
-        self.results_file = os.path.join(self.results_dir, "results.csv")
+        self.results_file = os.path.join(self.results_dir, "results_annotated.csv")
         
         # Example test data
         self.RAG_results = {
@@ -76,7 +76,7 @@ class TestSaveResultsUseCase1(unittest.TestCase):
         self.test_dir = TemporaryDirectory()
         self.results_dir = os.path.join(self.test_dir.name, "eval_results/UseCase1_travel_plans")
         os.makedirs(self.results_dir, exist_ok=True)
-        self.results_file = os.path.join(self.results_dir, "results.csv")
+        self.results_file = os.path.join(self.results_dir, "results_annotated.csv")
         
         # Path to the test images provided in the src/tests/test_evaluation directory
         self.test_images_dir = os.path.join("src", "tests", "test_evaluation")
