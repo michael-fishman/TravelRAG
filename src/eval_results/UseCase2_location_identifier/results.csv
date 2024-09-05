@@ -1,0 +1,27 @@
+id,full_answer,answer,retrieved_answer,true_answer,correct,start_time,end_time,response_by,use_case
+0,"It seems your picture is from Park Güell in Barcelona! This whimsical park, designed by Antoni Gaudí, is a must-see for anyone visiting the city. It's a world of colorful mosaics, unique architecture, and stunning views. You should definitely plan a trip there! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Spain! 
+",['Park Güell'],['Park Güell'],Africa Morocco Chefchaouen Medina,False,2024-09-02 16:17:43.997429,2024-09-02 16:17:46.474806,RAG,2
+,"It looks like your picture is from Chefchaouen, a stunning city in Morocco known for its beautiful blue-washed buildings. You should definitely plan a trip there—it's a truly unique destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Morocco! 
+","{'name': 'Chefchaouen', 'location': 'Morocco'}",,Africa Morocco Chefchaouen Medina,True,2024-09-02 16:17:47.000128,2024-09-02 16:17:49.737433,Generative Model,2
+1,"It looks like your picture is from the Cathedral of St. Michael and St. Gudula in Brussels! This stunning Gothic masterpiece is a must-see for anyone visiting the city.  You should definitely add it to your travel list—it's a truly remarkable landmark. You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Belgium! 
+",['Cathedral of St. Michael and St. Gudula Brussels'],['Cathedral of St. Michael and St. Gudula Brussels'],"Africa Nigeria Cathedral Church of Christ, Marina",False,2024-09-02 16:18:25.423393,2024-09-02 16:18:26.857745,RAG,2
+,"Hi 1! 
+
+It looks like your picture is from St. Andrew's Church in Singapore.  Did you know this beautiful church is the oldest Anglican church in Singapore and has a fascinating history dating back to the 19th century? You should definitely plan a trip there—it's a fantastic destination! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Singapore! 
+","{'name': 'St. Andrew's Church', 'location': 'Singapore'}",,"Africa Nigeria Cathedral Church of Christ, Marina",False,2024-09-02 16:18:27.317759,2024-09-02 16:18:32.254106,Generative Model,2
+2,"It looks like your picture is from the Albufera Natural Park in Valencia! This stunning park, a haven for birdwatchers and nature lovers, is a must-visit for anyone exploring the region.  You should definitely plan a trip there and soak in the tranquil beauty of its lagoons and rice paddies.  And if you'd like to discover more incredible destinations in Spain, be sure to check out our travel planner, TravelRAG, where you can explore amazing images of landmarks across the country! 
+",['Albufera Natural Park Valencia'],['Albufera Natural Park Valencia'],Africa Nigeria Lekki Conservation Centre,False,2024-09-02 16:18:40.845430,2024-09-02 16:18:42.275635,RAG,2
+,"Hi 2! It looks like your picture is from the Treetop Walk in Singapore.  That's a fantastic place to experience the unique rainforest canopy. You should definitely plan a trip there—it's a truly immersive experience! You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more landmarks in Singapore! 
+","{'name': 'Treetop Walk', 'location': 'Singapore'}",,Africa Nigeria Lekki Conservation Centre,False,2024-09-02 16:18:42.742925,2024-09-02 16:18:44.411170,Generative Model,2
+3,"It looks like your picture is from the Catacombs of San Gennaro in Naples!  These underground tunnels are a fascinating glimpse into the city's history and faith. They're an incredible place to explore, full of ancient tombs and beautiful artwork. You should definitely plan a trip to Naples - the city itself is full of vibrant culture and delicious food!  And if you'd like to discover more incredible landmarks in Italy, you're welcome to explore our travel planner, TravelRAG, which features a collection of stunning images from around the country. 
+",['Catacombs of San Gennaro Naples'],['Catacombs of San Gennaro Naples'],Africa Nigeria Ogbunike Cave,False,2024-09-02 16:18:47.706792,2024-09-02 16:18:49.209668,RAG,2
+,"Hi 3! 
+
+It looks like your picture is from Hang Son Doong, the world's largest cave! 
+
+You should definitely plan a trip there—it's a truly awe-inspiring destination. Imagine exploring a cave so vast, you could fit an entire city inside! 
+
+You're also welcome to try our travel planner, TravelRAG, where you can explore the best images of more amazing landmarks in Vietnam! 
+","{'name': 'Hang Son Doong', 'location': 'Vietnam'}",,Africa Nigeria Ogbunike Cave,False,2024-09-02 16:18:50.143542,2024-09-02 16:18:52.099158,Generative Model,2
