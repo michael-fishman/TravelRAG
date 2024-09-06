@@ -217,7 +217,7 @@ def save_results_Use_Case_1(RAG_results: Dict, baseline_results: Dict,
 
     # Save images to the corresponding id folder
     for result in [RAG_results_copy, baseline_results_copy]:
-        images_folder = os.path.join(results_dir, str(int(result['id']) + 30))
+        images_folder = os.path.join(results_dir, str(int(result['id'])))
         os.makedirs(images_folder, exist_ok=True)
         for i, img in enumerate(result['images']):
             img_filename = f"image_{i + 1}.jpg"
@@ -268,7 +268,7 @@ def save_results_Use_Case_2(RAG_results: Dict, baseline_results: Dict,
     Returns:
         _type_: _description_
     """
-    results_file = os.path.join(results_dir, "results.csv")
+    results_file = os.path.join(results_dir, "results_annotated.csv")
 
     # Create a DataFrame
     rag_df = pd.DataFrame([RAG_results])

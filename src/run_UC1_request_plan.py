@@ -92,9 +92,10 @@ def eval_pipeline_Use_Case_1():
     text_index = create_index_and_upsert(rec_num=-1)
 
     for id, request in zip(ids, requests):
-        RAG_results = get_RAG_response(request, text_index, id, eval=True)
-        baseline_results = get_baseline_response(request, id, eval=True)
-        save_results_Use_Case_1(RAG_results, baseline_results)
+        if id in [24, 25, 26, 27, 28, 29, 30, 34]:
+            RAG_results = get_RAG_response(request, text_index, id, eval=True)
+            baseline_results = get_baseline_response(request, id, eval=True)
+            save_results_Use_Case_1(RAG_results, baseline_results)
 
 
 
