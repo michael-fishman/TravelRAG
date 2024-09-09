@@ -24,7 +24,7 @@ or to identify famous landmarks in images. By using this interface, users can ei
    ```
 2. **Activate the environment**:
    ```bash
-   conda activate lab_project
+   conda activate travelrag
    ```
 
 ## Running the Application
