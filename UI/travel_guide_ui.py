@@ -1,5 +1,10 @@
 import streamlit as st
 from PIL import Image
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.index import create_index_and_upsert
 from src.run_UC1_request_plan import get_RAG_response as get_RAG_response_UC1
 from src.run_UC2_request_to_location import get_RAG_response as get_RAG_response_UC2
