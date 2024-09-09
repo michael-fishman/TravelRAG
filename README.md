@@ -20,7 +20,7 @@ or to identify famous landmarks in images. By using this interface, users can ei
 ## Setting up the Environment
 1. **Create a Conda environment** using the provided `environment.yml` file:
    ```bash
-   conda env create -f environment.yaml
+   conda env create -f environment.yml
    ```
 2. **Activate the environment**:
    ```bash
